@@ -1,0 +1,5 @@
+workato.connection dodel_jira_connection@s {
+  application = "jira"
+  name = "dodel jira connection"
+  folder_id = workato.folder.instance.jira_dodel_playground_Root
+}

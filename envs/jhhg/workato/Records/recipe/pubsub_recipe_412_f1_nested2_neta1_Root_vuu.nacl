@@ -1,0 +1,34 @@
+workato.recipe pubsub_recipe_412_f1_nested2_neta1_Root_vuu@ssuuuum {
+  name = "pubsub recipe 412"
+  trigger_application = "workato_pub_sub"
+  action_applications = [
+    "salesforce",
+  ]
+  applications = [
+    "workato_pub_sub",
+    "salesforce",
+  ]
+  description = "When there is a trigger event, do action"
+  folder_id = workato.folder.instance.f1_nested2_neta1_Root@vuu
+  running = false
+  version_no = 1
+  config = [
+    {
+      keyword = "application"
+      provider = "workato_pub_sub"
+      skip_validation = false
+      name = "workato_pub_sub"
+    },
+    {
+      keyword = "application"
+      provider = "salesforce"
+      skip_validation = false
+      name = "salesforce"
+      account_id = workato.connection.instance.Neta_sfdev1@s
+    },
+  ]
+  code = workato.recipe__code.instance.pubsub_recipe_412_f1_nested2_neta1_Root_vuu_ssuuuum@uuuuuuum
+  author_name = "Environment Test"
+  version_author_name = "Workato @ Salto"
+  version_author_email = "workato@salto.io"
+}

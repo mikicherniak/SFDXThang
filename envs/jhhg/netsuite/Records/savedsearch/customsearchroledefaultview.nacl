@@ -1,0 +1,76 @@
+netsuite.savedsearch customsearchroledefaultview {
+  scriptid = "customsearchroledefaultview"
+  definition = "f461791a6e00e7519557610d534ac64975b6e5d3ea832f679a7071c8eda3acb7@GZC@2023.1.15@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"
+  return_fields = [
+    {
+      FIELD_ALIAS = "Role_NAME"
+      FIELD_INDEX = 1
+      FIELD_FORMULA_ERROR = false
+    },
+    {
+      FIELD_ALIAS = "Role_INTERNALID"
+      FIELD_INDEX = 2
+      FIELD_FORMULA_ERROR = false
+    },
+    {
+      FIELD_ALIAS = "Role_FROMBUNDLE"
+      FIELD_INDEX = 3
+      FIELD_FORMULA_ERROR = false
+    },
+    {
+      FIELD_ALIAS = "Role_CUSTOMSTANDARD"
+      FIELD_INDEX = 4
+      FIELD_FORMULA_ERROR = false
+    },
+    {
+      FIELD_ALIAS = "Role_CENTERTYPE"
+      FIELD_INDEX = 5
+      FIELD_FORMULA_ERROR = false
+    },
+  ]
+  sort_columns = [
+    {
+      KEY_FIELD = "Role_NAME"
+      FILELD_ORDER = 1
+      FLAG_DESCENDING = false
+    },
+  ]
+  KEY_SCRIPT_ID = "customsearchroledefaultview"
+  FIELD_DEFAULT_NAME = "Custom Role Default View"
+  FIELD_SEARCH_TYPE = "Role"
+  FLAG_PUBLIC = false
+  FLAG_LIST = false
+  FLAG_PORTLET = false
+  FLAG_MACHINE = false
+  FLAG_REMINDER = false
+  FLAG_SHOW_LINK = false
+  FLAG_PREFERRED_LIST = false
+  FLAG_PREFERRED_PORTLET = false
+  FLAG_PREFERRED_MACHINE = false
+  FLAG_PREFERRED_FORM = false
+  FLAG_PREFERRED_RESULTS = false
+  FLAG_VIEW_AS_REPORT = false
+  FLAG_VIEW_AS_GRAPH = false
+  FLAG_VIEW_AS_GRID = false
+  FLAG_UNRESTRICTED = false
+  FLAG_DISABLE_DRILL_DOWN = false
+  FLAG_HIDE_FILTER_DROPDOWNS = false
+  KEY_DEFAULT_TEXT_FIELD_FILTER = "STARTSWITH"
+  FLAG_AVAILABLE_AS_FEED = false
+  FLAG_GLOBAL_EDIT = false
+  FLAG_CSV = false
+  FLAG_EXCEL = false
+  FLAG_PDF = false
+  FLAG_TRIGGERED_ALERT = false
+  FLAG_SCHEDULED_ALERT = false
+  FLAG_SCHEDULED_ALERT_SUMMARIES = false
+  FLAG_SEND_EMPTY_RESULTS = false
+  FLAG_ALERT_ALLOW_SUBSCRIBE = false
+  FLAG_ALERT_INCLUDE_VIEW_LINK = true
+  FLAG_HAS_TOTALS = false
+  FLAG_INCLUDE_PERIOD_END_TRANSACTIONS = false
+  FLAG_BUILT_IN = false
+  FLAG_SEND_ON_UPDATE = false
+  FLAG_SHOW_AUDIT_TRAIL = false
+  _alias = "Custom Role Default View"
+}

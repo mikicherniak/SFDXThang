@@ -1,0 +1,83 @@
+workato.recipe__code _Test__My_Test_eshed_wk_sf_ns_sbox_Root_bbbbu_hissuuuuuum@uuuuuuuuuuum {
+  number = 0
+  provider = "netsuite"
+  name = "updated_saved_search_result"
+  as = "352680a0"
+  title = "New/updated standard records in a saved search"
+  description = '''
+          New or updated search result for
+          <span class="provider">Contact</span>
+          in <span class="provider">NetSuite</span>
+
+'''
+  keyword = "trigger"
+  dynamicPickListSelection = {
+    netsuite_search_type = "Contact"
+    object_list = [
+      {
+        label = "Contact"
+        value = "basic"
+      },
+    ]
+    join_field_list = [
+      {
+        label = "Contact : Email"
+        value = "basic.email"
+      },
+    ]
+  }
+  toggleCfg = {
+    saved_search = false
+  }
+  input = {
+    since = "#{_('data.workato.job_context.user_email')}"
+    netsuite_search_type = "Contact@@script"
+    saved_search = "#{_('data.workato.job_context.user_name')}"
+    object_list = "basic"
+    join_field_list = "basic.email"
+  }
+  block = [
+    {
+      number = 1
+      provider = "salesforce"
+      name = "create_custom_object"
+      as = "0281ac35"
+      title = "Create Account"
+      description = "Create <span class=\"provider\">Account</span> in <span class=\"provider\">Salesforce</span>"
+      keyword = "action"
+      dynamicPickListSelection = {
+        sobject_name = "Account"
+      }
+      input = {
+        sobject_name = "Account"
+        Name = "Eshed_Workato_Test"
+      }
+      uuid = "b1a8679c-343c-4e06-865c-dc69b882f2cd"
+    },
+    {
+      number = 2
+      provider = "netsuite"
+      name = "update_object"
+      as = "4e76ecc7"
+      keyword = "action"
+      dynamicPickListSelection = {
+        netsuite_object = "Customer"
+        custom_list = [
+          {
+            label = "Region"
+            value = "entityCustomField@26"
+          },
+        ]
+      }
+      input = {
+        netsuite_object = "Customer"
+        custom_list = "entityCustomField@26"
+      }
+      uuid = "3ef5d627-dd04-47e1-8720-a999211d5240"
+    },
+  ]
+  uuid = "29b2adcf-1ae4-4df6-ba9c-1ffdb8b35f89"
+  _parent = [
+    workato.recipe.instance._Test__My_Test_eshed_wk_sf_ns_sbox_Root_bbbbu@hissuuuuuum,
+  ]
+}

@@ -1,0 +1,5 @@
+workato.connection My_second_NetSuite_account@s {
+  application = "netsuite"
+  name = "My second NetSuite account"
+  folder_id = workato.folder.instance.eshed_wk_sf_ns_sbox_Root@bbbbu
+}

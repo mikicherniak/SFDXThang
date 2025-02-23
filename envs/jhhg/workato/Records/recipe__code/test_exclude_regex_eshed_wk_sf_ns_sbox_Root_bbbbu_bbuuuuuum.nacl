@@ -1,0 +1,27 @@
+workato.recipe__code test_exclude_regex_eshed_wk_sf_ns_sbox_Root_bbbbu_bbuuuuuum@uuuuuuuuum {
+  number = 0
+  provider = "salesforce"
+  name = "updated_custom_object"
+  as = "e659a37f"
+  keyword = "trigger"
+  dynamicPickListSelection = {
+    sobject_name = "Opportunity"
+  }
+  input = {
+    sobject_name = "Opportunity"
+  }
+  block = [
+    {
+      number = 1
+      keyword = "stop"
+      input = {
+        stop_with_error = "false"
+      }
+      uuid = "aa9141a6-62b7-48c4-9f3b-2770b7185b41"
+    },
+  ]
+  uuid = "63ee9156-5432-4c6a-aeeb-b62f0871f80a"
+  _parent = [
+    workato.recipe.instance.test_exclude_regex_eshed_wk_sf_ns_sbox_Root_bbbbu@bbuuuuuum,
+  ]
+}

@@ -1,0 +1,36 @@
+workato.recipe _Test__My_Test_eshed_wk_sf_ns_sbox_Root_bbbbu@hissuuuuuum {
+  name = "[Test] My Test"
+  trigger_application = "netsuite"
+  action_applications = [
+    "salesforce",
+  ]
+  applications = [
+    "netsuite",
+    "salesforce",
+  ]
+  description = "When there is a trigger event, do action"
+  folder_id = workato.folder.instance.eshed_wk_sf_ns_sbox_Root@bbbbu
+  running = false
+  stopped_at = "2023-05-08T02:13:22.095-07:00"
+  version_no = 7
+  config = [
+    {
+      keyword = "application"
+      name = "netsuite"
+      provider = "netsuite"
+      skip_validation = false
+      account_id = workato.connection.instance.My_second_NetSuite_account@s
+    },
+    {
+      keyword = "application"
+      name = "salesforce"
+      provider = "salesforce"
+      skip_validation = false
+      account_id = workato.connection.instance.My_second_Salesforce_account@s
+    },
+  ]
+  code = workato.recipe__code.instance._Test__My_Test_eshed_wk_sf_ns_sbox_Root_bbbbu_hissuuuuuum@uuuuuuuuuuum
+  author_name = "Environment Test"
+  version_author_name = "Workato @ Salto"
+  version_author_email = "workato@salto.io"
+}

@@ -1,0 +1,4 @@
+workato.folder eshed_wk_sf_ns_sbox_Root@bbbbu {
+  name = "eshed-wk-sf-ns-sbox"
+  parent_id = workato.folder.instance.Root
+}

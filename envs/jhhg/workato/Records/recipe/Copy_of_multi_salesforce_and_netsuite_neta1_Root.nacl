@@ -1,0 +1,43 @@
+workato.recipe Copy_of_multi_salesforce_and_netsuite_neta1_Root@sssssuu {
+  name = "Copy of multi salesforce and netsuite"
+  trigger_application = "salesforce"
+  action_applications = [
+    "rest",
+    "netsuite",
+  ]
+  applications = [
+    "salesforce",
+    "rest",
+    "netsuite",
+  ]
+  description = "When there is a trigger event, do action"
+  folder_id = workato.folder.instance.neta1_Root
+  running = false
+  version_no = 1
+  config = [
+    {
+      keyword = "application"
+      provider = "salesforce"
+      skip_validation = false
+      name = "salesforce"
+      account_id = workato.connection.instance.Neta_sfdev1@s
+    },
+    {
+      keyword = "application"
+      provider = "rest"
+      skip_validation = false
+      name = "rest"
+    },
+    {
+      keyword = "application"
+      provider = "netsuite"
+      skip_validation = false
+      name = "netsuite"
+      account_id = workato.connection.instance.Test_NetSuite_account@s
+    },
+  ]
+  code = workato.recipe__code.instance.Copy_of_multi_salesforce_and_netsuite_neta1_Root_sssssuu@uuuuuuum
+  author_name = "Environment Test"
+  version_author_name = "Workato @ Salto"
+  version_author_email = "workato@salto.io"
+}

@@ -1,0 +1,18 @@
+workato.recipe__code _Production__My_Test_Prod_eshed_wk_sf_ns_sbox_Root_bbbbu_hisssuuuuuum@uuuuuuuuuuuum {
+  number = 0
+  keyword = "trigger"
+  block = [
+    {
+      number = 1
+      keyword = "stop"
+      input = {
+        stop_with_error = "false"
+      }
+      uuid = "880cf2ed-2508-495a-a9b8-fc3ccda96904"
+    },
+  ]
+  uuid = "bf4d0576-c15d-4339-98cf-d35553554a8c"
+  _parent = [
+    workato.recipe.instance._Production__My_Test_Prod_eshed_wk_sf_ns_sbox_Root_bbbbu@hisssuuuuuum,
+  ]
+}

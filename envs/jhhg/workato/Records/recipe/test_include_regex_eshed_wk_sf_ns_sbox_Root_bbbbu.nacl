@@ -1,0 +1,33 @@
+workato.recipe test_include_regex_eshed_wk_sf_ns_sbox_Root_bbbbu@bbuuuuuum {
+  name = "test-include-regex"
+  trigger_application = "netsuite"
+  action_applications = [
+    "salesforce",
+  ]
+  applications = [
+    "netsuite",
+    "salesforce",
+  ]
+  description = "When there is a trigger event, do action"
+  folder_id = workato.folder.instance.eshed_wk_sf_ns_sbox_Root@bbbbu
+  running = false
+  version_no = 2
+  config = [
+    {
+      keyword = "application"
+      name = "netsuite"
+      provider = "netsuite"
+      skip_validation = false
+    },
+    {
+      keyword = "application"
+      name = "salesforce"
+      provider = "salesforce"
+      skip_validation = false
+    },
+  ]
+  code = workato.recipe__code.instance.test_include_regex_eshed_wk_sf_ns_sbox_Root_bbbbu_bbuuuuuum@uuuuuuuuum
+  author_name = "Environment Test"
+  version_author_name = "Workato @ Salto"
+  version_author_email = "workato@salto.io"
+}

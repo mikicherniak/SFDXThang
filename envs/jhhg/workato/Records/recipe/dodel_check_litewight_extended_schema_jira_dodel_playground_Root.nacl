@@ -1,0 +1,24 @@
+workato.recipe dodel_check_litewight_extended_schema_jira_dodel_playground_Root@ssssuuuu {
+  name = "dodel check litewight extended schema"
+  trigger_application = "jira"
+  applications = [
+    "jira",
+  ]
+  description = "When there is a trigger event, do action"
+  folder_id = workato.folder.instance.jira_dodel_playground_Root
+  running = false
+  version_no = 1
+  config = [
+    {
+      keyword = "application"
+      provider = "jira"
+      skip_validation = false
+      name = "jira"
+      account_id = workato.connection.instance.dodel_jira_connection@s
+    },
+  ]
+  code = workato.recipe__code.instance.dodel_check_litewight_extended_schema_jira_dodel_playground_Root_ssssuuuu@uuuuuuuum
+  author_name = "Environment Test"
+  version_author_name = "Workato @ Salto"
+  version_author_email = "workato@salto.io"
+}

@@ -1,0 +1,23 @@
+workato.recipe first_api_recipe_first_folder_dodel_playground_Root {
+  name = "first_api_recipe"
+  trigger_application = "workato_api_platform"
+  applications = [
+    "workato_api_platform",
+  ]
+  description = "When there is a new API request, do action"
+  folder_id = workato.folder.instance.first_folder_dodel_playground_Root
+  running = false
+  version_no = 1
+  config = [
+    {
+      keyword = "application"
+      provider = "workato_api_platform"
+      skip_validation = false
+      name = "workato_api_platform"
+    },
+  ]
+  code = workato.recipe__code.instance.first_api_recipe_first_folder_dodel_playground_Root
+  author_name = "Environment Test"
+  version_author_name = "Workato @ Salto"
+  version_author_email = "workato@salto.io"
+}

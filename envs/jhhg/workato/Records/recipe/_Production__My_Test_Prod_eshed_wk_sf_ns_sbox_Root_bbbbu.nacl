@@ -1,0 +1,11 @@
+workato.recipe _Production__My_Test_Prod_eshed_wk_sf_ns_sbox_Root_bbbbu@hisssuuuuuum {
+  name = "[Production] My Test Prod"
+  description = "When there is a trigger event, do action"
+  folder_id = workato.folder.instance.eshed_wk_sf_ns_sbox_Root@bbbbu
+  running = false
+  version_no = 2
+  code = workato.recipe__code.instance._Production__My_Test_Prod_eshed_wk_sf_ns_sbox_Root_bbbbu_hisssuuuuuum@uuuuuuuuuuuum
+  author_name = "Environment Test"
+  version_author_name = "Workato @ Salto"
+  version_author_email = "workato@salto.io"
+}

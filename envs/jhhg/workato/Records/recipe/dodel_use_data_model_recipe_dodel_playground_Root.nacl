@@ -1,0 +1,41 @@
+workato.recipe dodel_use_data_model_recipe_dodel_playground_Root {
+  name = "dodel_use_data_model_recipe"
+  trigger_application = "workato_app"
+  action_applications = [
+    "workato_recipe_function",
+    "workato_mapper",
+  ]
+  applications = [
+    "workato_app",
+    "workato_recipe_function",
+    "workato_mapper",
+  ]
+  description = "When there is a trigger event, do action"
+  folder_id = workato.folder.instance.dodel_playground_Root
+  running = false
+  version_no = 1
+  config = [
+    {
+      keyword = "application"
+      provider = "workato_app"
+      skip_validation = false
+      name = "workato_app"
+    },
+    {
+      keyword = "application"
+      provider = "workato_recipe_function"
+      skip_validation = false
+      name = "workato_recipe_function"
+    },
+    {
+      keyword = "application"
+      provider = "workato_mapper"
+      skip_validation = false
+      name = "workato_mapper"
+    },
+  ]
+  code = workato.recipe__code.instance.dodel_use_data_model_recipe_dodel_playground_Root
+  author_name = "Environment Test"
+  version_author_name = "Workato @ Salto"
+  version_author_email = "workato@salto.io"
+}

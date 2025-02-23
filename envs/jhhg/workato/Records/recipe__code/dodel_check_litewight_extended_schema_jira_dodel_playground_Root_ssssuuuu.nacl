@@ -1,0 +1,90 @@
+workato.recipe__code dodel_check_litewight_extended_schema_jira_dodel_playground_Root_ssssuuuu@uuuuuuuum {
+  number = 0
+  provider = "jira"
+  name = "updated_issue"
+  as = "d7945ec7"
+  keyword = "trigger"
+  input = {
+    since = "2023-09-04T00:00:00-07:00"
+  }
+  block = [
+    {
+      number = 1
+      keyword = "if"
+      input = {
+        type = "compound"
+        operand = "and"
+        conditions = [
+          {
+            operand = "contains"
+            lhs = "#{_('data.jira.d7945ec7.fields.description')}"
+            rhs = "dodel"
+            uuid = "condition-8f93ab08-fe4e-4221-92b3-d6d5f63b5f48"
+          },
+          {
+            operand = "blank"
+            lhs = "#{_('data.jira.d7945ec7.fields.assignee.accountId')}"
+            uuid = "condition-49c4acfc-e31e-48b8-a562-e214f9563d93"
+          },
+        ]
+      }
+      block = [
+        {
+          number = 2
+          provider = "jira"
+          name = "create_comment"
+          as = "a2e00242"
+          keyword = "action"
+          input = {
+            key = "#{_('data.jira.d7945ec7.id')}"
+            body = "dodel comment 4 - created by workato"
+          }
+          uuid = "adf55c23-fe4b-41a5-a8d3-b81debad1b6a"
+        },
+        {
+          number = 3
+          provider = "jira"
+          name = "update_issue"
+          as = "7cbd192d"
+          keyword = "action"
+          toggleCfg = {
+            project_issuetype = true
+          }
+          input = {
+            issuekey = "#{_('data.jira.d7945ec7.id')}"
+            assignee_id = "#{_('data.jira.d7945ec7.fields.reporter.accountId')}"
+            description = '''
+Atlas Projec Key : '#{_('data.jira.d7945ec7.fields.customfield_10035')}'
+Open Forms: '#{_('data.jira.d7945ec7.fields.customfield_10028')}'
+dodel 1 value : '#{_('data.jira.d7945ec7.fields.customfield_10037.first.value')}'
+'''
+            customfield_10040 = "a"
+            customfield_10041 = "d"
+            customfield_10038 = "f"
+            projectKey = "DOD"
+            issueType = "Task"
+          }
+          visible_config_fields = [
+            "reporter_id",
+            "description",
+            "priority",
+            "assignee_id",
+            "labels",
+            "issuekey",
+            "project_issuetype",
+            "customfield_10041",
+            "customfield_10040",
+            "customfield_10038",
+          ]
+          uuid = "48e4b676-6f6b-456f-8cb8-fdaf5af79830"
+        },
+      ]
+      uuid = "9978aac4-aa11-4183-98df-899afd09792e"
+    },
+  ]
+  uuid = "3b2e0bcb-c21e-4ec3-8fb1-945e0f61b2e8"
+  unfinished = false
+  _parent = [
+    workato.recipe.instance.dodel_check_litewight_extended_schema_jira_dodel_playground_Root@ssssuuuu,
+  ]
+}

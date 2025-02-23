@@ -1,0 +1,5 @@
+workato.connection My_second_Salesforce_account@s {
+  application = "salesforce"
+  name = "My second Salesforce account"
+  folder_id = workato.folder.instance.eshed_wk_sf_ns_sbox_Root@bbbbu
+}

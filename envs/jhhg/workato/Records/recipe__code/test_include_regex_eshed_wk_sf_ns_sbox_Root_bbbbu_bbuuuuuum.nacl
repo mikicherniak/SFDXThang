@@ -1,0 +1,56 @@
+workato.recipe__code test_include_regex_eshed_wk_sf_ns_sbox_Root_bbbbu_bbuuuuuum@uuuuuuuuum {
+  number = 0
+  provider = "netsuite"
+  name = "updated_saved_search_result"
+  as = "32fc9cdb"
+  keyword = "trigger"
+  block = [
+    {
+      number = 1
+      keyword = "if"
+      input = {
+        type = "compound"
+        operand = "and"
+        conditions = [
+          {
+            operand = "contains"
+            lhs = "#{_('data.workato.job_context.user_id')}"
+            rhs = "aaa"
+            uuid = "condition-1473e5ca-87ee-4328-9557-d5c88291252e"
+          },
+        ]
+      }
+      block = [
+        {
+          number = 2
+          provider = "salesforce"
+          name = "create_custom_object"
+          as = "acbbf290"
+          keyword = "action"
+          uuid = "27b026f7-6db6-4005-afa0-4ca5a40f438a"
+        },
+        {
+          number = 3
+          keyword = "stop"
+          input = {
+            stop_with_error = "false"
+          }
+          uuid = "50fb292c-d73e-4bb6-a3b5-b8e8b1f9dd3c"
+        },
+      ]
+      uuid = "42e2dd54-9cf6-427c-b291-589e2dc0a2a3"
+    },
+    {
+      number = 4
+      keyword = "stop"
+      input = {
+        stop_with_error = "true"
+      }
+      uuid = "cf895f85-a012-4f55-9e43-037def6d6d1e"
+    },
+  ]
+  uuid = "540f014f-167c-48b9-82c4-436d7adff4d0"
+  _parent = [
+    workato.recipe.instance.test_include_regex_eshed_wk_sf_ns_sbox_Root_bbbbu@bbuuuuuum,
+  ]
+}

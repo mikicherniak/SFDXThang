@@ -1,0 +1,132 @@
+netsuite.savedsearch customsearch_srd_search_test_123 {
+  scriptid = "customsearch_srd_search_test_123"
+  definition = "275f01ccfb12d25229dbed9515494a580811a3595369eb606b5b382245ce4c1e@GZC@2023.2.13@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"
+  search_filter = [
+    {
+      FLAG_DATE_TIME_SECOND = false
+      FLAG_FROM_AVAILABLE_FILTER = false
+      FLAG_NOT = false
+      FLAG_OR = false
+      FIELD_OR_CLAUSE_STATUS = "N"
+      FIELD_NUM_LEFT_PARENS = 0
+      FIELD_NUM_RIGHT_PARENS = 0
+      FIELD_FILTER_NAME = "Account_INTERNALID"
+      FIELD_ATTRIBUTE = "NONEOF"
+      FIELD_TYPE = "SELECT"
+      RECORDS = [
+        {
+          KEY_ID = 0
+          FIELD_VALUE = "1"
+        },
+      ]
+    },
+  ]
+  return_fields = [
+    {
+      FIELD_ALIAS = "Account_NAME"
+      FIELD_INDEX = 1
+      FIELD_FORMULA_ERROR = false
+    },
+    {
+      FIELD_ALIAS = "Account_DISPLAYNAME"
+      FIELD_INDEX = 2
+      FIELD_FORMULA_ERROR = false
+    },
+    {
+      FIELD_ALIAS = "Account_TYPE"
+      FIELD_INDEX = 3
+      FIELD_FORMULA_ERROR = false
+    },
+    {
+      FIELD_ALIAS = "Account_DESCRIPTION"
+      FIELD_INDEX = 4
+      FIELD_FORMULA_ERROR = false
+    },
+    {
+      FIELD_ALIAS = "Account_BALANCE"
+      FIELD_INDEX = 5
+      FIELD_FORMULA_ERROR = false
+    },
+  ]
+  detail_fields = [
+    {
+      FIELD_ALIAS = "Account_NAME"
+      FIELD_INDEX = 6
+      FIELD_FORMULA_ERROR = false
+    },
+    {
+      FIELD_ALIAS = "Account_DISPLAYNAME"
+      FIELD_INDEX = 6
+      FIELD_FORMULA_ERROR = false
+    },
+    {
+      FIELD_ALIAS = "Account_TYPE"
+      FIELD_INDEX = 6
+      FIELD_FORMULA_ERROR = false
+    },
+    {
+      FIELD_ALIAS = "Account_DESCRIPTION"
+      FIELD_INDEX = 6
+      FIELD_FORMULA_ERROR = false
+    },
+    {
+      FIELD_ALIAS = "Account_BALANCE"
+      FIELD_INDEX = 6
+      FIELD_FORMULA_ERROR = false
+    },
+  ]
+  sort_columns = [
+    {
+      KEY_FIELD = "Account_NAME"
+      FILELD_ORDER = 1
+      FLAG_DESCENDING = false
+    },
+  ]
+  audience = {
+    FLAG_AUDIENCE_ALL_CUSTOMERS = false
+    FLAG_AUDIENCE_ALL_EMPLOYEES = false
+    FLAG_AUDIENCE_ALL_PARTNERS = false
+    FLAG_AUDIENCE_ALL_ROLES = false
+    FLAG_AUDIENCE_ALL_VENDORS = false
+    FIELD_AUDIENCE_ROLES = "25"
+  }
+  KEY_SCRIPT_ID = "customsearch_srd_search_test_123"
+  FIELD_DEFAULT_NAME = "SRD - Custom search test"
+  FIELD_SEARCH_TYPE = "Account"
+  FLAG_PUBLIC = false
+  FLAG_LIST = false
+  FLAG_PORTLET = false
+  FLAG_MACHINE = false
+  FLAG_REMINDER = false
+  FLAG_SHOW_LINK = false
+  FLAG_PREFERRED_LIST = false
+  FLAG_PREFERRED_PORTLET = false
+  FLAG_PREFERRED_MACHINE = false
+  FLAG_PREFERRED_FORM = false
+  FLAG_PREFERRED_RESULTS = false
+  FLAG_VIEW_AS_REPORT = false
+  FLAG_VIEW_AS_GRAPH = false
+  FLAG_VIEW_AS_GRID = false
+  FLAG_UNRESTRICTED = false
+  FLAG_DISABLE_DRILL_DOWN = false
+  FLAG_HIDE_FILTER_DROPDOWNS = false
+  KEY_DEFAULT_TEXT_FIELD_FILTER = "STARTSWITH"
+  FLAG_AVAILABLE_AS_FEED = false
+  FLAG_GLOBAL_EDIT = false
+  FLAG_CSV = false
+  FLAG_EXCEL = false
+  FLAG_PDF = false
+  FLAG_TRIGGERED_ALERT = false
+  FLAG_SCHEDULED_ALERT = false
+  FLAG_SCHEDULED_ALERT_SUMMARIES = false
+  FLAG_SEND_EMPTY_RESULTS = false
+  FLAG_ALERT_ALLOW_SUBSCRIBE = false
+  FLAG_ALERT_INCLUDE_VIEW_LINK = true
+  FLAG_HAS_TOTALS = false
+  FLAG_INCLUDE_PERIOD_END_TRANSACTIONS = false
+  FLAG_BUILT_IN = false
+  FLAG_SEND_ON_UPDATE = false
+  FLAG_SHOW_AUDIT_TRAIL = false
+  KEY_AUDIENCE = 259
+  _alias = "SRD - Custom search test"
+}

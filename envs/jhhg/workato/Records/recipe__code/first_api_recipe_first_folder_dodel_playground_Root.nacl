@@ -1,0 +1,20 @@
+workato.recipe__code first_api_recipe_first_folder_dodel_playground_Root {
+  number = 0
+  provider = "workato_api_platform"
+  name = "receive_request"
+  as = "55467a7b"
+  keyword = "trigger"
+  input = {
+    request = {
+      content_type = "json"
+    }
+    response = {
+      content_type = "json"
+    }
+  }
+  comment = "Define the request and response parameters for this API endpoint"
+  uuid = "1446206d-8bc3-4bf7-9eed-3d3c56768fb9"
+  _parent = [
+    workato.recipe.instance.first_api_recipe_first_folder_dodel_playground_Root,
+  ]
+}

@@ -1,0 +1,204 @@
+netsuite.savedsearch customsearch_mkd_custom_search {
+  scriptid = "customsearch_mkd_custom_search"
+  definition = "7e1abc57f835654ca6c71a0531a41e2b8e9e6ba1a1cd9ffae3f6af209ef74555@GZC@2023.2.14@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"
+  search_filter = [
+    {
+      FLAG_DATE_TIME_SECOND = false
+      FLAG_FROM_AVAILABLE_FILTER = false
+      FLAG_NOT = false
+      FLAG_OR = false
+      FIELD_OR_CLAUSE_STATUS = "N"
+      FIELD_NUM_LEFT_PARENS = 0
+      FIELD_NUM_RIGHT_PARENS = 0
+      FIELD_FILTER_NAME = "Entity_DATECREATED"
+      FIELD_MODIFIER = "ONORAFTER"
+      FIELD_ATTRIBUTE = "FHBL"
+      FIELD_TYPE = "DATETIME"
+      RECORDS = [
+        {
+          KEY_ID = 0
+          FIELD_VALUE = "2022-01-01 08:00:00.0 UTC"
+        },
+        {
+          KEY_ID = 1
+          FIELD_VALUE = "2022-06-30 07:00:00.0 UTC"
+        },
+      ]
+    },
+    {
+      FLAG_DATE_TIME_SECOND = false
+      FLAG_FROM_AVAILABLE_FILTER = false
+      FLAG_NOT = false
+      FLAG_OR = false
+      FIELD_OR_CLAUSE_STATUS = "N"
+      FIELD_NUM_LEFT_PARENS = 0
+      FIELD_NUM_RIGHT_PARENS = 0
+      FIELD_FILTER_NAME = "Entity_COUNTRY"
+      FIELD_ATTRIBUTE = "ANYOF"
+      FIELD_TYPE = "SELECT"
+      RECORDS = [
+        {
+          KEY_ID = 0
+          FIELD_VALUE = "AF"
+        },
+        {
+          KEY_ID = 1
+          FIELD_VALUE = "AS"
+        },
+        {
+          KEY_ID = 2
+          FIELD_VALUE = "US"
+        },
+        {
+          KEY_ID = 3
+          FIELD_VALUE = "UM"
+        },
+        {
+          KEY_ID = 4
+          FIELD_VALUE = "UY"
+        },
+      ]
+    },
+  ]
+  return_fields = [
+    {
+      FIELD_ALIAS = "Entity_ENTITYID"
+      FIELD_INDEX = 1
+      FIELD_FORMULA_ERROR = false
+    },
+    {
+      FIELD_ALIAS = "Entity_ALTNAME"
+      FIELD_INDEX = 2
+      FIELD_FORMULA_ERROR = false
+    },
+    {
+      FIELD_ALIAS = "Entity_EMAIL"
+      FIELD_INDEX = 3
+      FIELD_FORMULA_ERROR = false
+    },
+    {
+      FIELD_ALIAS = "Entity_PHONE"
+      FIELD_INDEX = 4
+      FIELD_FORMULA_ERROR = false
+    },
+    {
+      FIELD_ALIAS = "Entity_ALTPHONE"
+      FIELD_INDEX = 5
+      FIELD_FORMULA_ERROR = false
+    },
+    {
+      FIELD_ALIAS = "Entity_FAX"
+      FIELD_INDEX = 6
+      FIELD_FORMULA_ERROR = false
+    },
+    {
+      FIELD_ALIAS = "Company_TYPE"
+      FIELD_INDEX = 7
+      FIELD_FORMULA_ERROR = false
+    },
+    {
+      FIELD_ALIAS = "Company_STATUS"
+      FIELD_INDEX = 8
+      FIELD_FORMULA_ERROR = false
+    },
+    {
+      FIELD_ALIAS = "Entity_ALTEMAIL"
+      FIELD_INDEX = 9
+      FIELD_FORMULA_ERROR = false
+    },
+  ]
+  detail_fields = [
+    {
+      FIELD_ALIAS = "Entity_ENTITYID"
+      FIELD_INDEX = 10
+      FIELD_FORMULA_ERROR = false
+    },
+    {
+      FIELD_ALIAS = "Entity_ALTNAME"
+      FIELD_INDEX = 10
+      FIELD_FORMULA_ERROR = false
+    },
+    {
+      FIELD_ALIAS = "Entity_EMAIL"
+      FIELD_INDEX = 10
+      FIELD_FORMULA_ERROR = false
+    },
+    {
+      FIELD_ALIAS = "Entity_PHONE"
+      FIELD_INDEX = 10
+      FIELD_FORMULA_ERROR = false
+    },
+    {
+      FIELD_ALIAS = "Entity_ALTPHONE"
+      FIELD_INDEX = 10
+      FIELD_FORMULA_ERROR = false
+    },
+    {
+      FIELD_ALIAS = "Entity_FAX"
+      FIELD_INDEX = 10
+      FIELD_FORMULA_ERROR = false
+    },
+    {
+      FIELD_ALIAS = "Company_TYPE"
+      FIELD_INDEX = 10
+      FIELD_FORMULA_ERROR = false
+    },
+    {
+      FIELD_ALIAS = "Company_STATUS"
+      FIELD_INDEX = 10
+      FIELD_FORMULA_ERROR = false
+    },
+    {
+      FIELD_ALIAS = "Entity_ALTEMAIL"
+      FIELD_INDEX = 10
+      FIELD_FORMULA_ERROR = false
+    },
+  ]
+  sort_columns = [
+    {
+      KEY_FIELD = "Entity_ENTITYID"
+      FILELD_ORDER = 1
+      FLAG_DESCENDING = false
+    },
+  ]
+  KEY_SCRIPT_ID = "customsearch_mkd_custom_search"
+  FIELD_DEFAULT_NAME = "MKD Custom Search TEST uhoh"
+  FIELD_SEARCH_TYPE = "Company"
+  FLAG_PUBLIC = false
+  FLAG_LIST = false
+  FLAG_PORTLET = false
+  FLAG_MACHINE = false
+  FLAG_REMINDER = false
+  FLAG_SHOW_LINK = false
+  FLAG_PREFERRED_LIST = false
+  FLAG_PREFERRED_PORTLET = false
+  FLAG_PREFERRED_MACHINE = false
+  FLAG_PREFERRED_FORM = false
+  FLAG_PREFERRED_RESULTS = false
+  FLAG_VIEW_AS_REPORT = false
+  FLAG_VIEW_AS_GRAPH = false
+  FLAG_VIEW_AS_GRID = false
+  FLAG_UNRESTRICTED = false
+  FLAG_DISABLE_DRILL_DOWN = false
+  FLAG_HIDE_FILTER_DROPDOWNS = false
+  KEY_DEFAULT_TEXT_FIELD_FILTER = "STARTSWITH"
+  FLAG_AVAILABLE_AS_FEED = false
+  FLAG_GLOBAL_EDIT = false
+  FLAG_CSV = false
+  FLAG_EXCEL = false
+  FLAG_PDF = false
+  FLAG_TRIGGERED_ALERT = false
+  FLAG_SCHEDULED_ALERT = false
+  FLAG_SCHEDULED_ALERT_SUMMARIES = false
+  FLAG_SEND_EMPTY_RESULTS = false
+  FLAG_ALERT_ALLOW_SUBSCRIBE = false
+  FLAG_ALERT_INCLUDE_VIEW_LINK = true
+  FLAG_HAS_TOTALS = false
+  FLAG_INCLUDE_PERIOD_END_TRANSACTIONS = false
+  FLAG_BUILT_IN = false
+  FLAG_SEND_ON_UPDATE = false
+  FLAG_SHOW_AUDIT_TRAIL = false
+  _alias = "MKD Custom Search TEST uhoh"
+  
+  
+}
