@@ -4,16 +4,11 @@ type salesforce.ContractContactRole {
     label = "Contact Role ID"
     queryable = true
     _hidden_value = true
-    updateable = false
-    createable = false
   }
   salesforce.Lookup ContractId {
     apiName = "ContractContactRole.ContractId"
     label = "Contract ID"
     _required = true
-    referenceTo = [
-      salesforce.Contract,
-    ]
     createable = true
     updateable = false
     relationshipName = "Contract"
@@ -23,9 +18,6 @@ type salesforce.ContractContactRole {
     apiName = "ContractContactRole.ContactId"
     label = "Contact ID"
     _required = true
-    referenceTo = [
-      salesforce.Contact,
-    ]
     createable = true
     updateable = true
     relationshipName = "Contact"
@@ -59,9 +51,6 @@ type salesforce.ContractContactRole {
   salesforce.Lookup CreatedById {
     apiName = "ContractContactRole.CreatedById"
     label = "Created By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "CreatedBy"
@@ -79,9 +68,6 @@ type salesforce.ContractContactRole {
   salesforce.Lookup LastModifiedById {
     apiName = "ContractContactRole.LastModifiedById"
     label = "Last Modified By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "LastModifiedBy"

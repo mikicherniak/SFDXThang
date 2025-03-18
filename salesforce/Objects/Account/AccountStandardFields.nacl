@@ -4,8 +4,6 @@ type salesforce.Account {
     label = "Account ID"
     queryable = true
     _hidden_value = true
-    updateable = false
-    createable = false
   }
   salesforce.Checkbox IsDeleted {
     apiName = "Account.IsDeleted"
@@ -19,9 +17,6 @@ type salesforce.Account {
   salesforce.Lookup MasterRecordId {
     apiName = "Account.MasterRecordId"
     label = "Master Record ID"
-    referenceTo = [
-      salesforce.Account,
-    ]
     createable = false
     updateable = false
     relationshipName = "MasterRecord"
@@ -35,19 +30,7 @@ type salesforce.Account {
     createable = true
     updateable = true
     queryable = true
-    trackFeedHistory = false
     valueSetName = salesforce.StandardValueSet.instance.AccountType
-  }
-  salesforce.Lookup ParentId {
-    apiName = "Account.ParentId"
-    label = "Parent Account ID"
-    referenceTo = [
-      salesforce.Account,
-    ]
-    createable = true
-    updateable = true
-    relationshipName = "Parent"
-    queryable = true
   }
   salesforce.Address BillingAddress {
     apiName = "Account.BillingAddress"
@@ -121,7 +104,6 @@ type salesforce.Account {
     createable = true
     updateable = true
     queryable = true
-    trackFeedHistory = false
     valueSetName = salesforce.StandardValueSet.instance.Industry
   }
   salesforce.Currency AnnualRevenue {
@@ -150,7 +132,6 @@ type salesforce.Account {
     createable = true
     updateable = true
     queryable = true
-    trackFeedHistory = false
     valueSetName = salesforce.StandardValueSet.instance.AccountOwnership
   }
   salesforce.Text TickerSymbol {
@@ -178,7 +159,6 @@ type salesforce.Account {
     createable = true
     updateable = true
     queryable = true
-    trackFeedHistory = false
     valueSetName = salesforce.StandardValueSet.instance.AccountRating
   }
   salesforce.Text Site {
@@ -194,15 +174,11 @@ type salesforce.Account {
   salesforce.Lookup OwnerId {
     apiName = "Account.OwnerId"
     label = "Owner ID"
-    referenceTo = [
-      salesforce.User,
-    ]
-    createable = false
-    updateable = false
+    createable = true
+    updateable = true
     relationshipName = "Owner"
     queryable = true
     _hidden_value = true
-    trackFeedHistory = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "Account.CreatedDate"
@@ -215,9 +191,6 @@ type salesforce.Account {
   salesforce.Lookup CreatedById {
     apiName = "Account.CreatedById"
     label = "Created By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "CreatedBy"
@@ -235,9 +208,6 @@ type salesforce.Account {
   salesforce.Lookup LastModifiedById {
     apiName = "Account.LastModifiedById"
     label = "Last Modified By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "LastModifiedBy"
@@ -284,56 +254,6 @@ type salesforce.Account {
   salesforce.Picklist CleanStatus {
     apiName = "Account.CleanStatus"
     label = "Clean Status"
-    valueSet = [
-      {
-        fullName = "Matched"
-        default = false
-        label = "In Sync"
-        isActive = true
-      },
-      {
-        fullName = "Different"
-        default = false
-        label = "Different"
-        isActive = true
-      },
-      {
-        fullName = "Acknowledged"
-        default = false
-        label = "Reviewed"
-        isActive = true
-      },
-      {
-        fullName = "NotFound"
-        default = false
-        label = "Not Found"
-        isActive = true
-      },
-      {
-        fullName = "Inactive"
-        default = false
-        label = "Inactive"
-        isActive = true
-      },
-      {
-        fullName = "Pending"
-        default = false
-        label = "Not Compared"
-        isActive = true
-      },
-      {
-        fullName = "SelectMatch"
-        default = false
-        label = "Select Match"
-        isActive = true
-      },
-      {
-        fullName = "Skipped"
-        default = false
-        label = "Skipped"
-        isActive = true
-      },
-    ]
     restricted = true
     createable = true
     updateable = true
@@ -346,7 +266,6 @@ type salesforce.Account {
     createable = true
     updateable = true
     queryable = true
-    trackFeedHistory = false
     valueSetName = salesforce.StandardValueSet.instance.LeadSource
   }
   salesforce.Text DunsNumber {
@@ -412,40 +331,21 @@ type salesforce.Account {
   salesforce.Lookup DandbCompanyId {
     apiName = "Account.DandbCompanyId"
     label = "D&B Company ID"
-    referenceTo = [
-      salesforce.DandBCompany,
-    ]
     createable = true
     updateable = true
     relationshipName = "DandbCompany"
     queryable = true
-    trackFeedHistory = false
   }
   salesforce.Lookup OperatingHoursId {
     apiName = "Account.OperatingHoursId"
     label = "Operating Hour ID"
-    referenceTo = [
-      salesforce.OperatingHours,
-    ]
     createable = true
     updateable = true
     relationshipName = "OperatingHours"
     queryable = true
-    trackFeedHistory = false
-  }
-  salesforce.Unknown Name {
-    apiName = "Account.Name"
-    trackFeedHistory = true
-    queryable = false
-    updateable = false
-    createable = false
-    _hidden_value = true
   }
   salesforce.Unknown Tier {
     apiName = "Account.Tier"
-    queryable = false
-    updateable = false
-    createable = false
     _hidden_value = true
   }
 }

@@ -4,6 +4,10 @@ salesforce.EventSettings {
   enableDynamicStreamingChannel = false
   enableLoginForensics = false
   enableStreamingApi = true
-  enableTerminateOldestSession = false
   enableTransactionSecurityPolicies = false
+  _alias = "Event"
+  bypassMeteringBlock = "false"
+  enableEventLogGeneration = false
+  enableLightningLoggerEvents = "false"
+  eventLogRetentionDuration = 0
 }

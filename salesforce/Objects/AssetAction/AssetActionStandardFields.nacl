@@ -4,8 +4,6 @@ type salesforce.AssetAction {
     label = "Asset Action ID"
     queryable = true
     _hidden_value = true
-    updateable = false
-    createable = false
   }
   salesforce.Checkbox IsDeleted {
     apiName = "AssetAction.IsDeleted"
@@ -35,9 +33,6 @@ type salesforce.AssetAction {
   salesforce.Lookup CreatedById {
     apiName = "AssetAction.CreatedById"
     label = "Created By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "CreatedBy"
@@ -55,9 +50,6 @@ type salesforce.AssetAction {
   salesforce.Lookup LastModifiedById {
     apiName = "AssetAction.LastModifiedById"
     label = "Last Modified By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "LastModifiedBy"
@@ -72,49 +64,10 @@ type salesforce.AssetAction {
     queryable = true
     _hidden_value = true
   }
-  salesforce.Lookup AssetId {
-    apiName = "AssetAction.AssetId"
-    label = "Asset ID"
-    _required = true
-    referenceTo = [
-      salesforce.Asset,
-    ]
-    createable = false
-    updateable = false
-    relationshipName = "Asset"
-    queryable = true
-    _hidden_value = true
-  }
   salesforce.Picklist Type {
     apiName = "AssetAction.Type"
     label = "Type"
     _required = true
-    valueSet = [
-      {
-        fullName = "Generate"
-        default = false
-        label = "Generate"
-        isActive = true
-      },
-      {
-        fullName = "Change"
-        default = false
-        label = "Change"
-        isActive = true
-      },
-      {
-        fullName = "Cancel"
-        default = false
-        label = "Cancel"
-        isActive = true
-      },
-      {
-        fullName = "Convert"
-        default = false
-        label = "Convert"
-        isActive = true
-      },
-    ]
     restricted = true
     createable = false
     updateable = false
@@ -125,62 +78,6 @@ type salesforce.AssetAction {
     apiName = "AssetAction.Category"
     label = "Category (Deprecated)"
     _required = true
-    valueSet = [
-      {
-        fullName = "Initial Sale"
-        default = false
-        label = "Initial Sale"
-        isActive = true
-      },
-      {
-        fullName = "Upsells"
-        default = false
-        label = "Upsells"
-        isActive = true
-      },
-      {
-        fullName = "Downsells"
-        default = false
-        label = "Downsells"
-        isActive = true
-      },
-      {
-        fullName = "Cross-Sells"
-        default = false
-        label = "Cross-Sells"
-        isActive = true
-      },
-      {
-        fullName = "Cancellations"
-        default = false
-        label = "Cancellations"
-        isActive = true
-      },
-      {
-        fullName = "Transfers"
-        default = false
-        label = "Transfers"
-        isActive = true
-      },
-      {
-        fullName = "Terms And Conditions Changes"
-        default = false
-        label = "Terms And Conditions Changes"
-        isActive = true
-      },
-      {
-        fullName = "Renewals"
-        default = false
-        label = "Renewals"
-        isActive = true
-      },
-      {
-        fullName = "Other"
-        default = false
-        label = "Other"
-        isActive = true
-      },
-    ]
     restricted = false
     createable = false
     updateable = false
@@ -190,62 +87,6 @@ type salesforce.AssetAction {
   salesforce.Picklist CategoryEnum {
     apiName = "AssetAction.CategoryEnum"
     label = "Business Category"
-    valueSet = [
-      {
-        fullName = "Initial Sale"
-        default = false
-        label = "Initial Sale"
-        isActive = true
-      },
-      {
-        fullName = "Upsells"
-        default = false
-        label = "Upsells"
-        isActive = true
-      },
-      {
-        fullName = "Downsells"
-        default = false
-        label = "Downsells"
-        isActive = true
-      },
-      {
-        fullName = "Cross-Sells"
-        default = false
-        label = "Cross-Sells"
-        isActive = true
-      },
-      {
-        fullName = "Cancellations"
-        default = false
-        label = "Cancellations"
-        isActive = true
-      },
-      {
-        fullName = "Transfers"
-        default = false
-        label = "Transfers"
-        isActive = true
-      },
-      {
-        fullName = "Terms And Conditions Changes"
-        default = false
-        label = "Terms And Conditions Changes"
-        isActive = true
-      },
-      {
-        fullName = "Renewals"
-        default = false
-        label = "Renewals"
-        isActive = true
-      },
-      {
-        fullName = "Other"
-        default = false
-        label = "Other"
-        isActive = true
-      },
-    ]
     restricted = true
     createable = false
     updateable = false
@@ -451,6 +292,16 @@ type salesforce.AssetAction {
     updateable = false
     scale = 2
     precision = 18
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.MasterDetail AssetId {
+    apiName = "AssetAction.AssetId"
+    relationshipName = "Asset"
+    _required = true
+    label = "Asset ID"
+    createable = false
+    updateable = false
     queryable = true
     _hidden_value = true
   }

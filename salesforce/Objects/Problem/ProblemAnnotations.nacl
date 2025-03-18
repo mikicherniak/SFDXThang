@@ -201,4 +201,8 @@ type salesforce.Problem {
       "Priority",
     ]
   }
+  _alias = "Problem"
+  topicsForObjects = {
+    enableTopics = false
+  }
 }

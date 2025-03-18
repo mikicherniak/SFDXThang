@@ -4,8 +4,6 @@ type salesforce.AssetRelationship {
     label = "Asset Relationship ID"
     queryable = true
     _hidden_value = true
-    updateable = false
-    createable = false
   }
   salesforce.Checkbox IsDeleted {
     apiName = "AssetRelationship.IsDeleted"
@@ -35,9 +33,6 @@ type salesforce.AssetRelationship {
   salesforce.Lookup CreatedById {
     apiName = "AssetRelationship.CreatedById"
     label = "Created By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "CreatedBy"
@@ -55,9 +50,6 @@ type salesforce.AssetRelationship {
   salesforce.Lookup LastModifiedById {
     apiName = "AssetRelationship.LastModifiedById"
     label = "Last Modified By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "LastModifiedBy"
@@ -72,31 +64,14 @@ type salesforce.AssetRelationship {
     queryable = true
     _hidden_value = true
   }
-  salesforce.Lookup AssetId {
-    apiName = "AssetRelationship.AssetId"
-    label = "Asset ID"
-    _required = true
-    referenceTo = [
-      salesforce.Asset,
-    ]
-    createable = true
-    updateable = false
-    relationshipName = "Asset"
-    queryable = true
-    trackHistory = false
-  }
   salesforce.Lookup RelatedAssetId {
     apiName = "AssetRelationship.RelatedAssetId"
     label = "Asset ID"
     _required = true
-    referenceTo = [
-      salesforce.Asset,
-    ]
     createable = true
     updateable = true
     relationshipName = "RelatedAsset"
     queryable = true
-    trackHistory = false
   }
   salesforce.DateTime FromDate {
     apiName = "AssetRelationship.FromDate"
@@ -115,30 +90,18 @@ type salesforce.AssetRelationship {
   salesforce.Picklist RelationshipType {
     apiName = "AssetRelationship.RelationshipType"
     label = "Relationship Type"
-    valueSet = [
-      {
-        fullName = "Replacement"
-        default = true
-        label = "Replacement"
-        isActive = true
-      },
-      {
-        fullName = "Upgrade"
-        default = false
-        label = "Upgrade"
-        isActive = true
-      },
-      {
-        fullName = "Crossgrade"
-        default = false
-        label = "Crossgrade"
-        isActive = true
-      },
-    ]
     restricted = false
     createable = true
     updateable = true
     queryable = true
-    trackHistory = false
+  }
+  salesforce.MasterDetail AssetId {
+    apiName = "AssetRelationship.AssetId"
+    relationshipName = "Asset"
+    _required = true
+    label = "Asset ID"
+    createable = true
+    updateable = false
+    queryable = true
   }
 }

@@ -205,7 +205,10 @@ type salesforce.ServiceResource {
       "LastModifiedDate",
     ]
   }
+  _alias = "Service Resource"
   topicsForObjects = {
     enableTopics = false
+  }
+  historyTrackedFields = {
   }
 }

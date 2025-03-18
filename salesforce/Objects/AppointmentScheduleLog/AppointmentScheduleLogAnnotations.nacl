@@ -60,4 +60,5 @@ type salesforce.AppointmentScheduleLog {
   label = "Appointment Schedule Log"
   enableFeeds = false
   externalSharingModel = "ControlledByParent"
+  _alias = "Appointment Schedule Log"
 }

@@ -235,6 +235,7 @@ type salesforce.ReturnOrderLineItem {
       "ChangeOrderItem",
     ]
   }
+  _alias = "Return Order Line Item"
   topicsForObjects = {
     enableTopics = false
   }

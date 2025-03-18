@@ -153,10 +153,15 @@ salesforce.Layout PaymentGatewayLog_Payment_Gateway_Log_Layout@bsss {
       customLabel = false
       detailHeading = false
       editHeading = false
+      layoutColumns = [
+        {
+        },
+      ]
       style = "CustomLinks"
     },
   ]
   showEmailCheckbox = false
   showRunAssignmentRulesCheckbox = false
   showSubmitAndAttachButton = false
+  _alias = "PaymentGatewayLog-Payment Gateway Log Layout"
 }

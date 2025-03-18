@@ -4,8 +4,6 @@ type salesforce.PartnerRole {
     label = "Partner Role Value ID"
     queryable = true
     _hidden_value = true
-    updateable = false
-    createable = false
   }
   salesforce.Text MasterLabel {
     apiName = "PartnerRole.MasterLabel"
@@ -54,9 +52,6 @@ type salesforce.PartnerRole {
   salesforce.Lookup CreatedById {
     apiName = "PartnerRole.CreatedById"
     label = "Created By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "CreatedBy"
@@ -74,9 +69,6 @@ type salesforce.PartnerRole {
   salesforce.Lookup LastModifiedById {
     apiName = "PartnerRole.LastModifiedById"
     label = "Last Modified By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "LastModifiedBy"

@@ -7,11 +7,19 @@ salesforce.LightningPage LightningSalesConsole_UtilityBar {
         {
           componentInstance = {
             componentName = "console:history"
+            identifier = "console_history"
           }
         },
         {
           componentInstance = {
             componentName = "notes:utilityBarNoteList"
+            identifier = "notes_utilityBarNoteList"
+          }
+        },
+        {
+          componentInstance = {
+            componentName = "runtime_sales_todo_list:unifiedToDoListAuraWrapper"
+            identifier = "runtime_sales_todo_list_unifiedToDoListAuraWrapper"
           }
         },
       ]
@@ -24,4 +32,5 @@ salesforce.LightningPage LightningSalesConsole_UtilityBar {
     name = "one:utilityBarTemplateDesktop"
   }
   type = "UtilityBar"
+  _alias = "LightningSalesConsole_UtilityBar"
 }

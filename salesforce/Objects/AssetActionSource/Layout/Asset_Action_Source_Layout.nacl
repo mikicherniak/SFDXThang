@@ -111,6 +111,10 @@ salesforce.Layout AssetActionSource_Asset_Action_Source_Layout@bsss {
       customLabel = false
       detailHeading = false
       editHeading = false
+      layoutColumns = [
+        {
+        },
+      ]
       style = "CustomLinks"
     },
   ]
@@ -120,4 +124,5 @@ salesforce.Layout AssetActionSource_Asset_Action_Source_Layout@bsss {
   _parent = [
     salesforce.AssetActionSource,
   ]
+  _alias = "AssetActionSource-Asset Action Source Layout"
 }

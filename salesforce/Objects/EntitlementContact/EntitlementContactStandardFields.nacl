@@ -4,8 +4,6 @@ type salesforce.EntitlementContact {
     label = "Entitlement Contact ID"
     queryable = true
     _hidden_value = true
-    updateable = false
-    createable = false
   }
   salesforce.Checkbox IsDeleted {
     apiName = "EntitlementContact.IsDeleted"
@@ -35,9 +33,6 @@ type salesforce.EntitlementContact {
   salesforce.Lookup CreatedById {
     apiName = "EntitlementContact.CreatedById"
     label = "Created By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "CreatedBy"
@@ -55,9 +50,6 @@ type salesforce.EntitlementContact {
   salesforce.Lookup LastModifiedById {
     apiName = "EntitlementContact.LastModifiedById"
     label = "Last Modified By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "LastModifiedBy"
@@ -72,28 +64,22 @@ type salesforce.EntitlementContact {
     queryable = true
     _hidden_value = true
   }
-  salesforce.Lookup EntitlementId {
+  salesforce.MasterDetail EntitlementId {
     apiName = "EntitlementContact.EntitlementId"
-    label = "Entitlement ID"
+    relationshipName = "Entitlement"
     _required = true
-    referenceTo = [
-      salesforce.Entitlement,
-    ]
+    label = "Entitlement ID"
     createable = true
     updateable = false
-    relationshipName = "Entitlement"
     queryable = true
   }
-  salesforce.Lookup ContactId {
+  salesforce.MasterDetail ContactId {
     apiName = "EntitlementContact.ContactId"
-    label = "Contact ID"
+    relationshipName = "Contact"
     _required = true
-    referenceTo = [
-      salesforce.Contact,
-    ]
+    label = "Contact ID"
     createable = true
     updateable = false
-    relationshipName = "Contact"
     queryable = true
   }
 }

@@ -3,4 +3,5 @@ salesforce.SharingRules Shift {
   _parent = [
     salesforce.Shift,
   ]
+  _alias = "Shift"
 }

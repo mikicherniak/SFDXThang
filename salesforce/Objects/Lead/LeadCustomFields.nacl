@@ -9,7 +9,6 @@ type salesforce.Lead {
     length = 15
     queryable = true
     externalId = false
-    trackFeedHistory = false
   }
   salesforce.Picklist ProductInterest__c {
     apiName = "Lead.ProductInterest__c"
@@ -35,8 +34,6 @@ type salesforce.Lead {
     createable = true
     updateable = true
     queryable = true
-    externalId = false
-    trackFeedHistory = false
     sorted = false
   }
   salesforce.Picklist Primary__c {
@@ -58,8 +55,6 @@ type salesforce.Lead {
     createable = true
     updateable = true
     queryable = true
-    externalId = false
-    trackFeedHistory = false
     sorted = false
   }
   salesforce.Text CurrentGenerators__c {
@@ -72,7 +67,6 @@ type salesforce.Lead {
     length = 100
     queryable = true
     externalId = false
-    trackFeedHistory = false
   }
   salesforce.Number NumberofLocations__c {
     apiName = "Lead.NumberofLocations__c"
@@ -84,6 +78,5 @@ type salesforce.Lead {
     unique = false
     queryable = true
     externalId = false
-    trackFeedHistory = false
   }
 }

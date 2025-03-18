@@ -66,4 +66,5 @@ salesforce.Layout ResourcePreference_Resource_Preference_Layout@bss {
   _parent = [
     salesforce.ResourcePreference,
   ]
+  _alias = "ResourcePreference-Resource Preference Layout"
 }

@@ -4,16 +4,11 @@ type salesforce.CollaborationGroupMember {
     label = "Group Member Id"
     queryable = true
     _hidden_value = true
-    updateable = false
-    createable = false
   }
   salesforce.Lookup CollaborationGroupId {
     apiName = "CollaborationGroupMember.CollaborationGroupId"
     label = "CollaborationGroup ID"
     _required = true
-    referenceTo = [
-      salesforce.CollaborationGroup,
-    ]
     createable = true
     updateable = false
     relationshipName = "CollaborationGroup"
@@ -23,9 +18,6 @@ type salesforce.CollaborationGroupMember {
     apiName = "CollaborationGroupMember.MemberId"
     label = "Member ID"
     _required = true
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = true
     updateable = false
     relationshipName = "Member"
@@ -34,20 +26,6 @@ type salesforce.CollaborationGroupMember {
   salesforce.Picklist CollaborationRole {
     apiName = "CollaborationGroupMember.CollaborationRole"
     label = "Group Member Role"
-    valueSet = [
-      {
-        fullName = "Admin"
-        default = false
-        label = "Manager"
-        isActive = true
-      },
-      {
-        fullName = "Standard"
-        default = false
-        label = "Member"
-        isActive = true
-      },
-    ]
     restricted = true
     createable = true
     updateable = true
@@ -56,32 +34,6 @@ type salesforce.CollaborationGroupMember {
   salesforce.Picklist NotificationFrequency {
     apiName = "CollaborationGroupMember.NotificationFrequency"
     label = "Notification Frequency"
-    valueSet = [
-      {
-        fullName = "P"
-        default = false
-        label = "Email on Each Post"
-        isActive = true
-      },
-      {
-        fullName = "D"
-        default = false
-        label = "Daily Digests"
-        isActive = true
-      },
-      {
-        fullName = "W"
-        default = false
-        label = "Weekly Digests"
-        isActive = true
-      },
-      {
-        fullName = "N"
-        default = true
-        label = "Never"
-        isActive = true
-      },
-    ]
     restricted = true
     createable = true
     updateable = true
@@ -98,9 +50,6 @@ type salesforce.CollaborationGroupMember {
   salesforce.Lookup CreatedById {
     apiName = "CollaborationGroupMember.CreatedById"
     label = "Created By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "CreatedBy"
@@ -118,9 +67,6 @@ type salesforce.CollaborationGroupMember {
   salesforce.Lookup LastModifiedById {
     apiName = "CollaborationGroupMember.LastModifiedById"
     label = "Last Modified By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "LastModifiedBy"

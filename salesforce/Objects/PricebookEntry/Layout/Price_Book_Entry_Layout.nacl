@@ -58,6 +58,10 @@ salesforce.Layout PricebookEntry_Price_Book_Entry_Layout@bsss {
       customLabel = false
       detailHeading = false
       editHeading = false
+      layoutColumns = [
+        {
+        },
+      ]
       style = "CustomLinks"
     },
   ]
@@ -74,4 +78,5 @@ salesforce.Layout PricebookEntry_Price_Book_Entry_Layout@bsss {
   _parent = [
     salesforce.PricebookEntry,
   ]
+  _alias = "PricebookEntry-Price Book Entry Layout"
 }

@@ -2,14 +2,15 @@ salesforce.ListView FinanceBalanceSnapshot_mine {
   fullName = "FinanceBalanceSnapshot.mine"
   columns = [
     "Name",
-    "Balance",
+    salesforce.FinanceBalanceSnapshot.field.Balance,
     "ReferenceEntity",
-    "TransactionDate",
-    "EffectiveDate",
+    salesforce.FinanceBalanceSnapshot.field.TransactionDate,
+    salesforce.FinanceBalanceSnapshot.field.EffectiveDate,
   ]
   filterScope = "Mine"
   label = "My Finance Balance Snapshots"
   _parent = [
     salesforce.FinanceBalanceSnapshot,
   ]
+  _alias = "My Finance Balance Snapshots"
 }

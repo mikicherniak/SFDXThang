@@ -76,6 +76,8 @@ salesforce.Layout PaymentAuthorization_Payment_Authorization_Layout@bss {
             },
           ]
         },
+        {
+        },
       ]
       style = "TwoColumnsLeftToRight"
     },
@@ -177,6 +179,10 @@ salesforce.Layout PaymentAuthorization_Payment_Authorization_Layout@bss {
       customLabel = false
       detailHeading = false
       editHeading = false
+      layoutColumns = [
+        {
+        },
+      ]
       style = "CustomLinks"
     },
   ]
@@ -186,4 +192,5 @@ salesforce.Layout PaymentAuthorization_Payment_Authorization_Layout@bss {
   _parent = [
     salesforce.PaymentAuthorization,
   ]
+  _alias = "PaymentAuthorization-Payment Authorization Layout"
 }

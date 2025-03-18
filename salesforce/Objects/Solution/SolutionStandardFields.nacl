@@ -4,8 +4,6 @@ type salesforce.Solution {
     label = "Solution ID"
     queryable = true
     _hidden_value = true
-    updateable = false
-    createable = false
   }
   salesforce.Checkbox IsDeleted {
     apiName = "Solution.IsDeleted"
@@ -59,7 +57,6 @@ type salesforce.Solution {
     createable = true
     updateable = true
     queryable = true
-    trackHistory = true
     valueSetName = salesforce.StandardValueSet.instance.SolutionStatus
   }
   salesforce.Checkbox IsReviewed {
@@ -82,11 +79,8 @@ type salesforce.Solution {
   salesforce.Lookup OwnerId {
     apiName = "Solution.OwnerId"
     label = "Owner ID"
-    referenceTo = [
-      salesforce.User,
-    ]
-    createable = false
-    updateable = false
+    createable = true
+    updateable = true
     relationshipName = "Owner"
     queryable = true
     _hidden_value = true
@@ -102,9 +96,6 @@ type salesforce.Solution {
   salesforce.Lookup CreatedById {
     apiName = "Solution.CreatedById"
     label = "Created By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "CreatedBy"
@@ -122,9 +113,6 @@ type salesforce.Solution {
   salesforce.Lookup LastModifiedById {
     apiName = "Solution.LastModifiedById"
     label = "Last Modified By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "LastModifiedBy"

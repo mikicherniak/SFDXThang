@@ -31,6 +31,10 @@ salesforce.Layout CreditMemoLine_Credit_Memo_Line_Layout@bsss {
             },
             {
               behavior = "Edit"
+              field = salesforce.CreditMemoLine.field.ReferenceEntityItemId
+            },
+            {
+              behavior = "Edit"
               field = salesforce.CreditMemoLine.field.ReferenceEntityItemType
             },
           ]
@@ -79,6 +83,8 @@ salesforce.Layout CreditMemoLine_Credit_Memo_Line_Layout@bsss {
               field = salesforce.CreditMemoLine.field.TaxAmount
             },
           ]
+        },
+        {
         },
       ]
       style = "TwoColumnsLeftToRight"
@@ -153,6 +159,10 @@ salesforce.Layout CreditMemoLine_Credit_Memo_Line_Layout@bsss {
       customLabel = false
       detailHeading = false
       editHeading = false
+      layoutColumns = [
+        {
+        },
+      ]
       style = "CustomLinks"
     },
   ]
@@ -162,4 +172,5 @@ salesforce.Layout CreditMemoLine_Credit_Memo_Line_Layout@bsss {
   _parent = [
     salesforce.CreditMemoLine,
   ]
+  _alias = "CreditMemoLine-Credit Memo Line Layout"
 }

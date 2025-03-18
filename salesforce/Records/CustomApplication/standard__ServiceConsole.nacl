@@ -164,6 +164,8 @@ salesforce.CustomApplication standard__ServiceConsole {
   defaultLandingTab = "standard-home"
   isNavAutoTempTabsDisabled = false
   isNavPersonalizationDisabled = false
+  isNavTabPersistenceDisabled = false
+  isOmniPinnedViewEnabled = false
   isServiceCloudConsole = true
   preferences = {
     enableCustomizeMyTabs = false
@@ -205,4 +207,5 @@ salesforce.CustomApplication standard__ServiceConsole {
       },
     ]
   }
+  _alias = "standard__ServiceConsole"
 }

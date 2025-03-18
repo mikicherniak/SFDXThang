@@ -5,4 +5,5 @@ salesforce.ListView OperatingHours_All_OperatingHours {
   _parent = [
     salesforce.OperatingHours,
   ]
+  _alias = "All Operating Hours"
 }

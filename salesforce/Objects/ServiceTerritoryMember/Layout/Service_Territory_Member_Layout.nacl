@@ -114,4 +114,5 @@ salesforce.Layout ServiceTerritoryMember_Service_Territory_Member_Layout@bsss {
   _parent = [
     salesforce.ServiceTerritoryMember,
   ]
+  _alias = "ServiceTerritoryMember-Service Territory Member Layout"
 }

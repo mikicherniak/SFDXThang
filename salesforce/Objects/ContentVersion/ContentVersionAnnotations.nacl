@@ -99,4 +99,9 @@ type salesforce.ContentVersion {
       "VERSION.OWNER",
     ]
   }
+  _alias = "Content Version"
+  historyTrackedFields = {
+    SharingOption = salesforce.ContentVersion.field.SharingOption
+    SharingPrivacy = salesforce.ContentVersion.field.SharingPrivacy
+  }
 }

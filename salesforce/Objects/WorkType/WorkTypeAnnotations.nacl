@@ -207,4 +207,5 @@ type salesforce.WorkType {
       "DurationType",
     ]
   }
+  _alias = "Work Type"
 }

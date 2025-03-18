@@ -15,7 +15,11 @@ salesforce.Layout WebCartAdjustmentBasis_Cart_Adjustment_Basis_Layout@bsss {
             },
             {
               behavior = "Required"
-              field = "AdjustmentBasisDetail"
+              field = salesforce.WebCartAdjustmentBasis.field.AdjustmentBasisDetail
+            },
+            {
+              behavior = "Required"
+              field = salesforce.WebCartAdjustmentBasis.field.AdjustmentBasisReferenceId
             },
           ]
         },
@@ -26,6 +30,10 @@ salesforce.Layout WebCartAdjustmentBasis_Cart_Adjustment_Basis_Layout@bsss {
       customLabel = false
       detailHeading = false
       editHeading = false
+      layoutColumns = [
+        {
+        },
+      ]
       style = "CustomLinks"
     },
   ]
@@ -35,4 +43,5 @@ salesforce.Layout WebCartAdjustmentBasis_Cart_Adjustment_Basis_Layout@bsss {
   _parent = [
     salesforce.WebCartAdjustmentBasis,
   ]
+  _alias = "WebCartAdjustmentBasis-Cart Adjustment Basis Layout"
 }

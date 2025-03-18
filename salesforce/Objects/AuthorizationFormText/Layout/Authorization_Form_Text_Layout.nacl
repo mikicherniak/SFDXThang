@@ -10,6 +10,10 @@ salesforce.Layout AuthorizationFormText_Authorization_Form_Text_Layout@bsss {
         {
           layoutItems = [
             {
+              behavior = "Edit"
+              field = salesforce.AuthorizationFormText.field.DetailAuthorizationFormText
+            },
+            {
               behavior = "Required"
               field = salesforce.AuthorizationFormText.field.Name
             },
@@ -46,9 +50,18 @@ salesforce.Layout AuthorizationFormText_Authorization_Form_Text_Layout@bsss {
       customLabel = false
       detailHeading = false
       editHeading = false
+      layoutColumns = [
+        {
+        },
+      ]
       style = "CustomLinks"
     },
   ]
+  miniLayout = {
+    fields = [
+      "DetailAuthorizationFormText",
+    ]
+  }
   relatedLists = [
     {
       fields = [
@@ -68,4 +81,5 @@ salesforce.Layout AuthorizationFormText_Authorization_Form_Text_Layout@bsss {
   _parent = [
     salesforce.AuthorizationFormText,
   ]
+  _alias = "AuthorizationFormText-Authorization Form Text Layout"
 }

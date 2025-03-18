@@ -18,4 +18,6 @@ salesforce.UserInterfaceSettings {
   enableQuickCreate = true
   enableRelatedListHovers = "true"
   enableTabOrganizer = "true"
+  _alias = "UserInterface"
+  dynamicMruActionsOff = "false"
 }

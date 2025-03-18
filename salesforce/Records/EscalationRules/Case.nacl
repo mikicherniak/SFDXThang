@@ -27,8 +27,8 @@ salesforce.EscalationRules Case {
           assignedTo = "miki.chernyak+dev1@salto.io"
           assignedToTemplate = "unfiled$public/SupportEscalatedCaseReassignment"
           assignedToType = "User"
-          minutesToEscalation = "120"
-          notifyCaseOwner = "false"
+          minutesToEscalation = 120
+          notifyCaseOwner = false
           notifyTo = "miki.chernyak+dev1@salto.io"
           notifyToTemplate = "unfiled$public/SupportEscalatedCaseNotification"
         }
@@ -57,8 +57,8 @@ salesforce.EscalationRules Case {
           assignedTo = "miki.chernyak+dev1@salto.io"
           assignedToTemplate = "unfiled$public/SupportEscalatedCaseReassignment"
           assignedToType = "User"
-          minutesToEscalation = "360"
-          notifyCaseOwner = "false"
+          minutesToEscalation = 360
+          notifyCaseOwner = false
           notifyTo = "miki.chernyak+dev1@salto.io"
           notifyToTemplate = "unfiled$public/SupportEscalatedCaseNotification"
         }
@@ -87,8 +87,8 @@ salesforce.EscalationRules Case {
           assignedTo = "miki.chernyak+dev1@salto.io"
           assignedToTemplate = "unfiled$public/SupportEscalatedCaseReassignment"
           assignedToType = "User"
-          minutesToEscalation = "240"
-          notifyCaseOwner = "false"
+          minutesToEscalation = 240
+          notifyCaseOwner = false
           notifyTo = "miki.chernyak+dev1@salto.io"
           notifyToTemplate = "unfiled$public/SupportEscalatedCaseNotification"
         }
@@ -117,8 +117,8 @@ salesforce.EscalationRules Case {
           assignedTo = "miki.chernyak+dev1@salto.io"
           assignedToTemplate = "unfiled$public/SupportEscalatedCaseReassignment"
           assignedToType = "User"
-          minutesToEscalation = "480"
-          notifyCaseOwner = "false"
+          minutesToEscalation = 480
+          notifyCaseOwner = false
           notifyTo = "miki.chernyak+dev1@salto.io"
           notifyToTemplate = "unfiled$public/SupportEscalatedCaseNotification"
         }
@@ -142,8 +142,8 @@ salesforce.EscalationRules Case {
           assignedTo = "miki.chernyak+dev1@salto.io"
           assignedToTemplate = "unfiled$public/SupportEscalatedCaseReassignment"
           assignedToType = "User"
-          minutesToEscalation = "720"
-          notifyCaseOwner = "false"
+          minutesToEscalation = 720
+          notifyCaseOwner = false
           notifyTo = "miki.chernyak+dev1@salto.io"
           notifyToTemplate = "unfiled$public/SupportEscalatedCaseNotification"
         }
@@ -167,8 +167,8 @@ salesforce.EscalationRules Case {
           assignedTo = "miki.chernyak+dev1@salto.io"
           assignedToTemplate = "unfiled$public/SupportEscalatedCaseReassignment"
           assignedToType = "User"
-          minutesToEscalation = "1440"
-          notifyCaseOwner = "false"
+          minutesToEscalation = 1440
+          notifyCaseOwner = false
           notifyTo = "miki.chernyak+dev1@salto.io"
           notifyToTemplate = "unfiled$public/SupportEscalatedCaseNotification"
         }
@@ -192,8 +192,8 @@ salesforce.EscalationRules Case {
           assignedTo = "miki.chernyak+dev1@salto.io"
           assignedToTemplate = "unfiled$public/SupportEscalatedCaseReassignment"
           assignedToType = "User"
-          minutesToEscalation = "360"
-          notifyCaseOwner = "false"
+          minutesToEscalation = 360
+          notifyCaseOwner = false
           notifyTo = "miki.chernyak+dev1@salto.io"
           notifyToTemplate = "unfiled$public/SupportEscalatedCaseNotification"
         }
@@ -217,8 +217,8 @@ salesforce.EscalationRules Case {
           assignedTo = "miki.chernyak+dev1@salto.io"
           assignedToTemplate = "unfiled$public/SupportEscalatedCaseReassignment"
           assignedToType = "User"
-          minutesToEscalation = "1080"
-          notifyCaseOwner = "false"
+          minutesToEscalation = 1080
+          notifyCaseOwner = false
           notifyTo = "miki.chernyak+dev1@salto.io"
           notifyToTemplate = "unfiled$public/SupportEscalatedCaseNotification"
         }
@@ -226,4 +226,5 @@ salesforce.EscalationRules Case {
       },
     ]
   }
+  _alias = "Case"
 }

@@ -4,8 +4,6 @@ type salesforce.CartValidationOutput {
     label = "Cart Validation Output ID"
     queryable = true
     _hidden_value = true
-    updateable = false
-    createable = false
   }
   salesforce.Checkbox IsDeleted {
     apiName = "CartValidationOutput.IsDeleted"
@@ -38,9 +36,6 @@ type salesforce.CartValidationOutput {
   salesforce.Lookup CreatedById {
     apiName = "CartValidationOutput.CreatedById"
     label = "Created By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "CreatedBy"
@@ -58,9 +53,6 @@ type salesforce.CartValidationOutput {
   salesforce.Lookup LastModifiedById {
     apiName = "CartValidationOutput.LastModifiedById"
     label = "Last Modified By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "LastModifiedBy"
@@ -79,9 +71,6 @@ type salesforce.CartValidationOutput {
     apiName = "CartValidationOutput.CartId"
     label = "Cart ID"
     _required = true
-    referenceTo = [
-      salesforce.WebCart,
-    ]
     createable = true
     updateable = false
     relationshipName = "Cart"
@@ -91,12 +80,6 @@ type salesforce.CartValidationOutput {
     apiName = "CartValidationOutput.RelatedEntityId"
     label = "Cart Delivery Group ID or Cart Item ID or Web Cart ID"
     _required = true
-    referenceTo = [
-      salesforce.CartDeliveryGroup,
-      salesforce.CartItem,
-      salesforce.CartTax,
-      salesforce.WebCart,
-    ]
     createable = true
     updateable = true
     relationshipName = "RelatedEntity"
@@ -105,9 +88,6 @@ type salesforce.CartValidationOutput {
   salesforce.Lookup BackgroundOperationId {
     apiName = "CartValidationOutput.BackgroundOperationId"
     label = "Background Operation ID"
-    referenceTo = [
-      "BackgroundOperation",
-    ]
     createable = true
     updateable = true
     relationshipName = "BackgroundOperation"
@@ -117,50 +97,6 @@ type salesforce.CartValidationOutput {
     apiName = "CartValidationOutput.Type"
     label = "Type"
     _required = true
-    valueSet = [
-      {
-        fullName = "Inventory"
-        default = false
-        label = "Inventory"
-        isActive = true
-      },
-      {
-        fullName = "Taxes"
-        default = false
-        label = "Taxes"
-        isActive = true
-      },
-      {
-        fullName = "Pricing"
-        default = false
-        label = "Pricing"
-        isActive = true
-      },
-      {
-        fullName = "Shipping"
-        default = false
-        label = "Shipping"
-        isActive = true
-      },
-      {
-        fullName = "Entitlement"
-        default = false
-        label = "Entitlement"
-        isActive = true
-      },
-      {
-        fullName = "SystemError"
-        default = false
-        label = "SystemError"
-        isActive = true
-      },
-      {
-        fullName = "Other"
-        default = false
-        label = "Other"
-        isActive = true
-      },
-    ]
     restricted = true
     createable = true
     updateable = true
@@ -170,26 +106,6 @@ type salesforce.CartValidationOutput {
     apiName = "CartValidationOutput.Level"
     label = "Level"
     _required = true
-    valueSet = [
-      {
-        fullName = "Info"
-        default = false
-        label = "Info"
-        isActive = true
-      },
-      {
-        fullName = "Error"
-        default = false
-        label = "Error"
-        isActive = true
-      },
-      {
-        fullName = "Warning"
-        default = false
-        label = "Warning"
-        isActive = true
-      },
-    ]
     restricted = true
     createable = true
     updateable = true

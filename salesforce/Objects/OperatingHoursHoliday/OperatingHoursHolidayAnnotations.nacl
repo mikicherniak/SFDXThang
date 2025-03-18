@@ -207,4 +207,5 @@ type salesforce.OperatingHoursHoliday {
       "OperatingHours",
     ]
   }
+  _alias = "Operating Hours Holiday"
 }

@@ -45,4 +45,5 @@ salesforce.Layout WorkTypeGroupMember_Work_Type_Group_Member_Layout@bssss {
   _parent = [
     salesforce.WorkTypeGroupMember,
   ]
+  _alias = "WorkTypeGroupMember-Work Type Group Member Layout"
 }

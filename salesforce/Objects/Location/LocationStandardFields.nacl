@@ -1,25 +1,22 @@
 type salesforce.Location {
+  salesforce.Lookup VisitorAddressId {
+    apiName = "Location.VisitorAddressId"
+    _hidden_value = true
+  }
   serviceid Id {
     apiName = "Location.Id"
     label = "Location ID"
     queryable = true
     _hidden_value = true
-    updateable = false
-    createable = false
   }
   salesforce.Lookup OwnerId {
     apiName = "Location.OwnerId"
     label = "Owner ID"
-    referenceTo = [
-      salesforce.Group,
-      salesforce.User,
-    ]
-    createable = false
-    updateable = false
+    createable = true
+    updateable = true
     relationshipName = "Owner"
     queryable = true
     _hidden_value = true
-    trackHistory = false
   }
   salesforce.Checkbox IsDeleted {
     apiName = "Location.IsDeleted"
@@ -52,9 +49,6 @@ type salesforce.Location {
   salesforce.Lookup CreatedById {
     apiName = "Location.CreatedById"
     label = "Created By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "CreatedBy"
@@ -72,9 +66,6 @@ type salesforce.Location {
   salesforce.Lookup LastModifiedById {
     apiName = "Location.LastModifiedById"
     label = "Last Modified By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "LastModifiedBy"
@@ -96,7 +87,6 @@ type salesforce.Location {
     createable = true
     updateable = true
     queryable = true
-    trackHistory = false
   }
   salesforce.Checkbox IsMobile {
     apiName = "Location.IsMobile"
@@ -117,14 +107,10 @@ type salesforce.Location {
   salesforce.Lookup RootLocationId {
     apiName = "Location.RootLocationId"
     label = "Root Location ID"
-    referenceTo = [
-      salesforce.Location,
-    ]
     createable = false
     updateable = false
     relationshipName = "RootLocation"
     queryable = true
-    trackHistory = false
     _hidden_value = true
   }
   salesforce.Text ExternalReference {
@@ -140,117 +126,69 @@ type salesforce.Location {
   salesforce.Lookup LogoId {
     apiName = "Location.LogoId"
     label = "Asset File ID"
-    referenceTo = [
-      "ContentAsset",
-    ]
     createable = true
     updateable = true
     relationshipName = "Logo"
     queryable = true
-    trackHistory = false
   }
   salesforce.Unknown CloseDate {
     apiName = "Location.CloseDate"
-    trackHistory = false
-    queryable = false
-    updateable = false
-    createable = false
     _hidden_value = true
   }
   salesforce.Unknown ConstructionEndDate {
     apiName = "Location.ConstructionEndDate"
-    trackHistory = false
-    queryable = false
-    updateable = false
-    createable = false
     _hidden_value = true
   }
   salesforce.Unknown ConstructionStartDate {
     apiName = "Location.ConstructionStartDate"
-    trackHistory = false
-    queryable = false
-    updateable = false
-    createable = false
     _hidden_value = true
   }
   salesforce.Unknown Description {
     apiName = "Location.Description"
-    trackHistory = false
-    queryable = false
-    updateable = false
-    createable = false
     _hidden_value = true
   }
   salesforce.Unknown DrivingDirections {
     apiName = "Location.DrivingDirections"
-    trackHistory = false
-    queryable = false
-    updateable = false
-    createable = false
     _hidden_value = true
   }
   salesforce.Unknown Location {
     apiName = "Location.Location"
-    trackHistory = false
-    queryable = false
-    updateable = false
-    createable = false
     _hidden_value = true
   }
   salesforce.Unknown LocationLevel {
     apiName = "Location.LocationLevel"
-    trackHistory = false
-    queryable = false
-    updateable = false
-    createable = false
     _hidden_value = true
   }
   salesforce.Unknown OpenDate {
     apiName = "Location.OpenDate"
-    trackHistory = false
-    queryable = false
-    updateable = false
-    createable = false
+    _hidden_value = true
+  }
+  salesforce.Hierarchy ParentLocationId {
+    apiName = "Location.ParentLocationId"
     _hidden_value = true
   }
   salesforce.Unknown PossessionDate {
     apiName = "Location.PossessionDate"
-    trackHistory = false
-    queryable = false
-    updateable = false
-    createable = false
     _hidden_value = true
   }
   salesforce.Unknown RemodelEndDate {
     apiName = "Location.RemodelEndDate"
-    trackHistory = false
-    queryable = false
-    updateable = false
-    createable = false
     _hidden_value = true
   }
   salesforce.Unknown RemodelStartDate {
     apiName = "Location.RemodelStartDate"
-    trackHistory = false
-    queryable = false
-    updateable = false
-    createable = false
-    _hidden_value = true
-  }
-  salesforce.Unknown ShouldSyncWithOci {
-    apiName = "Location.ShouldSyncWithOci"
-    trackHistory = false
-    queryable = false
-    updateable = false
-    createable = false
     _hidden_value = true
   }
   salesforce.Unknown TimeZone {
     apiName = "Location.TimeZone"
-    trackHistory = false
-    queryable = false
-    updateable = false
-    createable = false
     _hidden_value = true
+  }
+  salesforce.Checkbox ShouldSyncWithOci {
+    apiName = "Location.ShouldSyncWithOci"
+    defaultValue = false
+    label = "Sync with OCI"
+    createable = true
+    updateable = true
+    queryable = true
   }
 }

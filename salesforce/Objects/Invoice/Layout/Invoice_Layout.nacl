@@ -84,6 +84,8 @@ salesforce.Layout Invoice_Invoice_Layout@bs {
             },
           ]
         },
+        {
+        },
       ]
       style = "TwoColumnsLeftToRight"
     },
@@ -124,6 +126,10 @@ salesforce.Layout Invoice_Invoice_Layout@bs {
       customLabel = false
       detailHeading = false
       editHeading = false
+      layoutColumns = [
+        {
+        },
+      ]
       style = "CustomLinks"
     },
   ]
@@ -133,4 +139,5 @@ salesforce.Layout Invoice_Invoice_Layout@bs {
   _parent = [
     salesforce.Invoice,
   ]
+  _alias = "Invoice-Invoice Layout"
 }

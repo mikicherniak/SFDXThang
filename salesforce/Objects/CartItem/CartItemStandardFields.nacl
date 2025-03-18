@@ -1,11 +1,18 @@
 type salesforce.CartItem {
+  salesforce.Currency UnitItemAdjustmentAmount {
+    apiName = "CartItem.UnitItemAdjustmentAmount"
+    label = "Item level discount on a unit level for this cart item"
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 18
+    queryable = true
+  }
   serviceid Id {
     apiName = "CartItem.Id"
     label = "Cart Item ID"
     queryable = true
     _hidden_value = true
-    updateable = false
-    createable = false
   }
   salesforce.Checkbox IsDeleted {
     apiName = "CartItem.IsDeleted"
@@ -38,9 +45,6 @@ type salesforce.CartItem {
   salesforce.Lookup CreatedById {
     apiName = "CartItem.CreatedById"
     label = "Created By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "CreatedBy"
@@ -58,9 +62,6 @@ type salesforce.CartItem {
   salesforce.Lookup LastModifiedById {
     apiName = "CartItem.LastModifiedById"
     label = "Last Modified By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "LastModifiedBy"
@@ -75,37 +76,37 @@ type salesforce.CartItem {
     queryable = true
     _hidden_value = true
   }
-  salesforce.Lookup CartId {
-    apiName = "CartItem.CartId"
-    label = "Cart ID"
-    _required = true
-    referenceTo = [
-      salesforce.WebCart,
-    ]
-    createable = true
-    updateable = false
-    relationshipName = "Cart"
-    queryable = true
-    description = "This is a new desc for the field"
-  }
   salesforce.Lookup CartDeliveryGroupId {
     apiName = "CartItem.CartDeliveryGroupId"
     label = "Cart Delivery Group ID"
     _required = true
-    referenceTo = [
-      salesforce.CartDeliveryGroup,
-    ]
     createable = true
     updateable = true
     relationshipName = "CartDeliveryGroup"
     queryable = true
   }
+  salesforce.Currency NetAdjustmentAmount {
+    apiName = "CartItem.NetAdjustmentAmount"
+    label = "Net Adjustment Amount quantity based"
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Currency NetUnitPrice {
+    apiName = "CartItem.NetUnitPrice"
+    label = "Net Unit Price"
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 18
+    queryable = true
+  }
   salesforce.Lookup Product2Id {
     apiName = "CartItem.Product2Id"
     label = "Product ID"
-    referenceTo = [
-      salesforce.Product2,
-    ]
     createable = true
     updateable = true
     relationshipName = "Product2"
@@ -114,20 +115,6 @@ type salesforce.CartItem {
   salesforce.Picklist Type {
     apiName = "CartItem.Type"
     label = "Type"
-    valueSet = [
-      {
-        fullName = "Product"
-        default = false
-        label = "Product"
-        isActive = true
-      },
-      {
-        fullName = "Charge"
-        default = false
-        label = "Charge"
-        isActive = true
-      },
-    ]
     restricted = true
     createable = true
     updateable = true
@@ -153,6 +140,57 @@ type salesforce.CartItem {
     unique = false
     queryable = true
   }
+  salesforce.Summary DistributedAdjustmentAmount {
+    apiName = "CartItem.DistributedAdjustmentAmount"
+    label = "Distributed Promotions Total"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Summary DistributedAdjustmentTaxAmount {
+    apiName = "CartItem.DistributedAdjustmentTaxAmount"
+    label = "Distributed Promotions Tax Adjustment"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Currency GrossAdjustmentAmount {
+    apiName = "CartItem.GrossAdjustmentAmount"
+    label = "Gross Adjustment Amount quantity based"
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Currency GrossUnitPrice {
+    apiName = "CartItem.GrossUnitPrice"
+    label = "Gross Unit Price"
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 18
+    queryable = true
+  }
+  salesforce.Summary ItemizedAdjustmentAmount {
+    apiName = "CartItem.ItemizedAdjustmentAmount"
+    label = "Item Promotions Total"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Summary ItemizedAdjustmentTaxAmount {
+    apiName = "CartItem.ItemizedAdjustmentTaxAmount"
+    label = "Item Promotions Tax Adjustment"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
   salesforce.Currency ListPrice {
     apiName = "CartItem.ListPrice"
     label = "List Price"
@@ -165,6 +203,15 @@ type salesforce.CartItem {
   salesforce.Currency SalesPrice {
     apiName = "CartItem.SalesPrice"
     label = "Sales Price"
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 18
+    queryable = true
+  }
+  salesforce.Currency UnitAdjustedPriceWithItemAdj {
+    apiName = "CartItem.UnitAdjustedPriceWithItemAdj"
+    label = "Unit price that includes both tier and item level discounts for this cart item"
     createable = true
     updateable = true
     scale = 2
@@ -207,6 +254,26 @@ type salesforce.CartItem {
     precision = 18
     queryable = true
   }
+  salesforce.Currency TotalLineGrossAmount {
+    apiName = "CartItem.TotalLineGrossAmount"
+    label = "Total Line Gross Amount"
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Currency TotalLineNetAmount {
+    apiName = "CartItem.TotalLineNetAmount"
+    label = "Total Line Net Amount"
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+    _hidden_value = true
+  }
   salesforce.Summary TotalLineTaxAmount {
     apiName = "CartItem.TotalLineTaxAmount"
     label = "Total Line Tax Amount"
@@ -242,6 +309,35 @@ type salesforce.CartItem {
     precision = 18
     queryable = true
   }
+  salesforce.Currency TotalPriceTaxAmount {
+    apiName = "CartItem.TotalPriceTaxAmount"
+    label = "Total Price Tax Amount"
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Currency TotalPromoAdjustmentAmount {
+    apiName = "CartItem.TotalPromoAdjustmentAmount"
+    label = "Item Promotions Plus Distributed Promotions Total"
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 18
+    queryable = true
+  }
+  salesforce.Currency TotalPromoAdjustmentTaxAmount {
+    apiName = "CartItem.TotalPromoAdjustmentTaxAmount"
+    label = "Item Promotions Tax Adjustment Plus Distributed Tax Adjustment"
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+    _hidden_value = true
+  }
   salesforce.Currency TotalTaxAmount {
     apiName = "CartItem.TotalTaxAmount"
     label = "Total Tax Amount"
@@ -262,18 +358,32 @@ type salesforce.CartItem {
     queryable = true
     _hidden_value = true
   }
-  salesforce.Unknown TotalAdjustmentAmount {
-    apiName = "CartItem.TotalAdjustmentAmount"
-    queryable = false
+  salesforce.MasterDetail CartId {
+    apiName = "CartItem.CartId"
+    description = "This is a new desc for the field"
+    relationshipName = "Cart"
+    _required = true
+    label = "Cart ID"
+    createable = true
     updateable = false
-    createable = false
-    _hidden_value = true
+    queryable = true
   }
-  salesforce.Unknown TotalPriceAfterAllAdjustments {
+  salesforce.Currency TotalAdjustmentAmount {
+    apiName = "CartItem.TotalAdjustmentAmount"
+    label = "All Adjustments Total"
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 18
+    queryable = true
+  }
+  salesforce.Currency TotalPriceAfterAllAdjustments {
     apiName = "CartItem.TotalPriceAfterAllAdjustments"
-    queryable = false
-    updateable = false
-    createable = false
-    _hidden_value = true
+    label = "Total Adjusted Price"
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 18
+    queryable = true
   }
 }

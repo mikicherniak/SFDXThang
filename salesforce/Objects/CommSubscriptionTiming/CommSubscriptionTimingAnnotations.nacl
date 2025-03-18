@@ -190,7 +190,20 @@ type salesforce.CommSubscriptionTiming {
   enableFeeds = false
   externalSharingModel = "ControlledByParent"
   searchLayouts = {
-    customTabListAdditionalFields = "Unit"
-    searchResultsAdditionalFields = "Unit"
+    customTabListAdditionalFields = [
+      "Unit",
+      "Offset",
+      "PreferredTimeStart",
+      "PreferredTimeEnd",
+      "PreferredTimeZone",
+    ]
+    searchResultsAdditionalFields = [
+      "Unit",
+      "Offset",
+      "PreferredTimeStart",
+      "PreferredTimeEnd",
+      "PreferredTimeZone",
+    ]
   }
+  _alias = "Communication Subscription Timing"
 }

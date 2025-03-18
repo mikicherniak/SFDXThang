@@ -186,6 +186,8 @@ type salesforce.ProblemIncident {
       type = "Default"
     },
   ]
+  compactLayoutAssignment = "SYSTEM"
   enableFeeds = false
   externalSharingModel = "ControlledByParent"
+  _alias = "Related Problem and Incident"
 }

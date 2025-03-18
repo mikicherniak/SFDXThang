@@ -166,6 +166,7 @@ type salesforce.MessagingSession {
       "MessagingChannel",
       "MessagingEndUser",
       "Owner",
+      "PlatformType",
       "Status",
       "StartTime",
       "EndTime",
@@ -174,6 +175,7 @@ type salesforce.MessagingSession {
       "MessagingChannel",
       "MessagingEndUser",
       "Owner",
+      "PlatformType",
       "Status",
       "StartTime",
       "EndTime",
@@ -182,6 +184,7 @@ type salesforce.MessagingSession {
       "MessagingChannel",
       "MessagingEndUser",
       "Owner",
+      "PlatformType",
       "Status",
       "StartTime",
       "EndTime",
@@ -190,9 +193,11 @@ type salesforce.MessagingSession {
       "MessagingChannel",
       "MessagingEndUser",
       "Owner",
+      "PlatformType",
       "Status",
       "StartTime",
       "EndTime",
     ]
   }
+  _alias = "Messaging Session"
 }

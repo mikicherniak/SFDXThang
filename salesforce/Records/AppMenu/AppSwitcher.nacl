@@ -81,5 +81,14 @@ salesforce.AppMenu AppSwitcher {
       name = salesforce.CustomApplication.instance.standard__LightningBolt
       type = "CustomApplication"
     },
+    {
+      name = salesforce.CustomApplication.instance.standard__DataManager
+      type = "CustomApplication"
+    },
+    {
+      name = salesforce.CustomApplication.instance.standard__FlowsApp
+      type = "CustomApplication"
+    },
   ]
+  _alias = "AppSwitcher"
 }

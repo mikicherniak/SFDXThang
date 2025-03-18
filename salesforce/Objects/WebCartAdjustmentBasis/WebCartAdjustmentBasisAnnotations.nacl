@@ -58,6 +58,8 @@ type salesforce.WebCartAdjustmentBasis {
   apiName = "WebCartAdjustmentBasis"
   metadataType = "CustomObject"
   label = "Cart Adjustment Basis"
+  compactLayoutAssignment = "SYSTEM"
   enableFeeds = false
   externalSharingModel = "ControlledByParent"
+  _alias = "Cart Adjustment Basis"
 }

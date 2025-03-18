@@ -135,4 +135,5 @@ type salesforce.WebCart {
       "Account",
     ]
   }
+  _alias = "Cart"
 }

@@ -6,6 +6,8 @@ salesforce.CustomApplication standard__Marketing {
   ]
   isNavAutoTempTabsDisabled = false
   isNavPersonalizationDisabled = false
+  isNavTabPersistenceDisabled = false
+  isOmniPinnedViewEnabled = false
   tabs = [
     "standard-Chatter",
     "standard-Campaign",
@@ -15,4 +17,5 @@ salesforce.CustomApplication standard__Marketing {
     "standard-report",
     "standard-Dashboard",
   ]
+  _alias = "standard__Marketing"
 }

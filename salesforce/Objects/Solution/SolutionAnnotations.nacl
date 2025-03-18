@@ -212,7 +212,15 @@ type salesforce.Solution {
       "SOLUTION.LAST_UPDATE",
     ]
   }
+  _alias = "Solution"
   topicsForObjects = {
     enableTopics = true
+  }
+  historyTrackedFields = {
+    IsPublished = salesforce.Solution.field.IsPublished
+    IsPublishedInPublicKb = salesforce.Solution.field.IsPublishedInPublicKb
+    SolutionName = salesforce.Solution.field.SolutionName
+    SolutionNote = salesforce.Solution.field.SolutionNote
+    Status = salesforce.Solution.field.Status
   }
 }

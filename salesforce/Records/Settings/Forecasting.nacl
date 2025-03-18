@@ -99,21 +99,12 @@ salesforce.ForecastingSettings {
   forecastingTypeSettings = [
     {
       active = true
-      adjustmentsSettings = {
-        enableAdjustments = false
-        enableOwnerAdjustments = false
-      }
       displayedCategoryApiNames = [
         "closedonly",
         "commitonly",
         "bestcaseonly",
         "pipelineonly",
       ]
-      forecastRangeSettings = {
-        beginning = 0
-        displaying = 6
-        periodType = "Month"
-      }
       forecastedCategoryApiNames = [
         "commitonly",
         "closedonly",
@@ -264,6 +255,14 @@ salesforce.ForecastingSettings {
           field = "Opportunity.TrackingNumber__c"
           label = "Tracking Number"
         },
+        {
+          field = "OPPORTUNITY.LAST_STAGE_CHANGE"
+          label = "Last Stage Change Date"
+        },
+        {
+          field = "OPPORTUNITY.PUSH_COUNT"
+          label = "Push Count"
+        },
       ]
       opportunityListFieldsSelectedSettings = {
         field = [
@@ -305,29 +304,19 @@ salesforce.ForecastingSettings {
           "Opportunity.MainCompetitors__c",
           "Opportunity.OrderNumber__c",
           "Opportunity.TrackingNumber__c",
+          "OPPORTUNITY.LAST_STAGE_CHANGE",
+          "OPPORTUNITY.PUSH_COUNT",
         ]
-      }
-      quotasSettings = {
-        showQuotas = false
       }
     },
     {
       active = false
-      adjustmentsSettings = {
-        enableAdjustments = false
-        enableOwnerAdjustments = false
-      }
       displayedCategoryApiNames = [
         "closedonly",
         "commitonly",
         "bestcaseonly",
         "pipelineonly",
       ]
-      forecastRangeSettings = {
-        beginning = 0
-        displaying = 6
-        periodType = "Month"
-      }
       forecastedCategoryApiNames = [
         "commitonly",
         "closedonly",
@@ -478,6 +467,14 @@ salesforce.ForecastingSettings {
           field = "Opportunity.TrackingNumber__c"
           label = "Tracking Number"
         },
+        {
+          field = "OPPORTUNITY.LAST_STAGE_CHANGE"
+          label = "Last Stage Change Date"
+        },
+        {
+          field = "OPPORTUNITY.PUSH_COUNT"
+          label = "Push Count"
+        },
       ]
       opportunityListFieldsSelectedSettings = {
         field = [
@@ -519,29 +516,19 @@ salesforce.ForecastingSettings {
           "Opportunity.MainCompetitors__c",
           "Opportunity.OrderNumber__c",
           "Opportunity.TrackingNumber__c",
+          "OPPORTUNITY.LAST_STAGE_CHANGE",
+          "OPPORTUNITY.PUSH_COUNT",
         ]
-      }
-      quotasSettings = {
-        showQuotas = false
       }
     },
     {
       active = false
-      adjustmentsSettings = {
-        enableAdjustments = false
-        enableOwnerAdjustments = false
-      }
       displayedCategoryApiNames = [
         "closedonly",
         "commitonly",
         "bestcaseonly",
         "pipelineonly",
       ]
-      forecastRangeSettings = {
-        beginning = 0
-        displaying = 6
-        periodType = "Month"
-      }
       forecastedCategoryApiNames = [
         "commitonly",
         "closedonly",
@@ -696,6 +683,14 @@ salesforce.ForecastingSettings {
           field = "Opportunity.TrackingNumber__c"
           label = "Tracking Number"
         },
+        {
+          field = "OPPORTUNITY.LAST_STAGE_CHANGE"
+          label = "Last Stage Change Date"
+        },
+        {
+          field = "OPPORTUNITY.PUSH_COUNT"
+          label = "Push Count"
+        },
       ]
       opportunityListFieldsSelectedSettings = {
         field = [
@@ -738,29 +733,19 @@ salesforce.ForecastingSettings {
           "Opportunity.MainCompetitors__c",
           "Opportunity.OrderNumber__c",
           "Opportunity.TrackingNumber__c",
+          "OPPORTUNITY.LAST_STAGE_CHANGE",
+          "OPPORTUNITY.PUSH_COUNT",
         ]
-      }
-      quotasSettings = {
-        showQuotas = false
       }
     },
     {
       active = false
-      adjustmentsSettings = {
-        enableAdjustments = false
-        enableOwnerAdjustments = false
-      }
       displayedCategoryApiNames = [
         "closedonly",
         "commitonly",
         "bestcaseonly",
         "pipelineonly",
       ]
-      forecastRangeSettings = {
-        beginning = 0
-        displaying = 6
-        periodType = "Month"
-      }
       forecastedCategoryApiNames = [
         "commitonly",
         "closedonly",
@@ -911,6 +896,14 @@ salesforce.ForecastingSettings {
           field = "Opportunity.TrackingNumber__c"
           label = "Tracking Number"
         },
+        {
+          field = "OPPORTUNITY.LAST_STAGE_CHANGE"
+          label = "Last Stage Change Date"
+        },
+        {
+          field = "OPPORTUNITY.PUSH_COUNT"
+          label = "Push Count"
+        },
       ]
       opportunityListFieldsSelectedSettings = {
         field = [
@@ -952,29 +945,19 @@ salesforce.ForecastingSettings {
           "Opportunity.MainCompetitors__c",
           "Opportunity.OrderNumber__c",
           "Opportunity.TrackingNumber__c",
+          "OPPORTUNITY.LAST_STAGE_CHANGE",
+          "OPPORTUNITY.PUSH_COUNT",
         ]
-      }
-      quotasSettings = {
-        showQuotas = false
       }
     },
     {
       active = false
-      adjustmentsSettings = {
-        enableAdjustments = false
-        enableOwnerAdjustments = false
-      }
       displayedCategoryApiNames = [
         "closedonly",
         "commitonly",
         "bestcaseonly",
         "pipelineonly",
       ]
-      forecastRangeSettings = {
-        beginning = 0
-        displaying = 6
-        periodType = "Month"
-      }
       forecastedCategoryApiNames = [
         "commitonly",
         "closedonly",
@@ -1129,6 +1112,14 @@ salesforce.ForecastingSettings {
           field = "Opportunity.TrackingNumber__c"
           label = "Tracking Number"
         },
+        {
+          field = "OPPORTUNITY.LAST_STAGE_CHANGE"
+          label = "Last Stage Change Date"
+        },
+        {
+          field = "OPPORTUNITY.PUSH_COUNT"
+          label = "Push Count"
+        },
       ]
       opportunityListFieldsSelectedSettings = {
         field = [
@@ -1171,29 +1162,19 @@ salesforce.ForecastingSettings {
           "Opportunity.MainCompetitors__c",
           "Opportunity.OrderNumber__c",
           "Opportunity.TrackingNumber__c",
+          "OPPORTUNITY.LAST_STAGE_CHANGE",
+          "OPPORTUNITY.PUSH_COUNT",
         ]
-      }
-      quotasSettings = {
-        showQuotas = false
       }
     },
     {
       active = false
-      adjustmentsSettings = {
-        enableAdjustments = false
-        enableOwnerAdjustments = false
-      }
       displayedCategoryApiNames = [
         "closedonly",
         "commitonly",
         "bestcaseonly",
         "pipelineonly",
       ]
-      forecastRangeSettings = {
-        beginning = 0
-        displaying = 6
-        periodType = "Month"
-      }
       forecastedCategoryApiNames = [
         "commitonly",
         "closedonly",
@@ -1344,6 +1325,14 @@ salesforce.ForecastingSettings {
           field = "Opportunity.TrackingNumber__c"
           label = "Tracking Number"
         },
+        {
+          field = "OPPORTUNITY.LAST_STAGE_CHANGE"
+          label = "Last Stage Change Date"
+        },
+        {
+          field = "OPPORTUNITY.PUSH_COUNT"
+          label = "Push Count"
+        },
       ]
       opportunityListFieldsSelectedSettings = {
         field = [
@@ -1385,29 +1374,19 @@ salesforce.ForecastingSettings {
           "Opportunity.MainCompetitors__c",
           "Opportunity.OrderNumber__c",
           "Opportunity.TrackingNumber__c",
+          "OPPORTUNITY.LAST_STAGE_CHANGE",
+          "OPPORTUNITY.PUSH_COUNT",
         ]
-      }
-      quotasSettings = {
-        showQuotas = false
       }
     },
     {
       active = false
-      adjustmentsSettings = {
-        enableAdjustments = false
-        enableOwnerAdjustments = false
-      }
       displayedCategoryApiNames = [
         "closedonly",
         "commitonly",
         "bestcaseonly",
         "pipelineonly",
       ]
-      forecastRangeSettings = {
-        beginning = 0
-        displaying = 6
-        periodType = "Month"
-      }
       forecastedCategoryApiNames = [
         "commitonly",
         "closedonly",
@@ -1562,6 +1541,14 @@ salesforce.ForecastingSettings {
           field = "Opportunity.TrackingNumber__c"
           label = "Tracking Number"
         },
+        {
+          field = "OPPORTUNITY.LAST_STAGE_CHANGE"
+          label = "Last Stage Change Date"
+        },
+        {
+          field = "OPPORTUNITY.PUSH_COUNT"
+          label = "Push Count"
+        },
       ]
       opportunityListFieldsSelectedSettings = {
         field = [
@@ -1604,29 +1591,19 @@ salesforce.ForecastingSettings {
           "Opportunity.MainCompetitors__c",
           "Opportunity.OrderNumber__c",
           "Opportunity.TrackingNumber__c",
+          "OPPORTUNITY.LAST_STAGE_CHANGE",
+          "OPPORTUNITY.PUSH_COUNT",
         ]
-      }
-      quotasSettings = {
-        showQuotas = false
       }
     },
     {
       active = false
-      adjustmentsSettings = {
-        enableAdjustments = false
-        enableOwnerAdjustments = false
-      }
       displayedCategoryApiNames = [
         "closedonly",
         "commitonly",
         "bestcaseonly",
         "pipelineonly",
       ]
-      forecastRangeSettings = {
-        beginning = 0
-        displaying = 6
-        periodType = "Month"
-      }
       forecastedCategoryApiNames = [
         "commitonly",
         "closedonly",
@@ -1777,6 +1754,14 @@ salesforce.ForecastingSettings {
           field = "Opportunity.TrackingNumber__c"
           label = "Tracking Number"
         },
+        {
+          field = "OPPORTUNITY.LAST_STAGE_CHANGE"
+          label = "Last Stage Change Date"
+        },
+        {
+          field = "OPPORTUNITY.PUSH_COUNT"
+          label = "Push Count"
+        },
       ]
       opportunityListFieldsSelectedSettings = {
         field = [
@@ -1818,29 +1803,19 @@ salesforce.ForecastingSettings {
           "Opportunity.MainCompetitors__c",
           "Opportunity.OrderNumber__c",
           "Opportunity.TrackingNumber__c",
+          "OPPORTUNITY.LAST_STAGE_CHANGE",
+          "OPPORTUNITY.PUSH_COUNT",
         ]
-      }
-      quotasSettings = {
-        showQuotas = false
       }
     },
     {
       active = false
-      adjustmentsSettings = {
-        enableAdjustments = false
-        enableOwnerAdjustments = false
-      }
       displayedCategoryApiNames = [
         "closedonly",
         "commitonly",
         "bestcaseonly",
         "pipelineonly",
       ]
-      forecastRangeSettings = {
-        beginning = 0
-        displaying = 6
-        periodType = "Month"
-      }
       forecastedCategoryApiNames = [
         "commitonly",
         "closedonly",
@@ -1995,6 +1970,14 @@ salesforce.ForecastingSettings {
           field = "Opportunity.TrackingNumber__c"
           label = "Tracking Number"
         },
+        {
+          field = "OPPORTUNITY.LAST_STAGE_CHANGE"
+          label = "Last Stage Change Date"
+        },
+        {
+          field = "OPPORTUNITY.PUSH_COUNT"
+          label = "Push Count"
+        },
       ]
       opportunityListFieldsSelectedSettings = {
         field = [
@@ -2037,29 +2020,19 @@ salesforce.ForecastingSettings {
           "Opportunity.MainCompetitors__c",
           "Opportunity.OrderNumber__c",
           "Opportunity.TrackingNumber__c",
+          "OPPORTUNITY.LAST_STAGE_CHANGE",
+          "OPPORTUNITY.PUSH_COUNT",
         ]
-      }
-      quotasSettings = {
-        showQuotas = false
       }
     },
     {
       active = false
-      adjustmentsSettings = {
-        enableAdjustments = false
-        enableOwnerAdjustments = false
-      }
       displayedCategoryApiNames = [
         "closedonly",
         "commitonly",
         "bestcaseonly",
         "pipelineonly",
       ]
-      forecastRangeSettings = {
-        beginning = 0
-        displaying = 6
-        periodType = "Month"
-      }
       forecastedCategoryApiNames = [
         "commitonly",
         "closedonly",
@@ -2210,6 +2183,14 @@ salesforce.ForecastingSettings {
           field = "Opportunity.TrackingNumber__c"
           label = "Tracking Number"
         },
+        {
+          field = "OPPORTUNITY.LAST_STAGE_CHANGE"
+          label = "Last Stage Change Date"
+        },
+        {
+          field = "OPPORTUNITY.PUSH_COUNT"
+          label = "Push Count"
+        },
       ]
       opportunityListFieldsSelectedSettings = {
         field = [
@@ -2251,29 +2232,19 @@ salesforce.ForecastingSettings {
           "Opportunity.MainCompetitors__c",
           "Opportunity.OrderNumber__c",
           "Opportunity.TrackingNumber__c",
+          "OPPORTUNITY.LAST_STAGE_CHANGE",
+          "OPPORTUNITY.PUSH_COUNT",
         ]
-      }
-      quotasSettings = {
-        showQuotas = false
       }
     },
     {
       active = false
-      adjustmentsSettings = {
-        enableAdjustments = false
-        enableOwnerAdjustments = false
-      }
       displayedCategoryApiNames = [
         "closedonly",
         "commitonly",
         "bestcaseonly",
         "pipelineonly",
       ]
-      forecastRangeSettings = {
-        beginning = 0
-        displaying = 6
-        periodType = "Month"
-      }
       forecastedCategoryApiNames = [
         "commitonly",
         "closedonly",
@@ -2428,6 +2399,14 @@ salesforce.ForecastingSettings {
           field = "Opportunity.TrackingNumber__c"
           label = "Tracking Number"
         },
+        {
+          field = "OPPORTUNITY.LAST_STAGE_CHANGE"
+          label = "Last Stage Change Date"
+        },
+        {
+          field = "OPPORTUNITY.PUSH_COUNT"
+          label = "Push Count"
+        },
       ]
       opportunityListFieldsSelectedSettings = {
         field = [
@@ -2470,29 +2449,19 @@ salesforce.ForecastingSettings {
           "Opportunity.MainCompetitors__c",
           "Opportunity.OrderNumber__c",
           "Opportunity.TrackingNumber__c",
+          "OPPORTUNITY.LAST_STAGE_CHANGE",
+          "OPPORTUNITY.PUSH_COUNT",
         ]
-      }
-      quotasSettings = {
-        showQuotas = false
       }
     },
     {
       active = false
-      adjustmentsSettings = {
-        enableAdjustments = false
-        enableOwnerAdjustments = false
-      }
       displayedCategoryApiNames = [
         "closedonly",
         "commitonly",
         "bestcaseonly",
         "pipelineonly",
       ]
-      forecastRangeSettings = {
-        beginning = 0
-        displaying = 6
-        periodType = "Month"
-      }
       forecastedCategoryApiNames = [
         "commitonly",
         "closedonly",
@@ -2643,6 +2612,14 @@ salesforce.ForecastingSettings {
           field = "Opportunity.TrackingNumber__c"
           label = "Tracking Number"
         },
+        {
+          field = "OPPORTUNITY.LAST_STAGE_CHANGE"
+          label = "Last Stage Change Date"
+        },
+        {
+          field = "OPPORTUNITY.PUSH_COUNT"
+          label = "Push Count"
+        },
       ]
       opportunityListFieldsSelectedSettings = {
         field = [
@@ -2684,11 +2661,24 @@ salesforce.ForecastingSettings {
           "Opportunity.MainCompetitors__c",
           "Opportunity.OrderNumber__c",
           "Opportunity.TrackingNumber__c",
+          "OPPORTUNITY.LAST_STAGE_CHANGE",
+          "OPPORTUNITY.PUSH_COUNT",
         ]
-      }
-      quotasSettings = {
-        showQuotas = false
       }
     },
   ]
+  _alias = "Forecasting"
+  globalAdjustmentsSettings = {
+    allowExpandedColumns = false
+    enableAdjustments = false
+    enableOwnerAdjustments = false
+  }
+  globalForecastRangeSettings = {
+    beginning = 0
+    displaying = 6
+    periodType = "Month"
+  }
+  globalQuotasSettings = {
+    showQuotas = false
+  }
 }

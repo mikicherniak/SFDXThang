@@ -4,22 +4,15 @@ type salesforce.ServiceContract {
     label = "Service Contract ID"
     queryable = true
     _hidden_value = true
-    updateable = false
-    createable = false
   }
   salesforce.Lookup OwnerId {
     apiName = "ServiceContract.OwnerId"
     label = "Owner ID"
-    referenceTo = [
-      salesforce.Group,
-      salesforce.User,
-    ]
-    createable = false
-    updateable = false
+    createable = true
+    updateable = true
     relationshipName = "Owner"
     queryable = true
     _hidden_value = true
-    trackHistory = false
   }
   salesforce.Checkbox IsDeleted {
     apiName = "ServiceContract.IsDeleted"
@@ -52,9 +45,6 @@ type salesforce.ServiceContract {
   salesforce.Lookup CreatedById {
     apiName = "ServiceContract.CreatedById"
     label = "Created By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "CreatedBy"
@@ -72,9 +62,6 @@ type salesforce.ServiceContract {
   salesforce.Lookup LastModifiedById {
     apiName = "ServiceContract.LastModifiedById"
     label = "Last Modified By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "LastModifiedBy"
@@ -92,26 +79,18 @@ type salesforce.ServiceContract {
   salesforce.Lookup AccountId {
     apiName = "ServiceContract.AccountId"
     label = "Account ID"
-    referenceTo = [
-      salesforce.Account,
-    ]
     createable = true
     updateable = true
     relationshipName = "Account"
     queryable = true
-    trackHistory = false
   }
   salesforce.Lookup ContactId {
     apiName = "ServiceContract.ContactId"
     label = "Contact ID"
-    referenceTo = [
-      salesforce.Contact,
-    ]
     createable = true
     updateable = true
     relationshipName = "Contact"
     queryable = true
-    trackHistory = false
   }
   salesforce.Number Term {
     apiName = "ServiceContract.Term"
@@ -144,6 +123,10 @@ type salesforce.ServiceContract {
     updateable = true
     queryable = true
   }
+  salesforce.Unknown AdditionalDiscount {
+    apiName = "ServiceContract.AdditionalDiscount"
+    _hidden_value = true
+  }
   salesforce.Picklist ApprovalStatus {
     apiName = "ServiceContract.ApprovalStatus"
     label = "Approval Status"
@@ -151,7 +134,6 @@ type salesforce.ServiceContract {
     createable = true
     updateable = true
     queryable = true
-    trackHistory = false
     valueSetName = salesforce.StandardValueSet.instance.ServiceContractApprovalStatus
   }
   salesforce.LongTextArea Description {
@@ -181,14 +163,10 @@ type salesforce.ServiceContract {
   salesforce.Lookup Pricebook2Id {
     apiName = "ServiceContract.Pricebook2Id"
     label = "Price Book ID"
-    referenceTo = [
-      salesforce.Pricebook2,
-    ]
     createable = true
     updateable = true
     relationshipName = "Pricebook2"
     queryable = true
-    trackHistory = false
   }
   salesforce.Currency ShippingHandling {
     apiName = "ServiceContract.ShippingHandling"
@@ -272,26 +250,6 @@ type salesforce.ServiceContract {
   salesforce.Picklist Status {
     apiName = "ServiceContract.Status"
     label = "Status"
-    valueSet = [
-      {
-        fullName = "Inactive"
-        default = false
-        label = "Inactive"
-        isActive = true
-      },
-      {
-        fullName = "Active"
-        default = false
-        label = "Active"
-        isActive = true
-      },
-      {
-        fullName = "Expired"
-        default = false
-        label = "Expired"
-        isActive = true
-      },
-    ]
     restricted = true
     createable = false
     updateable = false
@@ -301,34 +259,22 @@ type salesforce.ServiceContract {
   salesforce.Lookup ParentServiceContractId {
     apiName = "ServiceContract.ParentServiceContractId"
     label = "Parent Service Contract ID"
-    referenceTo = [
-      salesforce.ServiceContract,
-    ]
     createable = true
     updateable = true
     relationshipName = "ParentServiceContract"
     queryable = true
-    trackHistory = false
   }
   salesforce.Lookup RootServiceContractId {
     apiName = "ServiceContract.RootServiceContractId"
     label = "Root Service Contract ID"
-    referenceTo = [
-      salesforce.ServiceContract,
-    ]
     createable = false
     updateable = false
     relationshipName = "RootServiceContract"
     queryable = true
-    trackHistory = false
     _hidden_value = true
   }
   salesforce.Unknown StatusIndicator {
     apiName = "ServiceContract.StatusIndicator"
-    trackHistory = false
-    queryable = false
-    updateable = false
-    createable = false
     _hidden_value = true
   }
 }

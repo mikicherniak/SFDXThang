@@ -207,4 +207,5 @@ type salesforce.OperatingHours {
       "LastModifiedBy",
     ]
   }
+  _alias = "Operating Hours"
 }

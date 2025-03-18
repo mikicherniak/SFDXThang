@@ -188,4 +188,7 @@ type salesforce.CollaborationGroup {
   ]
   compactLayoutAssignment = "SYSTEM"
   enableFeeds = true
+  _alias = "Group"
+  feedHistoryTrackedFields = {
+  }
 }

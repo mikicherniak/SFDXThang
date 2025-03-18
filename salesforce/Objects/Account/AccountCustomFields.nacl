@@ -23,8 +23,6 @@ type salesforce.Account {
     createable = true
     updateable = true
     queryable = true
-    externalId = false
-    trackFeedHistory = false
     sorted = false
   }
   salesforce.Picklist SLA__c {
@@ -56,8 +54,6 @@ type salesforce.Account {
     createable = true
     updateable = true
     queryable = true
-    externalId = false
-    trackFeedHistory = false
     sorted = false
   }
   salesforce.Picklist Active__c {
@@ -79,8 +75,6 @@ type salesforce.Account {
     createable = true
     updateable = true
     queryable = true
-    externalId = false
-    trackFeedHistory = false
     sorted = false
   }
   salesforce.Number NumberofLocations__c {
@@ -93,7 +87,6 @@ type salesforce.Account {
     unique = false
     queryable = true
     externalId = false
-    trackFeedHistory = false
   }
   salesforce.Picklist UpsellOpportunity__c {
     apiName = "Account.UpsellOpportunity__c"
@@ -119,8 +112,6 @@ type salesforce.Account {
     createable = true
     updateable = true
     queryable = true
-    externalId = false
-    trackFeedHistory = false
     sorted = false
   }
   salesforce.Text SLASerialNumber__c {
@@ -133,7 +124,6 @@ type salesforce.Account {
     length = 10
     queryable = true
     externalId = false
-    trackFeedHistory = false
   }
   salesforce.Date SLAExpirationDate__c {
     apiName = "Account.SLAExpirationDate__c"
@@ -141,7 +131,24 @@ type salesforce.Account {
     createable = true
     updateable = true
     queryable = true
-    externalId = false
-    trackFeedHistory = false
+  }
+  salesforce.Hierarchy ParentId {
+    apiName = "Account.ParentId"
+    relationshipName = "Parent"
+    label = "Parent Account ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text Name {
+    apiName = "Account.Name"
+    length = 255
+    _required = true
+    label = "Account Name"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
   }
 }

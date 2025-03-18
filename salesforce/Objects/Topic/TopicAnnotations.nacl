@@ -104,4 +104,7 @@ type salesforce.Topic {
   ]
   compactLayoutAssignment = "SYSTEM"
   enableFeeds = true
+  _alias = "Topic"
+  feedHistoryTrackedFields = {
+  }
 }

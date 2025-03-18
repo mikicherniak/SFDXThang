@@ -4,18 +4,12 @@ type salesforce.WebStore {
     label = "Store ID"
     queryable = true
     _hidden_value = true
-    updateable = false
-    createable = false
   }
   salesforce.Lookup OwnerId {
     apiName = "WebStore.OwnerId"
     label = "Owner ID"
-    referenceTo = [
-      salesforce.Group,
-      salesforce.User,
-    ]
-    createable = false
-    updateable = false
+    createable = true
+    updateable = true
     relationshipName = "Owner"
     queryable = true
     _hidden_value = true
@@ -51,9 +45,6 @@ type salesforce.WebStore {
   salesforce.Lookup CreatedById {
     apiName = "WebStore.CreatedById"
     label = "Created By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "CreatedBy"
@@ -71,9 +62,6 @@ type salesforce.WebStore {
   salesforce.Lookup LastModifiedById {
     apiName = "WebStore.LastModifiedById"
     label = "Last Modified By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "LastModifiedBy"
@@ -92,26 +80,6 @@ type salesforce.WebStore {
     apiName = "WebStore.Type"
     label = "Type"
     _required = true
-    valueSet = [
-      {
-        fullName = "B2B"
-        default = true
-        label = "B2B"
-        isActive = true
-      },
-      {
-        fullName = "B2C"
-        default = false
-        label = "B2C"
-        isActive = true
-      },
-      {
-        fullName = "B2CE"
-        default = false
-        label = "B2C Enterprise"
-        isActive = true
-      },
-    ]
     restricted = true
     createable = true
     updateable = false
@@ -119,72 +87,138 @@ type salesforce.WebStore {
   }
   salesforce.Unknown DefaultLanguage {
     apiName = "WebStore.DefaultLanguage"
-    queryable = false
-    updateable = false
-    createable = false
+    inlineHelpText = "The language to use when translated content isn't available. This value is configured during store creation. If you change the default language later, you must also change the default language in Experience Builder for any associated community."
     _hidden_value = true
   }
-  salesforce.Unknown DefaultTaxLocaleType {
-    apiName = "WebStore.DefaultTaxLocaleType"
-    queryable = false
-    updateable = false
+  salesforce.Checkbox OptionsGuestBrowsingEnabled {
+    apiName = "WebStore.OptionsGuestBrowsingEnabled"
+    label = "Guest Browsing Enabled"
     createable = false
+    updateable = false
+    queryable = true
     _hidden_value = true
   }
+  salesforce.Checkbox OptionsGuestCartEnabled {
+    apiName = "WebStore.OptionsGuestCartEnabled"
+    label = "Guest Cart Enabled"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox OptionsGuestCheckoutEnabled {
+    apiName = "WebStore.OptionsGuestCheckoutEnabled"
+    label = "Guest Checkout Enabled"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox OptionsCartAsyncProcessingEnabled {
+    apiName = "WebStore.OptionsCartAsyncProcessingEnabled"
+    label = "Cart Async Processing Enabled"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox OptionsDuplicateCartItemsEnabled {
+    apiName = "WebStore.OptionsDuplicateCartItemsEnabled"
+    label = "Duplicate Cart Items Enabled"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox OptionsSkuDetectionEnabled {
+    apiName = "WebStore.OptionsSkuDetectionEnabled"
+    label = "Sku Detection Enabled"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox OptionsPreserveGuestCartEnabled {
+    apiName = "WebStore.OptionsPreserveGuestCartEnabled"
+    label = "Preserve Guest Cart Enabled"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox OptionsSplitShipmentEnabled {
+    apiName = "WebStore.OptionsSplitShipmentEnabled"
+    label = "Split Shipment Enabled"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  
   salesforce.Unknown Description {
     apiName = "WebStore.Description"
-    queryable = false
-    updateable = false
-    createable = false
-    _hidden_value = true
-  }
-  salesforce.Unknown ExternalReference {
-    apiName = "WebStore.ExternalReference"
-    queryable = false
-    updateable = false
-    createable = false
     _hidden_value = true
   }
   salesforce.Unknown MaxValuesPerFacet {
     apiName = "WebStore.MaxValuesPerFacet"
-    queryable = false
-    updateable = false
-    createable = false
+    inlineHelpText = "Set the maximum number of values to show per filter. Enter a value from 1 to 100."
+    _hidden_value = true
+  }
+  salesforce.Picklist OrderActivationStatus {
+    apiName = "WebStore.OrderActivationStatus"
+    _hidden_value = true
+  }
+  salesforce.Unknown OrderLifeCycleType {
+    apiName = "WebStore.OrderLifeCycleType"
     _hidden_value = true
   }
   salesforce.Unknown PaginationSize {
     apiName = "WebStore.PaginationSize"
-    queryable = false
-    updateable = false
-    createable = false
+    inlineHelpText = "Set the maximum number of results to show per page. Enter a value from 1 to 100."
     _hidden_value = true
   }
   salesforce.Unknown PricingStrategy {
     apiName = "WebStore.PricingStrategy"
-    queryable = false
-    updateable = false
-    createable = false
+    inlineHelpText = "Select the price to show to buyers: either the best price or the prices from the highest priority price book."
     _hidden_value = true
   }
   salesforce.Unknown ProductGrouping {
     apiName = "WebStore.ProductGrouping"
-    queryable = false
-    updateable = false
-    createable = false
+    _hidden_value = true
+  }
+  salesforce.Lookup SortByPricebookId {
+    apiName = "WebStore.SortByPricebookId"
+    inlineHelpText = "Select a price book to use when sorting search results by price."
     _hidden_value = true
   }
   salesforce.Lookup StrikethroughPricebookId {
     apiName = "WebStore.StrikethroughPricebookId"
-    queryable = false
-    updateable = false
-    createable = false
+    inlineHelpText = "Displays a price book with a product’s original list price and the buyer’s discounted price."
     _hidden_value = true
   }
   salesforce.Unknown SupportedLanguages {
     apiName = "WebStore.SupportedLanguages"
-    queryable = false
-    updateable = false
+    inlineHelpText = "The languages to make available to buyers. Language options come from Translation Workbench."
+    _hidden_value = true
+  }
+  salesforce.Picklist DefaultTaxLocaleType {
+    apiName = "WebStore.DefaultTaxLocaleType"
+    restricted = true
+    _required = true
+    label = "Tax Type"
+    inlineHelpText = "Choose Net if the product price doesn’t include tax. Choose Gross if the product price includes tax. Changing the tax type will effect any existing carts. We recommend clearing these carts to avoid any discrepancies."
     createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.LongTextArea ExternalReference {
+    apiName = "WebStore.ExternalReference"
+    length = 32000
+    label = "External Reference ID"
+    createable = false
+    updateable = false
+    queryable = true
     _hidden_value = true
   }
 }

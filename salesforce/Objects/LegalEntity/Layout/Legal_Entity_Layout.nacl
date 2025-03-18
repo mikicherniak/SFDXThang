@@ -42,6 +42,10 @@ salesforce.Layout LegalEntity_Legal_Entity_Layout@bss {
       customLabel = false
       detailHeading = false
       editHeading = false
+      layoutColumns = [
+        {
+        },
+      ]
       style = "CustomLinks"
     },
   ]
@@ -51,4 +55,5 @@ salesforce.Layout LegalEntity_Legal_Entity_Layout@bss {
   _parent = [
     salesforce.LegalEntity,
   ]
+  _alias = "LegalEntity-Legal Entity Layout"
 }

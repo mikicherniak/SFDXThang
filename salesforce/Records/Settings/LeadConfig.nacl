@@ -8,4 +8,6 @@ salesforce.LeadConfigSettings {
   enableConversionsOnMobile = false
   enableOrgWideMergeAndDelete = true
   shouldLeadConvertRequireValidation = true
+  _alias = "LeadConfig"
+  shouldSendNotificationEmailWhenLeadOwnerUpdatesViaApexInLEX = "false"
 }

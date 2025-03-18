@@ -144,6 +144,20 @@ type salesforce.Product2 {
       type = "Default"
     },
     {
+      actionName = "PreviewProductAction"
+      type = "Default"
+    },
+    {
+      actionName = "PreviewProductAction"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "PreviewProductAction"
+      formFactor = "Small"
+      type = "Default"
+    },
+    {
       actionName = "SaveEdit"
       type = "Default"
     },
@@ -197,21 +211,27 @@ type salesforce.Product2 {
     ]
     lookupDialogsAdditionalFields = [
       "PRODUCT2.NAME",
+      "PRODUCT2.PRODUCT_CLASS",
       "PRODUCT2.CUSTOMER_PRODUCT_ID",
       "PRODUCT2.DESCRIPTION",
       "PRODUCT2.FAMILY",
     ]
     lookupPhoneDialogsAdditionalFields = [
       "PRODUCT2.NAME",
+      "PRODUCT2.PRODUCT_CLASS",
       "PRODUCT2.CUSTOMER_PRODUCT_ID",
       "PRODUCT2.DESCRIPTION",
       "PRODUCT2.FAMILY",
     ]
     searchResultsAdditionalFields = [
       "PRODUCT2.NAME",
+      "PRODUCT2.PRODUCT_CLASS",
       "PRODUCT2.CUSTOMER_PRODUCT_ID",
       "PRODUCT2.DESCRIPTION",
       "PRODUCT2.FAMILY",
     ]
+  }
+  _alias = "Product"
+  historyTrackedFields = {
   }
 }

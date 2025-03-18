@@ -28,9 +28,12 @@ salesforce.QuickAction NewCase {
           },
         ]
       },
+      {
+      },
     ]
   }
   standardLabel = "New"
   targetObject = salesforce.Case
   type = "Create"
+  _alias = "NewCase"
 }

@@ -4,8 +4,6 @@ type salesforce.Contact {
     label = "Contact ID"
     queryable = true
     _hidden_value = true
-    updateable = false
-    createable = false
   }
   salesforce.Checkbox IsDeleted {
     apiName = "Contact.IsDeleted"
@@ -19,9 +17,6 @@ type salesforce.Contact {
   salesforce.Lookup MasterRecordId {
     apiName = "Contact.MasterRecordId"
     label = "Master Record ID"
-    referenceTo = [
-      salesforce.Contact,
-    ]
     createable = false
     updateable = false
     relationshipName = "MasterRecord"
@@ -31,14 +26,10 @@ type salesforce.Contact {
   salesforce.Lookup AccountId {
     apiName = "Contact.AccountId"
     label = "Account ID"
-    referenceTo = [
-      salesforce.Account,
-    ]
     createable = true
     updateable = true
     relationshipName = "Account"
     queryable = true
-    trackFeedHistory = true
   }
   salesforce.Name Name {
     apiName = "Contact.Name"
@@ -107,17 +98,17 @@ type salesforce.Contact {
     updateable = true
     queryable = true
   }
+  salesforce.Picklist Pronouns {
+    apiName = "Contact.Pronouns"
+    _hidden_value = true
+  }
   salesforce.Lookup ReportsToId {
     apiName = "Contact.ReportsToId"
     label = "Reports To ID"
-    referenceTo = [
-      salesforce.Contact,
-    ]
     createable = true
     updateable = true
     relationshipName = "ReportsTo"
     queryable = true
-    trackFeedHistory = false
   }
   salesforce.Email Email {
     apiName = "Contact.Email"
@@ -135,6 +126,14 @@ type salesforce.Contact {
     unique = false
     caseSensitive = false
     length = 128
+    queryable = true
+  }
+  salesforce.Picklist ContactSource {
+    apiName = "Contact.ContactSource"
+    restricted = true
+    label = "Creation Source"
+    createable = true
+    updateable = true
     queryable = true
   }
   salesforce.Text Department {
@@ -164,7 +163,6 @@ type salesforce.Contact {
     createable = true
     updateable = true
     queryable = true
-    trackFeedHistory = false
     valueSetName = salesforce.StandardValueSet.instance.LeadSource
   }
   salesforce.Date Birthdate {
@@ -185,15 +183,11 @@ type salesforce.Contact {
   salesforce.Lookup OwnerId {
     apiName = "Contact.OwnerId"
     label = "Owner ID"
-    referenceTo = [
-      salesforce.User,
-    ]
-    createable = false
-    updateable = false
+    createable = true
+    updateable = true
     relationshipName = "Owner"
     queryable = true
     _hidden_value = true
-    trackFeedHistory = true
   }
   salesforce.DateTime CreatedDate {
     apiName = "Contact.CreatedDate"
@@ -206,9 +200,6 @@ type salesforce.Contact {
   salesforce.Lookup CreatedById {
     apiName = "Contact.CreatedById"
     label = "Created By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "CreatedBy"
@@ -226,9 +217,6 @@ type salesforce.Contact {
   salesforce.Lookup LastModifiedById {
     apiName = "Contact.LastModifiedById"
     label = "Last Modified By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "LastModifiedBy"
@@ -325,56 +313,6 @@ type salesforce.Contact {
   salesforce.Picklist CleanStatus {
     apiName = "Contact.CleanStatus"
     label = "Clean Status"
-    valueSet = [
-      {
-        fullName = "Matched"
-        default = false
-        label = "In Sync"
-        isActive = true
-      },
-      {
-        fullName = "Different"
-        default = false
-        label = "Different"
-        isActive = true
-      },
-      {
-        fullName = "Acknowledged"
-        default = false
-        label = "Reviewed"
-        isActive = true
-      },
-      {
-        fullName = "NotFound"
-        default = false
-        label = "Not Found"
-        isActive = true
-      },
-      {
-        fullName = "Inactive"
-        default = false
-        label = "Inactive"
-        isActive = true
-      },
-      {
-        fullName = "Pending"
-        default = false
-        label = "Not Compared"
-        isActive = true
-      },
-      {
-        fullName = "SelectMatch"
-        default = false
-        label = "Select Match"
-        isActive = true
-      },
-      {
-        fullName = "Skipped"
-        default = false
-        label = "Skipped"
-        isActive = true
-      },
-    ]
     restricted = true
     createable = true
     updateable = true
@@ -383,37 +321,34 @@ type salesforce.Contact {
   salesforce.Lookup IndividualId {
     apiName = "Contact.IndividualId"
     label = "Individual ID"
-    referenceTo = [
-      salesforce.Individual,
-    ]
     createable = true
     updateable = true
     relationshipName = "Individual"
     queryable = true
-    trackFeedHistory = false
   }
   salesforce.Unknown DoNotCall {
     apiName = "Contact.DoNotCall"
-    trackFeedHistory = false
-    queryable = false
-    updateable = false
-    createable = false
+    _hidden_value = true
+  }
+  salesforce.Picklist GenderIdentity {
+    apiName = "Contact.GenderIdentity"
     _hidden_value = true
   }
   salesforce.Unknown HasOptedOutOfEmail {
     apiName = "Contact.HasOptedOutOfEmail"
-    trackFeedHistory = false
-    queryable = false
-    updateable = false
-    createable = false
     _hidden_value = true
   }
   salesforce.Unknown HasOptedOutOfFax {
     apiName = "Contact.HasOptedOutOfFax"
-    trackFeedHistory = false
-    queryable = false
-    updateable = false
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsPriorityRecord {
+    apiName = "Contact.IsPriorityRecord"
+    defaultValue = false
+    label = "Important"
     createable = false
+    updateable = false
+    queryable = true
     _hidden_value = true
   }
 }

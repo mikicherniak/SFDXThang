@@ -34,6 +34,10 @@ salesforce.Layout AuthorizationFormDataUse_Authorization_Form_Data_Use_Layout@bs
       customLabel = false
       detailHeading = false
       editHeading = false
+      layoutColumns = [
+        {
+        },
+      ]
       style = "CustomLinks"
     },
   ]
@@ -48,4 +52,5 @@ salesforce.Layout AuthorizationFormDataUse_Authorization_Form_Data_Use_Layout@bs
   _parent = [
     salesforce.AuthorizationFormDataUse,
   ]
+  _alias = "AuthorizationFormDataUse-Authorization Form Data Use Layout"
 }

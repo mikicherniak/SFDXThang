@@ -5,4 +5,5 @@ salesforce.ListView WorkType_My_WorkTypes {
   _parent = [
     salesforce.WorkType,
   ]
+  _alias = "My Work Types"
 }

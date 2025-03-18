@@ -4,18 +4,12 @@ type salesforce.ContactPointTypeConsent {
     label = "Contact Point Type Consent ID"
     queryable = true
     _hidden_value = true
-    updateable = false
-    createable = false
   }
   salesforce.Lookup OwnerId {
     apiName = "ContactPointTypeConsent.OwnerId"
     label = "Owner ID"
-    referenceTo = [
-      salesforce.Group,
-      salesforce.User,
-    ]
-    createable = false
-    updateable = false
+    createable = true
+    updateable = true
     relationshipName = "Owner"
     queryable = true
     _hidden_value = true
@@ -51,9 +45,6 @@ type salesforce.ContactPointTypeConsent {
   salesforce.Lookup CreatedById {
     apiName = "ContactPointTypeConsent.CreatedById"
     label = "Created By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "CreatedBy"
@@ -71,9 +62,6 @@ type salesforce.ContactPointTypeConsent {
   salesforce.Lookup LastModifiedById {
     apiName = "ContactPointTypeConsent.LastModifiedById"
     label = "Last Modified By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "LastModifiedBy"
@@ -92,50 +80,14 @@ type salesforce.ContactPointTypeConsent {
     apiName = "ContactPointTypeConsent.PartyId"
     label = "Party ID"
     _required = true
-    referenceTo = [
-      salesforce.Individual,
-    ]
     createable = true
     updateable = true
     relationshipName = "Party"
     queryable = true
-    trackHistory = false
   }
   salesforce.Picklist ContactPointType {
     apiName = "ContactPointTypeConsent.ContactPointType"
     label = "Contact Point Type ID"
-    valueSet = [
-      {
-        fullName = "Email"
-        default = false
-        label = "Email"
-        isActive = true
-      },
-      {
-        fullName = "Phone"
-        default = false
-        label = "Phone"
-        isActive = true
-      },
-      {
-        fullName = "Web"
-        default = false
-        label = "Web"
-        isActive = true
-      },
-      {
-        fullName = "Social"
-        default = false
-        label = "Social"
-        isActive = true
-      },
-      {
-        fullName = "MailingAddress"
-        default = false
-        label = "Mailing Address"
-        isActive = true
-      },
-    ]
     restricted = true
     createable = true
     updateable = true
@@ -144,45 +96,15 @@ type salesforce.ContactPointTypeConsent {
   salesforce.Lookup DataUsePurposeId {
     apiName = "ContactPointTypeConsent.DataUsePurposeId"
     label = "Data Use Purpose ID"
-    referenceTo = [
-      salesforce.DataUsePurpose,
-    ]
     createable = true
     updateable = true
     relationshipName = "DataUsePurpose"
     queryable = true
-    trackHistory = false
   }
   salesforce.Picklist PrivacyConsentStatus {
     apiName = "ContactPointTypeConsent.PrivacyConsentStatus"
     label = "Privacy Consent Status"
     _required = true
-    valueSet = [
-      {
-        fullName = "NotSeen"
-        default = true
-        label = "Not Seen"
-        isActive = true
-      },
-      {
-        fullName = "Seen"
-        default = false
-        label = "Seen"
-        isActive = true
-      },
-      {
-        fullName = "OptIn"
-        default = false
-        label = "Opt In"
-        isActive = true
-      },
-      {
-        fullName = "OptOut"
-        default = false
-        label = "Opt Out"
-        isActive = true
-      },
-    ]
     restricted = true
     createable = true
     updateable = true
@@ -212,38 +134,6 @@ type salesforce.ContactPointTypeConsent {
   salesforce.Picklist CaptureContactPointType {
     apiName = "ContactPointTypeConsent.CaptureContactPointType"
     label = "Capture Contact Point Type"
-    valueSet = [
-      {
-        fullName = "Email"
-        default = false
-        label = "Email"
-        isActive = true
-      },
-      {
-        fullName = "Phone"
-        default = false
-        label = "Phone"
-        isActive = true
-      },
-      {
-        fullName = "Web"
-        default = false
-        label = "Web"
-        isActive = true
-      },
-      {
-        fullName = "Social"
-        default = false
-        label = "Social"
-        isActive = true
-      },
-      {
-        fullName = "MailingAddress"
-        default = false
-        label = "Mailing Address"
-        isActive = true
-      },
-    ]
     restricted = true
     createable = true
     updateable = true
@@ -268,26 +158,22 @@ type salesforce.ContactPointTypeConsent {
   }
   salesforce.Lookup BusinessBrandId {
     apiName = "ContactPointTypeConsent.BusinessBrandId"
-    trackHistory = false
-    queryable = false
-    updateable = false
-    createable = false
-    _hidden_value = true
+    queryable = true
+    updateable = true
+    relationshipName = "BusinessBrand"
+    label = "Business Brand ID"
+    createable = true
   }
   salesforce.Lookup EngagementChannelTypeId {
     apiName = "ContactPointTypeConsent.EngagementChannelTypeId"
-    trackHistory = false
-    queryable = false
-    updateable = false
-    createable = false
     _hidden_value = true
   }
   salesforce.Lookup PartyRoleId {
     apiName = "ContactPointTypeConsent.PartyRoleId"
-    trackHistory = false
-    queryable = false
-    updateable = false
-    createable = false
-    _hidden_value = true
+    queryable = true
+    updateable = true
+    relationshipName = "PartyRole"
+    label = "Party Role ID"
+    createable = true
   }
 }

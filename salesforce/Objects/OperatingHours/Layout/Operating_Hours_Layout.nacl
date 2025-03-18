@@ -76,4 +76,5 @@ salesforce.Layout OperatingHours_Operating_Hours_Layout@bss {
   _parent = [
     salesforce.OperatingHours,
   ]
+  _alias = "OperatingHours-Operating Hours Layout"
 }

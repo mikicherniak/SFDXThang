@@ -32,4 +32,10 @@ salesforce.LightningExperienceSettings {
   isLEXExtensionDarkModeOff = false
   isLEXExtensionLinkGrabberOff = false
   isLEXExtensionOff = false
+  _alias = "LightningExperience"
+  enableErrorExperienceEnabled = "false"
+  enableHideOpenInQuip = "false"
+  enableInAppLearning = "true"
+  enableSidToken3rdPartyAuraApp = "false"
+  enableStackedModalManagerEnabled = "false"
 }

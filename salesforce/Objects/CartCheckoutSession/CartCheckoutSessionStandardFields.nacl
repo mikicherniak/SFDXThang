@@ -4,8 +4,6 @@ type salesforce.CartCheckoutSession {
     label = "Cart Checkout Session ID"
     queryable = true
     _hidden_value = true
-    updateable = false
-    createable = false
   }
   salesforce.Checkbox IsDeleted {
     apiName = "CartCheckoutSession.IsDeleted"
@@ -38,9 +36,6 @@ type salesforce.CartCheckoutSession {
   salesforce.Lookup CreatedById {
     apiName = "CartCheckoutSession.CreatedById"
     label = "Created By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "CreatedBy"
@@ -58,9 +53,6 @@ type salesforce.CartCheckoutSession {
   salesforce.Lookup LastModifiedById {
     apiName = "CartCheckoutSession.LastModifiedById"
     label = "Last Modified By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "LastModifiedBy"
@@ -79,9 +71,6 @@ type salesforce.CartCheckoutSession {
     apiName = "CartCheckoutSession.WebCartId"
     label = "Cart ID"
     _required = true
-    referenceTo = [
-      salesforce.WebCart,
-    ]
     createable = false
     updateable = false
     relationshipName = "WebCart"
@@ -120,9 +109,6 @@ type salesforce.CartCheckoutSession {
   salesforce.Lookup BackgroundOperationId {
     apiName = "CartCheckoutSession.BackgroundOperationId"
     label = "Background Operation ID"
-    referenceTo = [
-      "BackgroundOperation",
-    ]
     createable = false
     updateable = true
     relationshipName = "BackgroundOperation"
@@ -139,9 +125,6 @@ type salesforce.CartCheckoutSession {
   salesforce.Lookup OrderId {
     apiName = "CartCheckoutSession.OrderId"
     label = "Order ID"
-    referenceTo = [
-      salesforce.Order,
-    ]
     createable = false
     updateable = true
     relationshipName = "Order"
@@ -153,6 +136,16 @@ type salesforce.CartCheckoutSession {
     defaultValue = false
     createable = false
     updateable = true
+    queryable = true
+  }
+  salesforce.Text OrderReferenceNumber {
+    apiName = "CartCheckoutSession.OrderReferenceNumber"
+    length = 36
+    label = "Order Reference Number"
+    createable = false
+    updateable = true
+    unique = false
+    caseSensitive = false
     queryable = true
   }
 }

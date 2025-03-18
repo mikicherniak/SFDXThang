@@ -4,8 +4,6 @@ type salesforce.PaymentMethod {
     label = "Payment Method ID"
     queryable = true
     _hidden_value = true
-    updateable = false
-    createable = false
   }
   salesforce.Text ImplementorType {
     apiName = "PaymentMethod.ImplementorType"
@@ -21,9 +19,6 @@ type salesforce.PaymentMethod {
   salesforce.Lookup AccountId {
     apiName = "PaymentMethod.AccountId"
     label = "Account ID"
-    referenceTo = [
-      salesforce.Account,
-    ]
     createable = false
     updateable = false
     relationshipName = "Account"
@@ -52,30 +47,41 @@ type salesforce.PaymentMethod {
     queryable = true
     _hidden_value = true
   }
+  salesforce.Text PaymentMethodDetails {
+    apiName = "PaymentMethod.PaymentMethodDetails"
+    length = 255
+    label = "Payment Method Details"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text PaymentMethodSubType {
+    apiName = "PaymentMethod.PaymentMethodSubType"
+    length = 255
+    label = "Payment Method Sub Type"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist PaymentMethodType {
+    apiName = "PaymentMethod.PaymentMethodType"
+    restricted = true
+    label = "Payment Method Type"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
   salesforce.Picklist Status {
     apiName = "PaymentMethod.Status"
     label = "Status"
     _required = true
-    valueSet = [
-      {
-        fullName = "Active"
-        default = false
-        label = "Active"
-        isActive = true
-      },
-      {
-        fullName = "InActive"
-        default = false
-        label = "InActive"
-        isActive = true
-      },
-      {
-        fullName = "Canceled"
-        default = false
-        label = "Canceled"
-        isActive = true
-      },
-    ]
     restricted = true
     createable = false
     updateable = false
@@ -91,6 +97,14 @@ type salesforce.PaymentMethod {
     queryable = true
     _hidden_value = true
   }
+  salesforce.Checkbox IsAutoPayEnabled {
+    apiName = "PaymentMethod.IsAutoPayEnabled"
+    label = "Auto Pay"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
   salesforce.Address PaymentMethodAddress {
     apiName = "PaymentMethod.PaymentMethodAddress"
     label = "Payment Method Address"
@@ -102,9 +116,6 @@ type salesforce.PaymentMethod {
   salesforce.Lookup CreatedById {
     apiName = "PaymentMethod.CreatedById"
     label = "User ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "CreatedBy"
@@ -113,7 +124,7 @@ type salesforce.PaymentMethod {
   }
   salesforce.DateTime CreatedDate {
     apiName = "PaymentMethod.CreatedDate"
-    label = "Created Date"
+    label = "__MISSING LABEL__ PropertyFile - val CreatedDate not found in section udd_PaymentMethod"
     createable = false
     updateable = false
     queryable = true
@@ -122,9 +133,6 @@ type salesforce.PaymentMethod {
   salesforce.Lookup LastModifiedById {
     apiName = "PaymentMethod.LastModifiedById"
     label = "User ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "LastModifiedBy"
@@ -133,7 +141,7 @@ type salesforce.PaymentMethod {
   }
   salesforce.DateTime LastModifiedDate {
     apiName = "PaymentMethod.LastModifiedDate"
-    label = "Last Modified Date"
+    label = "__MISSING LABEL__ PropertyFile - val LastModifiedDate not found in section udd_PaymentMethod"
     createable = false
     updateable = false
     queryable = true
@@ -141,7 +149,7 @@ type salesforce.PaymentMethod {
   }
   salesforce.DateTime SystemModstamp {
     apiName = "PaymentMethod.SystemModstamp"
-    label = "System Modstamp"
+    label = "__MISSING LABEL__ PropertyFile - val SystemModstamp not found in section udd_PaymentMethod"
     createable = false
     updateable = false
     queryable = true
@@ -149,7 +157,7 @@ type salesforce.PaymentMethod {
   }
   salesforce.Checkbox IsDeleted {
     apiName = "PaymentMethod.IsDeleted"
-    label = "Deleted"
+    label = "__MISSING LABEL__ PropertyFile - val IsDeleted not found in section udd_PaymentMethod"
     defaultValue = false
     createable = false
     updateable = false
@@ -158,7 +166,7 @@ type salesforce.PaymentMethod {
   }
   salesforce.Text Name {
     apiName = "PaymentMethod.Name"
-    label = "Name"
+    label = "__MISSING LABEL__ PropertyFile - val Name not found in section udd_PaymentMethod"
     _required = true
     createable = false
     updateable = false

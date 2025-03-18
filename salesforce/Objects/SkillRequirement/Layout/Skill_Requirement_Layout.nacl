@@ -70,4 +70,5 @@ salesforce.Layout SkillRequirement_Skill_Requirement_Layout@bss {
   _parent = [
     salesforce.SkillRequirement,
   ]
+  _alias = "SkillRequirement-Skill Requirement Layout"
 }

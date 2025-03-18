@@ -11,6 +11,10 @@ salesforce.Layout WebCart_Cart_Layout@bs {
           layoutItems = [
             {
               behavior = "Readonly"
+              field = salesforce.WebCart.field.TotalProductLineItemCount
+            },
+            {
+              behavior = "Readonly"
               field = salesforce.WebCart.field.TotalLineItemsWithErrors
             },
             {
@@ -81,6 +85,10 @@ salesforce.Layout WebCart_Cart_Layout@bs {
             {
               behavior = "Required"
               field = salesforce.WebCart.field.Status
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.WebCart.field.TaxLocaleType
             },
           ]
         },
@@ -185,11 +193,16 @@ salesforce.Layout WebCart_Cart_Layout@bs {
       customLabel = false
       detailHeading = false
       editHeading = false
+      layoutColumns = [
+        {
+        },
+      ]
       style = "CustomLinks"
     },
   ]
   miniLayout = {
     fields = [
+      "TotalProductLineItemCount",
       "TotalLineItemsWithErrors",
       "TotalAdjustmentAmount",
     ]
@@ -212,4 +225,5 @@ salesforce.Layout WebCart_Cart_Layout@bs {
   _parent = [
     salesforce.WebCart,
   ]
+  _alias = "WebCart-Cart Layout"
 }

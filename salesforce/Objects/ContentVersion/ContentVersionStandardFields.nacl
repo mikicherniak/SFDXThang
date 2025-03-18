@@ -4,16 +4,11 @@ type salesforce.ContentVersion {
     label = "ContentVersion ID"
     queryable = true
     _hidden_value = true
-    updateable = false
-    createable = false
   }
   salesforce.Lookup ContentDocumentId {
     apiName = "ContentVersion.ContentDocumentId"
     label = "ContentDocument ID"
     _required = true
-    referenceTo = [
-      "ContentDocument",
-    ]
     createable = true
     updateable = false
     relationshipName = "ContentDocument"
@@ -37,9 +32,6 @@ type salesforce.ContentVersion {
   salesforce.Lookup ContentBodyId {
     apiName = "ContentVersion.ContentBodyId"
     label = "Content Body ID"
-    referenceTo = [
-      "ContentBody",
-    ]
     createable = true
     updateable = false
     relationshipName = "ContentBody"
@@ -89,20 +81,6 @@ type salesforce.ContentVersion {
     apiName = "ContentVersion.SharingOption"
     label = "Prevent others from sharing and unsharing"
     _required = true
-    valueSet = [
-      {
-        fullName = "A"
-        default = true
-        label = "Freeze Sharing Off"
-        isActive = true
-      },
-      {
-        fullName = "R"
-        default = false
-        label = "Freeze Sharing On"
-        isActive = true
-      },
-    ]
     restricted = true
     createable = true
     updateable = true
@@ -112,20 +90,6 @@ type salesforce.ContentVersion {
     apiName = "ContentVersion.SharingPrivacy"
     label = "File Privacy on Records"
     _required = true
-    valueSet = [
-      {
-        fullName = "N"
-        default = true
-        label = "Visible to Anyone With Record Access"
-        isActive = true
-      },
-      {
-        fullName = "P"
-        default = false
-        label = "Private on Records"
-        isActive = true
-      },
-    ]
     restricted = true
     createable = true
     updateable = true
@@ -171,9 +135,6 @@ type salesforce.ContentVersion {
   salesforce.Lookup ContentModifiedById {
     apiName = "ContentVersion.ContentModifiedById"
     label = "User ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "ContentModifiedBy"
@@ -224,22 +185,15 @@ type salesforce.ContentVersion {
   salesforce.Lookup OwnerId {
     apiName = "ContentVersion.OwnerId"
     label = "Owner ID"
-    referenceTo = [
-      salesforce.User,
-    ]
-    createable = false
-    updateable = false
+    createable = true
+    updateable = true
     relationshipName = "Owner"
     queryable = true
     _hidden_value = true
-    trackHistory = false
   }
   salesforce.Lookup CreatedById {
     apiName = "ContentVersion.CreatedById"
     label = "Created By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "CreatedBy"
@@ -257,9 +211,6 @@ type salesforce.ContentVersion {
   salesforce.Lookup LastModifiedById {
     apiName = "ContentVersion.LastModifiedById"
     label = "Last Modified By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "LastModifiedBy"
@@ -306,26 +257,6 @@ type salesforce.ContentVersion {
     apiName = "ContentVersion.PublishStatus"
     label = "Publish Status"
     _required = true
-    valueSet = [
-      {
-        fullName = "U"
-        default = true
-        label = "Upload Interrupted"
-        isActive = true
-      },
-      {
-        fullName = "P"
-        default = false
-        label = "Public"
-        isActive = true
-      },
-      {
-        fullName = "R"
-        default = false
-        label = "Private Library"
-        isActive = true
-      },
-    ]
     restricted = true
     createable = false
     updateable = false
@@ -367,88 +298,6 @@ type salesforce.ContentVersion {
   salesforce.Lookup FirstPublishLocationId {
     apiName = "ContentVersion.FirstPublishLocationId"
     label = "First Publish Location ID"
-    referenceTo = [
-      salesforce.Account,
-      salesforce.ApiAnomalyEventStore,
-      salesforce.Asset,
-      salesforce.AssetRelationship,
-      salesforce.AssignedResource,
-      salesforce.AuthorizationFormText,
-      salesforce.Campaign,
-      salesforce.Case,
-      salesforce.CollaborationGroup,
-      salesforce.CommSubscription,
-      salesforce.CommSubscriptionChannelType,
-      salesforce.CommSubscriptionConsent,
-      salesforce.CommSubscriptionTiming,
-      salesforce.ConsumptionSchedule,
-      salesforce.Contact,
-      "ContentWorkspace",
-      salesforce.Contract,
-      salesforce.ContractLineItem,
-      "ConversationEntry",
-      salesforce.CredentialStuffingEventStore,
-      salesforce.CreditMemo,
-      salesforce.CreditMemoLine,
-      "Dashboard",
-      "DashboardComponent",
-      salesforce.EmailMessage,
-      "EmailTemplate",
-      salesforce.EngagementChannelType,
-      "EnhancedLetterhead",
-      salesforce.Entitlement,
-      salesforce.EntityMilestone,
-      salesforce.Event,
-      salesforce.Image,
-      salesforce.Invoice,
-      salesforce.InvoiceLine,
-      salesforce.Lead,
-      salesforce.LegalEntity,
-      "ListEmail",
-      salesforce.Location,
-      salesforce.MessagingSession,
-      salesforce.OperatingHours,
-      salesforce.OperatingHoursHoliday,
-      salesforce.Opportunity,
-      salesforce.Order,
-      salesforce.OrderItem,
-      "Organization",
-      "OutgoingEmail",
-      salesforce.PartyConsent,
-      salesforce.Product2,
-      "Report",
-      salesforce.ReportAnomalyEventStore,
-      salesforce.ResourceAbsence,
-      salesforce.ResourcePreference,
-      salesforce.ReturnOrder,
-      salesforce.ReturnOrderLineItem,
-      salesforce.ServiceAppointment,
-      salesforce.ServiceContract,
-      salesforce.ServiceResource,
-      salesforce.ServiceResourceSkill,
-      salesforce.ServiceTerritory,
-      salesforce.ServiceTerritoryMember,
-      salesforce.ServiceTerritoryWorkType,
-      salesforce.SessionHijackingEventStore,
-      salesforce.Shift,
-      salesforce.Site,
-      salesforce.SkillRequirement,
-      salesforce.Solution,
-      salesforce.Task,
-      "ThreatDetectionFeedback",
-      salesforce.Topic,
-      salesforce.User,
-      salesforce.WorkOrder,
-      salesforce.WorkOrderLineItem,
-      salesforce.WorkPlan,
-      salesforce.WorkPlanTemplate,
-      salesforce.WorkPlanTemplateEntry,
-      salesforce.WorkStep,
-      salesforce.WorkStepTemplate,
-      salesforce.WorkType,
-      salesforce.WorkTypeGroup,
-      salesforce.WorkTypeGroupMember,
-    ]
     createable = true
     updateable = false
     relationshipName = "FirstPublishLocation"
@@ -458,20 +307,6 @@ type salesforce.ContentVersion {
     apiName = "ContentVersion.Origin"
     label = "Content Origin"
     _required = true
-    valueSet = [
-      {
-        fullName = "C"
-        default = true
-        label = "Content"
-        isActive = true
-      },
-      {
-        fullName = "H"
-        default = false
-        label = "Chatter"
-        isActive = true
-      },
-    ]
     restricted = true
     createable = true
     updateable = false
@@ -481,26 +316,6 @@ type salesforce.ContentVersion {
     apiName = "ContentVersion.ContentLocation"
     label = "Content Location"
     _required = true
-    valueSet = [
-      {
-        fullName = "S"
-        default = true
-        label = "Salesforce"
-        isActive = true
-      },
-      {
-        fullName = "E"
-        default = false
-        label = "External"
-        isActive = true
-      },
-      {
-        fullName = "L"
-        default = false
-        label = "Social Customer Service"
-        isActive = true
-      },
-    ]
     restricted = true
     createable = true
     updateable = false
@@ -540,9 +355,6 @@ type salesforce.ContentVersion {
   salesforce.Lookup ExternalDataSourceId {
     apiName = "ContentVersion.ExternalDataSourceId"
     label = "External Data Source ID"
-    referenceTo = [
-      salesforce.ExternalDataSource,
-    ]
     createable = true
     updateable = true
     relationshipName = "ExternalDataSource"
@@ -577,10 +389,17 @@ type salesforce.ContentVersion {
   }
   salesforce.Unknown Language {
     apiName = "ContentVersion.Language"
-    trackHistory = false
-    queryable = false
-    updateable = false
+    _hidden_value = true
+  }
+  salesforce.Text VersionDataUrl {
+    apiName = "ContentVersion.VersionDataUrl"
+    length = 255
+    label = "Version Data URL"
     createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
     _hidden_value = true
   }
 }

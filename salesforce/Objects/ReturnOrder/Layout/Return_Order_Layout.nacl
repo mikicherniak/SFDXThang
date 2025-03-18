@@ -129,6 +129,10 @@ salesforce.Layout ReturnOrder_Return_Order_Layout@bss {
       customLabel = false
       detailHeading = false
       editHeading = false
+      layoutColumns = [
+        {
+        },
+      ]
       style = "CustomLinks"
     },
   ]
@@ -138,4 +142,5 @@ salesforce.Layout ReturnOrder_Return_Order_Layout@bss {
   _parent = [
     salesforce.ReturnOrder,
   ]
+  _alias = "ReturnOrder-Return Order Layout"
 }

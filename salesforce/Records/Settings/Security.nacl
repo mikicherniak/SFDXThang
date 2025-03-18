@@ -36,7 +36,6 @@ salesforce.SecuritySettings {
     enablePostForSessions = false
     enableSMSIdentity = true
     enableU2F = false
-    enableXssProtection = true
     enforceIpRangesEveryRequest = false
     enforceUserDeviceRevoked = false
     forceLogoutOnSessionTimeout = true
@@ -52,6 +51,24 @@ salesforce.SecuritySettings {
     referrerPolicy = true
     requireHttpOnly = false
     sessionTimeout = "TwoHours"
+    allowUserCertBasedAuthenticationWithOcspValidation = false
+    enableBuiltInAuthenticator = false
+    enableCoepHeader = false
+    enableCoopHeader = false
+    enableMFADirectUILoginOptIn = false
+    enablePermissionsPolicy = false
+    grantCameraAccess = "TrustedUrls"
+    grantMicrophoneAccess = "TrustedUrls"
+    lockerServiceNext = false
+    lockerServiceNextControl = false
+    redirectBlockModeEnabled = false
+    referrerPolicyDirective = "origin-when-cross-origin"
+    sendCspForUncommonClients = false
+    sidToken3rdPartyAuraApp = false
+    skipSFAWhenMFADirectUILogin = false
+    terminateUserSessionsWhenAdminResetsPassword = false
+    useEAPIRateLimitForConnectAPI = false
+    useLocalStorageForLogoutUrl = false
   }
   singleSignOnSettings = {
     enableCaseInsensitiveFederationID = false
@@ -60,4 +77,13 @@ salesforce.SecuritySettings {
     enableSamlLogin = false
     isLoginWithSalesforceCredentialsDisabled = false
   }
+  _alias = "Security"
+  enableCoepHeader = "false"
+  enableCoopHeader = "false"
+  enableCrossOrgRedirects = "false"
+  enablePermissionsPolicy = "false"
+  networkAccess = {
+  }
+  redirectBlockModeEnabled = "false"
+  sendCspForUncommonClients = "false"
 }

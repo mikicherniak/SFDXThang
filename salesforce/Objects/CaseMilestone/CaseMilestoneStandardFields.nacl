@@ -4,16 +4,11 @@ type salesforce.CaseMilestone {
     label = "Case Milestone ID"
     queryable = true
     _hidden_value = true
-    updateable = false
-    createable = false
   }
   salesforce.Lookup CaseId {
     apiName = "CaseMilestone.CaseId"
     label = "Case ID"
     _required = true
-    referenceTo = [
-      salesforce.Case,
-    ]
     createable = false
     updateable = false
     relationshipName = "Case"
@@ -46,9 +41,6 @@ type salesforce.CaseMilestone {
   salesforce.Lookup MilestoneTypeId {
     apiName = "CaseMilestone.MilestoneTypeId"
     label = "Milestone Type ID"
-    referenceTo = [
-      salesforce.MilestoneType,
-    ]
     createable = false
     updateable = false
     relationshipName = "MilestoneType"
@@ -92,9 +84,6 @@ type salesforce.CaseMilestone {
   salesforce.Lookup CreatedById {
     apiName = "CaseMilestone.CreatedById"
     label = "Created By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "CreatedBy"
@@ -112,9 +101,6 @@ type salesforce.CaseMilestone {
   salesforce.Lookup LastModifiedById {
     apiName = "CaseMilestone.LastModifiedById"
     label = "Last Modified By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "LastModifiedBy"
@@ -265,9 +251,6 @@ type salesforce.CaseMilestone {
   salesforce.Lookup BusinessHoursId {
     apiName = "CaseMilestone.BusinessHoursId"
     label = "Business Hours ID"
-    referenceTo = [
-      "BusinessHours",
-    ]
     createable = false
     updateable = false
     relationshipName = "BusinessHours"
@@ -276,16 +259,10 @@ type salesforce.CaseMilestone {
   }
   salesforce.Lookup MilestoneId {
     apiName = "CaseMilestone.MilestoneId"
-    queryable = false
-    updateable = false
-    createable = false
     _hidden_value = true
   }
   salesforce.Lookup SlaProcessId {
     apiName = "CaseMilestone.SlaProcessId"
-    queryable = false
-    updateable = false
-    createable = false
     _hidden_value = true
   }
 }

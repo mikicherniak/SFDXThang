@@ -79,6 +79,8 @@ salesforce.Layout Lead_Lead__28Support_29_Layout@bspps {
             },
           ]
         },
+        {
+        },
       ]
       style = "TwoColumnsTopToBottom"
     },
@@ -339,11 +341,6 @@ salesforce.Layout Lead_Lead__28Support_29_Layout@bspps {
           field = salesforce.Lead.field.CampaignId
         }
       },
-      {
-        layoutItem = {
-          component = "runtime_sales_social:socialPanel"
-        }
-      },
     ]
   }
   relatedLists = [
@@ -394,4 +391,5 @@ salesforce.Layout Lead_Lead__28Support_29_Layout@bspps {
   _parent = [
     salesforce.Lead,
   ]
+  _alias = "Lead-Lead %28Support%29 Layout"
 }

@@ -288,7 +288,24 @@ type salesforce.Case {
       "CORE.USERS.ALIAS",
     ]
   }
+  _alias = "Case"
   topicsForObjects = {
     enableTopics = true
+  }
+  historyTrackedFields = {
+    AssetId = salesforce.Case.field.AssetId
+    ContactId = salesforce.Case.field.ContactId
+    Description = salesforce.Case.field.Description
+    Origin = salesforce.Case.field.Origin
+    OwnerId = salesforce.Case.field.OwnerId
+    Priority = salesforce.Case.field.Priority
+    Reason = salesforce.Case.field.Reason
+    Status = salesforce.Case.field.Status
+    Subject = salesforce.Case.field.Subject
+    Type = salesforce.Case.field.Type
+  }
+  feedHistoryTrackedFields = {
+    OwnerId = salesforce.Case.field.OwnerId
+    Priority = salesforce.Case.field.Priority
   }
 }

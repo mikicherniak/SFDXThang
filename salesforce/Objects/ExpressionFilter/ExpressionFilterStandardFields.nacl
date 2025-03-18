@@ -4,8 +4,6 @@ type salesforce.ExpressionFilter {
     label = "ExpressionFilter ID"
     queryable = true
     _hidden_value = true
-    updateable = false
-    createable = false
   }
   salesforce.Checkbox IsDeleted {
     apiName = "ExpressionFilter.IsDeleted"
@@ -35,9 +33,6 @@ type salesforce.ExpressionFilter {
   salesforce.Lookup CreatedById {
     apiName = "ExpressionFilter.CreatedById"
     label = "Created By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "CreatedBy"
@@ -55,9 +50,6 @@ type salesforce.ExpressionFilter {
   salesforce.Lookup LastModifiedById {
     apiName = "ExpressionFilter.LastModifiedById"
     label = "Last Modified By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "LastModifiedBy"
@@ -86,9 +78,6 @@ type salesforce.ExpressionFilter {
     apiName = "ExpressionFilter.ContextId"
     label = "Macro Instruction ID"
     _required = true
-    referenceTo = [
-      salesforce.MacroInstruction,
-    ]
     createable = true
     updateable = false
     relationshipName = "Context"

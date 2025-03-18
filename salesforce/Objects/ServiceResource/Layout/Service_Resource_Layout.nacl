@@ -153,10 +153,12 @@ salesforce.Layout ServiceResource_Service_Resource_Layout@bss {
     },
     {
       fields = [
-        "Label",
+        "Name",
         "StartTime",
         "EndTime",
         "Status",
+        "Label",
+        "Type",
       ]
       relatedList = "ServiceResourceShifts"
     },
@@ -167,4 +169,5 @@ salesforce.Layout ServiceResource_Service_Resource_Layout@bss {
   _parent = [
     salesforce.ServiceResource,
   ]
+  _alias = "ServiceResource-Service Resource Layout"
 }

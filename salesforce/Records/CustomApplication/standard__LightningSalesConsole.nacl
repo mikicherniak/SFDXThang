@@ -6,6 +6,8 @@ salesforce.CustomApplication standard__LightningSalesConsole {
   ]
   isNavAutoTempTabsDisabled = false
   isNavPersonalizationDisabled = false
+  isNavTabPersistenceDisabled = false
+  isOmniPinnedViewEnabled = false
   label = "Sales Console"
   navType = "Console"
   tabs = [
@@ -68,4 +70,5 @@ salesforce.CustomApplication standard__LightningSalesConsole {
       },
     ]
   }
+  _alias = "Sales Console (standard)"
 }

@@ -110,10 +110,11 @@ salesforce.Layout ServiceTerritory_Service_Territory_Layout@bss {
     },
     {
       fields = [
-        "Label",
+        "Name",
         "StartTime",
         "EndTime",
         "Status",
+        "Label",
       ]
       relatedList = "ServiceTerritoryShifts"
     },
@@ -124,4 +125,5 @@ salesforce.Layout ServiceTerritory_Service_Territory_Layout@bss {
   _parent = [
     salesforce.ServiceTerritory,
   ]
+  _alias = "ServiceTerritory-Service Territory Layout"
 }

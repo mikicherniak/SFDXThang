@@ -211,4 +211,5 @@ type salesforce.SkillRequirement {
       "Skill",
     ]
   }
+  _alias = "Skill Requirement"
 }

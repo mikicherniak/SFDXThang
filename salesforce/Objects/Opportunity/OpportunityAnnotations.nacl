@@ -229,7 +229,15 @@ type salesforce.Opportunity {
       "CORE.USERS.ALIAS",
     ]
   }
+  _alias = "Opportunity"
   topicsForObjects = {
     enableTopics = true
+  }
+  feedHistoryTrackedFields = {
+    Amount = salesforce.Opportunity.field.Amount
+    CloseDate = salesforce.Opportunity.field.CloseDate
+    Name = salesforce.Opportunity.field.Name
+    OwnerId = salesforce.Opportunity.field.OwnerId
+    StageName = salesforce.Opportunity.field.StageName
   }
 }

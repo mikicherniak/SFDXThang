@@ -201,4 +201,8 @@ type salesforce.ChangeRequest {
       "Priority",
     ]
   }
+  _alias = "Change Request"
+  topicsForObjects = {
+    enableTopics = false
+  }
 }

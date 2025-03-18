@@ -4,18 +4,12 @@ type salesforce.AuthorizationForm {
     label = "Authorization Form ID"
     queryable = true
     _hidden_value = true
-    updateable = false
-    createable = false
   }
   salesforce.Lookup OwnerId {
     apiName = "AuthorizationForm.OwnerId"
     label = "Owner ID"
-    referenceTo = [
-      salesforce.Group,
-      salesforce.User,
-    ]
-    createable = false
-    updateable = false
+    createable = true
+    updateable = true
     relationshipName = "Owner"
     queryable = true
     _hidden_value = true
@@ -51,9 +45,6 @@ type salesforce.AuthorizationForm {
   salesforce.Lookup CreatedById {
     apiName = "AuthorizationForm.CreatedById"
     label = "Created By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "CreatedBy"
@@ -71,9 +62,6 @@ type salesforce.AuthorizationForm {
   salesforce.Lookup LastModifiedById {
     apiName = "AuthorizationForm.LastModifiedById"
     label = "Last Modified By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "LastModifiedBy"
@@ -115,14 +103,10 @@ type salesforce.AuthorizationForm {
   salesforce.Lookup DefaultAuthFormTextId {
     apiName = "AuthorizationForm.DefaultAuthFormTextId"
     label = "Default Authorization Form Text ID"
-    referenceTo = [
-      salesforce.AuthorizationFormText,
-    ]
     createable = true
     updateable = true
     relationshipName = "DefaultAuthFormText"
     queryable = true
-    trackHistory = false
   }
   salesforce.Checkbox IsSignatureRequired {
     apiName = "AuthorizationForm.IsSignatureRequired"

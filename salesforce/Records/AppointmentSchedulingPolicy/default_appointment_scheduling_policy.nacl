@@ -13,4 +13,5 @@ salesforce.AppointmentSchedulingPolicy default_appointment_scheduling_policy {
   shouldRespectVisitingHours = true
   shouldUsePrimaryMembers = true
   shouldUseSecondaryMembers = true
+  _alias = "default_appointment_scheduling_policy"
 }

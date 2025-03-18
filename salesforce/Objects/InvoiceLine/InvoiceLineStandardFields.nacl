@@ -4,8 +4,6 @@ type salesforce.InvoiceLine {
     label = "Invoice Line ID"
     queryable = true
     _hidden_value = true
-    updateable = false
-    createable = false
   }
   salesforce.Checkbox IsDeleted {
     apiName = "InvoiceLine.IsDeleted"
@@ -38,9 +36,6 @@ type salesforce.InvoiceLine {
   salesforce.Lookup CreatedById {
     apiName = "InvoiceLine.CreatedById"
     label = "Created By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "CreatedBy"
@@ -58,9 +53,6 @@ type salesforce.InvoiceLine {
   salesforce.Lookup LastModifiedById {
     apiName = "InvoiceLine.LastModifiedById"
     label = "Last Modified By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "LastModifiedBy"
@@ -75,38 +67,17 @@ type salesforce.InvoiceLine {
     queryable = true
     _hidden_value = true
   }
-  salesforce.Lookup InvoiceId {
-    apiName = "InvoiceLine.InvoiceId"
-    label = "Invoice ID"
-    _required = true
-    referenceTo = [
-      salesforce.Invoice,
-    ]
-    createable = false
-    updateable = false
-    relationshipName = "Invoice"
-    queryable = true
-    trackHistory = false
-    _hidden_value = true
-  }
   salesforce.Lookup ReferenceEntityItemId {
     apiName = "InvoiceLine.ReferenceEntityItemId"
     label = "ReferenceEntityItem ID"
-    referenceTo = [
-      salesforce.OrderItem,
-    ]
     createable = false
     updateable = true
     relationshipName = "ReferenceEntityItem"
     queryable = true
-    trackHistory = false
   }
   salesforce.Lookup GroupReferenceEntityItemId {
     apiName = "InvoiceLine.GroupReferenceEntityItemId"
     label = "GroupReferenceEntityItem ID"
-    referenceTo = [
-      salesforce.OrderItem,
-    ]
     createable = false
     updateable = true
     relationshipName = "GroupReferenceEntityItem"
@@ -206,20 +177,6 @@ type salesforce.InvoiceLine {
   salesforce.Picklist ReferenceEntityItemType {
     apiName = "InvoiceLine.ReferenceEntityItemType"
     label = "Reference Entity Item Type"
-    valueSet = [
-      {
-        fullName = "Order Product"
-        default = false
-        label = "Order Product"
-        isActive = true
-      },
-      {
-        fullName = "Delivery Charge"
-        default = false
-        label = "Delivery Charge"
-        isActive = true
-      },
-    ]
     restricted = true
     createable = false
     updateable = true
@@ -228,20 +185,6 @@ type salesforce.InvoiceLine {
   salesforce.Picklist ReferenceEntityItemTypeCode {
     apiName = "InvoiceLine.ReferenceEntityItemTypeCode"
     label = "Reference Entity Item Type Code"
-    valueSet = [
-      {
-        fullName = "Product"
-        default = false
-        label = "Product"
-        isActive = true
-      },
-      {
-        fullName = "Charge"
-        default = false
-        label = "Charge"
-        isActive = true
-      },
-    ]
     restricted = true
     createable = false
     updateable = true
@@ -250,51 +193,23 @@ type salesforce.InvoiceLine {
   salesforce.Lookup Product2Id {
     apiName = "InvoiceLine.Product2Id"
     label = "Product ID"
-    referenceTo = [
-      salesforce.Product2,
-    ]
     createable = false
     updateable = true
     relationshipName = "Product2"
     queryable = true
-    trackHistory = false
   }
   salesforce.Lookup RelatedLineId {
     apiName = "InvoiceLine.RelatedLineId"
     label = "Invoice Line ID"
-    referenceTo = [
-      salesforce.InvoiceLine,
-    ]
     createable = false
     updateable = true
     relationshipName = "RelatedLine"
     queryable = true
-    trackHistory = false
   }
   salesforce.Picklist Type {
     apiName = "InvoiceLine.Type"
     label = "Type"
     _required = true
-    valueSet = [
-      {
-        fullName = "Charge"
-        default = false
-        label = "Charge"
-        isActive = true
-      },
-      {
-        fullName = "Tax"
-        default = false
-        label = "Tax"
-        isActive = true
-      },
-      {
-        fullName = "Adjustment"
-        default = false
-        label = "Adjustment"
-        isActive = true
-      },
-    ]
     restricted = true
     createable = false
     updateable = false
@@ -326,8 +241,8 @@ type salesforce.InvoiceLine {
     label = "Tax Rate"
     createable = false
     updateable = true
-    scale = 0
-    precision = 3
+    scale = 2
+    precision = 5
     queryable = true
   }
   salesforce.Date TaxEffectiveDate {
@@ -374,6 +289,16 @@ type salesforce.InvoiceLine {
     updateable = false
     scale = 2
     precision = 18
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.MasterDetail InvoiceId {
+    apiName = "InvoiceLine.InvoiceId"
+    relationshipName = "Invoice"
+    _required = true
+    label = "Invoice ID"
+    createable = false
+    updateable = false
     queryable = true
     _hidden_value = true
   }

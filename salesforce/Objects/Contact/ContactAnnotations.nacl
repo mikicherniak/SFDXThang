@@ -417,7 +417,13 @@ type salesforce.Contact {
       "CORE.USERS.ALIAS",
     ]
   }
+  _alias = "Contact"
   topicsForObjects = {
     enableTopics = true
+  }
+  feedHistoryTrackedFields = {
+    AccountId = salesforce.Contact.field.AccountId
+    Name = salesforce.Contact.field.Name
+    OwnerId = salesforce.Contact.field.OwnerId
   }
 }

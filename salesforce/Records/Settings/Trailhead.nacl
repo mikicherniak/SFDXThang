@@ -1,3 +1,5 @@
 salesforce.TrailheadSettings {
   fullName = "Trailhead"
+  _alias = "Trailhead"
+  enableTrailheadInLexTerms = "false"
 }

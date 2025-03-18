@@ -5,4 +5,5 @@ salesforce.ListView ServiceResource_My_ServiceResources {
   _parent = [
     salesforce.ServiceResource,
   ]
+  _alias = "My Service Resources"
 }

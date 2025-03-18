@@ -211,6 +211,7 @@ type salesforce.WorkPlan {
       "ExecutionOrder",
     ]
   }
+  _alias = "Work Plan"
   topicsForObjects = {
     enableTopics = false
   }

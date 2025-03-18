@@ -4,8 +4,6 @@ type salesforce.OrgMetricScanSummary {
     label = "Org Metric Scan ID"
     queryable = true
     _hidden_value = true
-    updateable = false
-    createable = false
   }
   salesforce.Checkbox IsDeleted {
     apiName = "OrgMetricScanSummary.IsDeleted"
@@ -39,9 +37,6 @@ type salesforce.OrgMetricScanSummary {
   salesforce.Lookup CreatedById {
     apiName = "OrgMetricScanSummary.CreatedById"
     label = "Created By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "CreatedBy"
@@ -59,9 +54,6 @@ type salesforce.OrgMetricScanSummary {
   salesforce.Lookup LastModifiedById {
     apiName = "OrgMetricScanSummary.LastModifiedById"
     label = "Last Modified By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "LastModifiedBy"
@@ -80,9 +72,6 @@ type salesforce.OrgMetricScanSummary {
     apiName = "OrgMetricScanSummary.OrgMetricId"
     label = "Org Metric ID"
     _required = true
-    referenceTo = [
-      "OrgMetric",
-    ]
     createable = true
     updateable = false
     relationshipName = "OrgMetric"

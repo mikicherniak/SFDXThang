@@ -63,6 +63,10 @@ salesforce.Layout ReturnOrderItemAdjustment_Return_Order_Item_Adjustment_Layout@
       customLabel = false
       detailHeading = false
       editHeading = false
+      layoutColumns = [
+        {
+        },
+      ]
       style = "CustomLinks"
     },
   ]
@@ -85,4 +89,5 @@ salesforce.Layout ReturnOrderItemAdjustment_Return_Order_Item_Adjustment_Layout@
   _parent = [
     salesforce.ReturnOrderItemAdjustment,
   ]
+  _alias = "ReturnOrderItemAdjustment-Return Order Item Adjustment Layout"
 }

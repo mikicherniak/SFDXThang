@@ -4,8 +4,6 @@ type salesforce.OperatingHoursHoliday {
     label = "Operating Hour ID"
     queryable = true
     _hidden_value = true
-    updateable = false
-    createable = false
   }
   salesforce.Checkbox IsDeleted {
     apiName = "OperatingHoursHoliday.IsDeleted"
@@ -35,9 +33,6 @@ type salesforce.OperatingHoursHoliday {
   salesforce.Lookup CreatedById {
     apiName = "OperatingHoursHoliday.CreatedById"
     label = "Created By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "CreatedBy"
@@ -55,9 +50,6 @@ type salesforce.OperatingHoursHoliday {
   salesforce.Lookup LastModifiedById {
     apiName = "OperatingHoursHoliday.LastModifiedById"
     label = "Last Modified By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "LastModifiedBy"
@@ -72,25 +64,10 @@ type salesforce.OperatingHoursHoliday {
     queryable = true
     _hidden_value = true
   }
-  salesforce.Lookup OperatingHoursId {
-    apiName = "OperatingHoursHoliday.OperatingHoursId"
-    label = "Operating Hour ID"
-    _required = true
-    referenceTo = [
-      salesforce.OperatingHours,
-    ]
-    createable = true
-    updateable = false
-    relationshipName = "OperatingHours"
-    queryable = true
-  }
   salesforce.Lookup HolidayId {
     apiName = "OperatingHoursHoliday.HolidayId"
     label = "Holiday ID"
     _required = true
-    referenceTo = [
-      "Holiday",
-    ]
     createable = true
     updateable = true
     relationshipName = "Holiday"
@@ -106,5 +83,14 @@ type salesforce.OperatingHoursHoliday {
     length = 255
     queryable = true
     _hidden_value = true
+  }
+  salesforce.MasterDetail OperatingHoursId {
+    apiName = "OperatingHoursHoliday.OperatingHoursId"
+    relationshipName = "OperatingHours"
+    _required = true
+    label = "Operating Hour ID"
+    createable = true
+    updateable = false
+    queryable = true
   }
 }

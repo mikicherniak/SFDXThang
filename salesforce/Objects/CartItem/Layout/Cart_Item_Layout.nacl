@@ -70,6 +70,30 @@ salesforce.Layout CartItem_Cart_Item_Layout@bss {
               field = salesforce.CartItem.field.TotalPriceAfterAllAdjustments
             },
             {
+              behavior = "Readonly"
+              field = salesforce.CartItem.field.TotalPromoAdjustmentAmount
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.CartItem.field.TotalPromoAdjustmentTaxAmount
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.CartItem.field.ItemizedAdjustmentAmount
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.CartItem.field.DistributedAdjustmentAmount
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.CartItem.field.ItemizedAdjustmentTaxAmount
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.CartItem.field.DistributedAdjustmentTaxAmount
+            },
+            {
               behavior = "Required"
               field = salesforce.CartItem.field.TotalLineAmount
             },
@@ -97,6 +121,42 @@ salesforce.Layout CartItem_Cart_Item_Layout@bss {
               behavior = "Required"
               field = salesforce.CartItem.field.UnitAdjustmentAmount
             },
+            {
+              behavior = "Required"
+              field = salesforce.CartItem.field.TotalLineNetAmount
+            },
+            {
+              behavior = "Required"
+              field = salesforce.CartItem.field.TotalLineGrossAmount
+            },
+            {
+              behavior = "Required"
+              field = salesforce.CartItem.field.TotalPriceTaxAmount
+            },
+            {
+              behavior = "Required"
+              field = salesforce.CartItem.field.NetUnitPrice
+            },
+            {
+              behavior = "Required"
+              field = salesforce.CartItem.field.GrossUnitPrice
+            },
+            {
+              behavior = "Required"
+              field = salesforce.CartItem.field.NetAdjustmentAmount
+            },
+            {
+              behavior = "Required"
+              field = salesforce.CartItem.field.GrossAdjustmentAmount
+            },
+            {
+              behavior = "Required"
+              field = salesforce.CartItem.field.UnitItemAdjustmentAmount
+            },
+            {
+              behavior = "Required"
+              field = salesforce.CartItem.field.UnitAdjustedPriceWithItemAdj
+            },
           ]
         },
       ]
@@ -106,13 +166,31 @@ salesforce.Layout CartItem_Cart_Item_Layout@bss {
       customLabel = false
       detailHeading = false
       editHeading = false
+      layoutColumns = [
+        {
+        },
+      ]
       style = "CustomLinks"
     },
   ]
+  miniLayout = {
+    fields = [
+      "TotalLineNetAmount",
+      "TotalLineGrossAmount",
+      "TotalPriceTaxAmount",
+      "NetUnitPrice",
+      "GrossUnitPrice",
+      "NetAdjustmentAmount",
+      "GrossAdjustmentAmount",
+      "UnitItemAdjustmentAmount",
+      "UnitAdjustedPriceWithItemAdj",
+    ]
+  }
   showEmailCheckbox = false
   showRunAssignmentRulesCheckbox = false
   showSubmitAndAttachButton = false
   _parent = [
     salesforce.CartItem,
   ]
+  _alias = "CartItem-Cart Item Layout"
 }

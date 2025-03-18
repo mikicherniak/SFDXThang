@@ -48,9 +48,12 @@ salesforce.QuickAction SendEmail {
           },
         ]
       },
+      {
+      },
     ]
   }
   standardLabel = "SendEmail"
   targetObject = "OutgoingEmail"
   type = "SendEmail"
+  _alias = "SendEmail"
 }

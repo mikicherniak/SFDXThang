@@ -182,6 +182,8 @@ type salesforce.MessagingEndUser {
       "MessageType",
       "Locale",
       "MessagingConsentStatus",
+      "CONTACT.PHONE3",
+      "CONTACT.PHONE5",
     ]
     searchResultsAdditionalFields = [
       "MessagingPlatformKey",
@@ -191,4 +193,5 @@ type salesforce.MessagingEndUser {
       "MessagingConsentStatus",
     ]
   }
+  _alias = "Messaging User"
 }

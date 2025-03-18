@@ -4,15 +4,10 @@ type salesforce.EmailMessage {
     label = "Email Message ID"
     queryable = true
     _hidden_value = true
-    updateable = false
-    createable = false
   }
   salesforce.Lookup ParentId {
     apiName = "EmailMessage.ParentId"
     label = "Case ID"
-    referenceTo = [
-      salesforce.Case,
-    ]
     createable = true
     updateable = false
     relationshipName = "Parent"
@@ -21,9 +16,6 @@ type salesforce.EmailMessage {
   salesforce.Lookup ActivityId {
     apiName = "EmailMessage.ActivityId"
     label = "Activity ID"
-    referenceTo = [
-      salesforce.Task,
-    ]
     createable = true
     updateable = false
     queryable = true
@@ -31,9 +23,6 @@ type salesforce.EmailMessage {
   salesforce.Lookup CreatedById {
     apiName = "EmailMessage.CreatedById"
     label = "Created By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "CreatedBy"
@@ -59,9 +48,6 @@ type salesforce.EmailMessage {
   salesforce.Lookup LastModifiedById {
     apiName = "EmailMessage.LastModifiedById"
     label = "Last Modified By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "LastModifiedBy"
@@ -81,7 +67,7 @@ type salesforce.EmailMessage {
     label = "Text Body"
     createable = true
     updateable = true
-    length = 32000
+    length = 131072
     queryable = true
   }
   salesforce.LongTextArea HtmlBody {
@@ -89,7 +75,7 @@ type salesforce.EmailMessage {
     label = "HTML Body"
     createable = true
     updateable = true
-    length = 32000
+    length = 131072
     queryable = true
   }
   salesforce.LongTextArea Headers {
@@ -131,14 +117,6 @@ type salesforce.EmailMessage {
   salesforce.Picklist ValidatedFromAddress {
     apiName = "EmailMessage.ValidatedFromAddress"
     label = "From"
-    valueSet = [
-      {
-        fullName = "miki.chernyak@salto.io"
-        default = false
-        label = "Miki Chernyak <miki.chernyak@salto.io>"
-        isActive = true
-      },
-    ]
     restricted = true
     createable = true
     updateable = true
@@ -162,6 +140,14 @@ type salesforce.EmailMessage {
     unique = false
     caseSensitive = false
     length = 4000
+    queryable = true
+  }
+  salesforce.Picklist AutomationType {
+    apiName = "EmailMessage.AutomationType"
+    restricted = true
+    label = "Automation Type"
+    createable = true
+    updateable = false
     queryable = true
   }
   salesforce.Text BccAddress {
@@ -195,44 +181,6 @@ type salesforce.EmailMessage {
     apiName = "EmailMessage.Status"
     label = "Status"
     _required = true
-    valueSet = [
-      {
-        fullName = "0"
-        default = false
-        label = "New"
-        isActive = true
-      },
-      {
-        fullName = "1"
-        default = false
-        label = "Read"
-        isActive = true
-      },
-      {
-        fullName = "2"
-        default = false
-        label = "Replied"
-        isActive = true
-      },
-      {
-        fullName = "3"
-        default = false
-        label = "Sent"
-        isActive = true
-      },
-      {
-        fullName = "4"
-        default = false
-        label = "Forwarded"
-        isActive = true
-      },
-      {
-        fullName = "5"
-        default = false
-        label = "Draft"
-        isActive = true
-      },
-    ]
     restricted = true
     createable = true
     updateable = true
@@ -244,6 +192,18 @@ type salesforce.EmailMessage {
     createable = true
     updateable = true
     queryable = true
+  }
+  salesforce.Text Name {
+    apiName = "EmailMessage.Name"
+    length = 255
+    _required = true
+    label = "Email Message Name"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
   }
   salesforce.Checkbox IsDeleted {
     apiName = "EmailMessage.IsDeleted"
@@ -257,11 +217,8 @@ type salesforce.EmailMessage {
   salesforce.Lookup ReplyToEmailMessageId {
     apiName = "EmailMessage.ReplyToEmailMessageId"
     label = "Email Message ID"
-    referenceTo = [
-      salesforce.EmailMessage,
-    ]
     createable = true
-    updateable = false
+    updateable = true
     relationshipName = "ReplyToEmailMessage"
     queryable = true
   }
@@ -294,6 +251,23 @@ type salesforce.EmailMessage {
     length = 765
     queryable = true
   }
+  salesforce.Text ClientThreadIdentifier {
+    apiName = "EmailMessage.ClientThreadIdentifier"
+    length = 765
+    label = "Client Thread ID"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.Lookup FromId {
+    apiName = "EmailMessage.FromId"
+    label = "From ID"
+    createable = true
+    updateable = false
+    queryable = true
+  }
   salesforce.Checkbox IsClientManaged {
     apiName = "EmailMessage.IsClientManaged"
     label = "Is Client Managed"
@@ -305,49 +279,19 @@ type salesforce.EmailMessage {
   salesforce.Lookup RelatedToId {
     apiName = "EmailMessage.RelatedToId"
     label = "Related To ID"
-    referenceTo = [
-      salesforce.Account,
-      salesforce.Asset,
-      salesforce.AssetRelationship,
-      salesforce.AssignedResource,
-      salesforce.Campaign,
-      salesforce.Case,
-      salesforce.CommSubscriptionConsent,
-      salesforce.ContactRequest,
-      salesforce.Contract,
-      salesforce.ContractLineItem,
-      salesforce.CreditMemo,
-      salesforce.Entitlement,
-      salesforce.Image,
-      salesforce.Invoice,
-      salesforce.LegalEntity,
-      "ListEmail",
-      salesforce.Location,
-      salesforce.OperatingHoursHoliday,
-      salesforce.Opportunity,
-      salesforce.Order,
-      salesforce.PartyConsent,
-      salesforce.ProcessException,
-      salesforce.Product2,
-      salesforce.ResourceAbsence,
-      salesforce.ReturnOrder,
-      salesforce.ReturnOrderLineItem,
-      salesforce.ServiceAppointment,
-      salesforce.ServiceContract,
-      salesforce.ServiceResource,
-      salesforce.Shift,
-      salesforce.Solution,
-      salesforce.WorkOrder,
-      salesforce.WorkOrderLineItem,
-      salesforce.WorkPlan,
-      salesforce.WorkPlanTemplate,
-      salesforce.WorkPlanTemplateEntry,
-      salesforce.WorkStep,
-      salesforce.WorkStepTemplate,
-    ]
     createable = true
-    updateable = false
+    updateable = true
     relationshipName = "RelatedTo"
+    queryable = true
+  }
+  salesforce.Text AttachmentIds {
+    apiName = "EmailMessage.AttachmentIds"
+    length = 32768
+    label = "Attachment Ids"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
     queryable = true
   }
   salesforce.Checkbox IsTracked {
@@ -392,9 +336,6 @@ type salesforce.EmailMessage {
   salesforce.Lookup EmailTemplateId {
     apiName = "EmailMessage.EmailTemplateId"
     label = "Email Template ID"
-    referenceTo = [
-      "EmailTemplate",
-    ]
     createable = true
     updateable = true
     relationshipName = "EmailTemplate"
@@ -402,16 +343,10 @@ type salesforce.EmailMessage {
   }
   salesforce.Unknown IsPrivateDraft {
     apiName = "EmailMessage.IsPrivateDraft"
-    queryable = false
-    updateable = false
-    createable = false
     _hidden_value = true
   }
   salesforce.Unknown MessageSize {
     apiName = "EmailMessage.MessageSize"
-    queryable = false
-    updateable = false
-    createable = false
     _hidden_value = true
   }
 }

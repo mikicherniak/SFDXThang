@@ -207,4 +207,5 @@ type salesforce.WorkTypeGroup {
       "LastModifiedBy",
     ]
   }
+  _alias = "Work Type Group"
 }

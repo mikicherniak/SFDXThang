@@ -3,4 +3,5 @@ salesforce.SharingRules ReturnOrder {
   _parent = [
     salesforce.ReturnOrder,
   ]
+  _alias = "ReturnOrder"
 }

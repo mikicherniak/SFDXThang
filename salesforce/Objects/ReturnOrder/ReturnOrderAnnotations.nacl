@@ -219,6 +219,7 @@ type salesforce.ReturnOrder {
       "ReturnedBy",
     ]
   }
+  _alias = "Return Order"
   topicsForObjects = {
     enableTopics = false
   }

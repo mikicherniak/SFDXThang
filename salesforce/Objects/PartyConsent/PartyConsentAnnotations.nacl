@@ -194,6 +194,8 @@ type salesforce.PartyConsent {
       "Party",
       "Action",
       "PrivacyConsentStatus",
+      "EffectiveFrom",
+      "EffectiveTo",
       "CaptureDate",
       "CaptureContactPointType",
       "LastModifiedDate",
@@ -203,10 +205,13 @@ type salesforce.PartyConsent {
       "Party",
       "Action",
       "PrivacyConsentStatus",
+      "EffectiveFrom",
+      "EffectiveTo",
       "CaptureDate",
       "CaptureContactPointType",
       "LastModifiedDate",
       "LastModifiedBy",
     ]
   }
+  _alias = "Party Consent"
 }

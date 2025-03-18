@@ -96,6 +96,10 @@ salesforce.Layout DigitalWallet_Digital_Wallet_Layout@bss {
       customLabel = false
       detailHeading = false
       editHeading = false
+      layoutColumns = [
+        {
+        },
+      ]
       style = "CustomLinks"
     },
   ]
@@ -105,4 +109,5 @@ salesforce.Layout DigitalWallet_Digital_Wallet_Layout@bss {
   _parent = [
     salesforce.DigitalWallet,
   ]
+  _alias = "DigitalWallet-Digital Wallet Layout"
 }

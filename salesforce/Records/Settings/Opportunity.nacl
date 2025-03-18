@@ -10,4 +10,9 @@ salesforce.OpportunitySettings {
   oppAmountDealMotionEnabled = "true"
   oppCloseDateDealMotionEnabled = "true"
   promptToAddProducts = false
+  _alias = "Opportunity"
+  enableOpportunityInsightsInMobile = false
+  pushCountEnabled = "true"
+  simpleOppCreateFromContact = "false"
+  simpleOppCreateFromEvent = "false"
 }

@@ -125,6 +125,10 @@ salesforce.Layout ReturnOrderLineItem_Return_Order_Line_Item_Layout@bssss {
       customLabel = false
       detailHeading = false
       editHeading = false
+      layoutColumns = [
+        {
+        },
+      ]
       style = "CustomLinks"
     },
   ]
@@ -134,4 +138,5 @@ salesforce.Layout ReturnOrderLineItem_Return_Order_Line_Item_Layout@bssss {
   _parent = [
     salesforce.ReturnOrderLineItem,
   ]
+  _alias = "ReturnOrderLineItem-Return Order Line Item Layout"
 }

@@ -4,75 +4,27 @@ type salesforce.Contract {
     label = "Contract ID"
     queryable = true
     _hidden_value = true
-    updateable = false
-    createable = false
   }
   salesforce.Lookup AccountId {
     apiName = "Contract.AccountId"
     label = "Account ID"
     _required = true
-    referenceTo = [
-      salesforce.Account,
-    ]
     createable = true
     updateable = true
     relationshipName = "Account"
     queryable = true
-    trackHistory = true
   }
   salesforce.Lookup Pricebook2Id {
     apiName = "Contract.Pricebook2Id"
     label = "Price Book ID"
-    referenceTo = [
-      salesforce.Pricebook2,
-    ]
     createable = true
     updateable = true
     relationshipName = "Pricebook2"
     queryable = true
-    trackHistory = true
   }
   salesforce.Picklist OwnerExpirationNotice {
     apiName = "Contract.OwnerExpirationNotice"
     label = "Owner Expiration Notice"
-    valueSet = [
-      {
-        fullName = "15"
-        default = false
-        label = "15 Days"
-        isActive = true
-      },
-      {
-        fullName = "30"
-        default = false
-        label = "30 Days"
-        isActive = true
-      },
-      {
-        fullName = "45"
-        default = false
-        label = "45 Days"
-        isActive = true
-      },
-      {
-        fullName = "60"
-        default = false
-        label = "60 Days"
-        isActive = true
-      },
-      {
-        fullName = "90"
-        default = false
-        label = "90 Days"
-        isActive = true
-      },
-      {
-        fullName = "120"
-        default = false
-        label = "120 Days"
-        isActive = true
-      },
-    ]
     restricted = true
     createable = true
     updateable = true
@@ -114,15 +66,11 @@ type salesforce.Contract {
   salesforce.Lookup OwnerId {
     apiName = "Contract.OwnerId"
     label = "Owner ID"
-    referenceTo = [
-      salesforce.User,
-    ]
-    createable = false
-    updateable = false
+    createable = true
+    updateable = true
     relationshipName = "Owner"
     queryable = true
     _hidden_value = true
-    trackHistory = true
   }
   salesforce.Picklist Status {
     apiName = "Contract.Status"
@@ -132,20 +80,15 @@ type salesforce.Contract {
     createable = true
     updateable = true
     queryable = true
-    trackHistory = true
     valueSetName = salesforce.StandardValueSet.instance.ServiceContractApprovalStatus
   }
   salesforce.Lookup CompanySignedId {
     apiName = "Contract.CompanySignedId"
     label = "Company Signed By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = true
     updateable = true
     relationshipName = "CompanySigned"
     queryable = true
-    trackHistory = true
   }
   salesforce.Date CompanySignedDate {
     apiName = "Contract.CompanySignedDate"
@@ -157,14 +100,10 @@ type salesforce.Contract {
   salesforce.Lookup CustomerSignedId {
     apiName = "Contract.CustomerSignedId"
     label = "Customer Signed By ID"
-    referenceTo = [
-      salesforce.Contact,
-    ]
     createable = true
     updateable = true
     relationshipName = "CustomerSigned"
     queryable = true
-    trackHistory = true
   }
   salesforce.Text CustomerSignedTitle {
     apiName = "Contract.CustomerSignedTitle"
@@ -194,14 +133,10 @@ type salesforce.Contract {
   salesforce.Lookup ActivatedById {
     apiName = "Contract.ActivatedById"
     label = "Activated By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = true
     relationshipName = "ActivatedBy"
     queryable = true
-    trackHistory = false
   }
   salesforce.DateTime ActivatedDate {
     apiName = "Contract.ActivatedDate"
@@ -214,38 +149,6 @@ type salesforce.Contract {
     apiName = "Contract.StatusCode"
     label = "Status Category"
     _required = true
-    valueSet = [
-      {
-        fullName = "Draft"
-        default = false
-        label = "Draft"
-        isActive = true
-      },
-      {
-        fullName = "InApproval"
-        default = false
-        label = "In Approval Process"
-        isActive = true
-      },
-      {
-        fullName = "Activated"
-        default = false
-        label = "Activated"
-        isActive = true
-      },
-      {
-        fullName = "Terminated"
-        default = false
-        label = "Terminated"
-        isActive = true
-      },
-      {
-        fullName = "Expired"
-        default = false
-        label = "Expired"
-        isActive = true
-      },
-    ]
     restricted = true
     createable = false
     updateable = false
@@ -296,9 +199,6 @@ type salesforce.Contract {
   salesforce.Lookup CreatedById {
     apiName = "Contract.CreatedById"
     label = "Created By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "CreatedBy"
@@ -316,9 +216,6 @@ type salesforce.Contract {
   salesforce.Lookup LastModifiedById {
     apiName = "Contract.LastModifiedById"
     label = "Last Modified By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "LastModifiedBy"
@@ -343,18 +240,10 @@ type salesforce.Contract {
   }
   salesforce.Unknown Name {
     apiName = "Contract.Name"
-    trackHistory = true
-    queryable = false
-    updateable = false
-    createable = false
     _hidden_value = true
   }
   salesforce.Unknown ShippingAddress {
     apiName = "Contract.ShippingAddress"
-    trackHistory = true
-    queryable = false
-    updateable = false
-    createable = false
     _hidden_value = true
   }
 }

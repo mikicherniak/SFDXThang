@@ -4,8 +4,6 @@ type salesforce.Site {
     label = "Site ID"
     queryable = true
     _hidden_value = true
-    updateable = false
-    createable = false
   }
   salesforce.Text Name {
     apiName = "Site.Name"
@@ -44,9 +42,6 @@ type salesforce.Site {
   salesforce.Lookup GuestUserId {
     apiName = "Site.GuestUserId"
     label = "User ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "GuestUser"
@@ -57,20 +52,6 @@ type salesforce.Site {
     apiName = "Site.Status"
     label = "Site Status"
     _required = true
-    valueSet = [
-      {
-        fullName = "Active"
-        default = false
-        label = "Active"
-        isActive = true
-      },
-      {
-        fullName = "Inactive"
-        default = false
-        label = "In Maintenance"
-        isActive = true
-      },
-    ]
     restricted = true
     createable = false
     updateable = false
@@ -81,9 +62,6 @@ type salesforce.Site {
     apiName = "Site.AdminId"
     label = "User ID"
     _required = true
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "Admin"
@@ -98,9 +76,17 @@ type salesforce.Site {
     queryable = true
     _hidden_value = true
   }
-  salesforce.Checkbox OptionsRequireHttps {
-    apiName = "Site.OptionsRequireHttps"
-    label = "Require Secure Connections (HTTPS)"
+  salesforce.Checkbox OptionsIsSiteGAIntegrationMigrated {
+    apiName = "Site.OptionsIsSiteGAIntegrationMigrated"
+    label = "isSiteGAIntegrationMigrated"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox OptionsRedirectToCustomDomain {
+    apiName = "Site.OptionsRedirectToCustomDomain"
+    label = "Redirect to custom domain"
     createable = false
     updateable = false
     queryable = true
@@ -117,6 +103,38 @@ type salesforce.Site {
   salesforce.Checkbox OptionsHasStoredPathPrefix {
     apiName = "Site.OptionsHasStoredPathPrefix"
     label = "HasStoredPathPrefix"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox OptionsCookieConsent {
+    apiName = "Site.OptionsCookieConsent"
+    label = "Enforce Cookie Consent"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox OptionsCachePublicVfPagesInProxies {
+    apiName = "Site.OptionsCachePublicVfPagesInProxies"
+    label = "Cache public Visualforce pages"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox OptionsIsSiteDataCloudIntegrationEnabled {
+    apiName = "Site.OptionsIsSiteDataCloudIntegrationEnabled"
+    label = "IsSiteDataCloudIntegrationEnabled"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox OptionsIsSiteGAIntegrationEnabled {
+    apiName = "Site.OptionsIsSiteGAIntegrationEnabled"
+    label = "IsSiteGAIntegrationEnabled"
     createable = false
     updateable = false
     queryable = true
@@ -178,14 +196,6 @@ type salesforce.Site {
     queryable = true
     _hidden_value = true
   }
-  salesforce.Checkbox OptionsCspUpgradeInsecureRequests {
-    apiName = "Site.OptionsCspUpgradeInsecureRequests"
-    label = "Upgrade all requests to HTTPS"
-    createable = false
-    updateable = false
-    queryable = true
-    _hidden_value = true
-  }
   salesforce.Checkbox OptionsContentSniffingProtection {
     apiName = "Site.OptionsContentSniffingProtection"
     label = "Enable Content Sniffing Protection"
@@ -205,6 +215,46 @@ type salesforce.Site {
   salesforce.Checkbox OptionsReferrerPolicyOriginWhenCrossOrigin {
     apiName = "Site.OptionsReferrerPolicyOriginWhenCrossOrigin"
     label = "Referrer URL Protection"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox OptionsUseGuestUserLanguage {
+    apiName = "Site.OptionsUseGuestUserLanguage"
+    label = "Use the guest user’s language for unauthenticated users"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox OptionsIsSiteGRecaptchaIntegrationEnabled {
+    apiName = "Site.OptionsIsSiteGRecaptchaIntegrationEnabled"
+    label = "IsSiteGRecaptchaIntegrationEnabled"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox OptionsIsSiteConsentBannerIntegrationEnabled {
+    apiName = "Site.OptionsIsSiteConsentBannerIntegrationEnabled"
+    label = "IsSiteConsentBannerIntegrationEnabled"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox OptionsIsSiteGAIntegrationMigratedV2 {
+    apiName = "Site.OptionsIsSiteGAIntegrationMigratedV2"
+    label = "isSiteGAIntegrationMigratedV2"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox OptionsIsSiteDataCloudIntegrationMigrated {
+    apiName = "Site.OptionsIsSiteDataCloudIntegrationMigrated"
+    label = "isSiteDataCloudIntegrationMigrated"
     createable = false
     updateable = false
     queryable = true
@@ -246,20 +296,6 @@ type salesforce.Site {
     apiName = "Site.SiteType"
     label = "Site Type"
     _required = true
-    valueSet = [
-      {
-        fullName = "Siteforce"
-        default = false
-        label = "Site.com"
-        isActive = true
-      },
-      {
-        fullName = "Visualforce"
-        default = false
-        label = "Force.com"
-        isActive = true
-      },
-    ]
     restricted = true
     createable = false
     updateable = false
@@ -270,32 +306,6 @@ type salesforce.Site {
     apiName = "Site.ClickjackProtectionLevel"
     label = "Clickjack Protection Level"
     _required = true
-    valueSet = [
-      {
-        fullName = "AllowAllFraming"
-        default = false
-        label = "Allow framing by any page (No protection)"
-        isActive = true
-      },
-      {
-        fullName = "External"
-        default = false
-        label = "Allow framing of site pages on external domains (Good protection)"
-        isActive = true
-      },
-      {
-        fullName = "SameOriginOnly"
-        default = true
-        label = "Allow framing by the same origin only (Recommended)"
-        isActive = true
-      },
-      {
-        fullName = "NoFraming"
-        default = false
-        label = "Don't allow framing by any page (Most protection)"
-        isActive = true
-      },
-    ]
     restricted = true
     createable = false
     updateable = false
@@ -368,9 +378,6 @@ type salesforce.Site {
   salesforce.Lookup CreatedById {
     apiName = "Site.CreatedById"
     label = "Created By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "CreatedBy"
@@ -388,9 +395,6 @@ type salesforce.Site {
   salesforce.Lookup LastModifiedById {
     apiName = "Site.LastModifiedById"
     label = "Last Modified By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "LastModifiedBy"
@@ -408,9 +412,6 @@ type salesforce.Site {
   salesforce.Lookup GuestRecordDefaultOwnerId {
     apiName = "Site.GuestRecordDefaultOwnerId"
     label = "User ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "GuestRecordDefaultOwner"

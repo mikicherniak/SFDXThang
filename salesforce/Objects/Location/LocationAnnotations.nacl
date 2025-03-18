@@ -190,9 +190,22 @@ type salesforce.Location {
   enableFeeds = false
   externalSharingModel = "Private"
   searchLayouts = {
-    customTabListAdditionalFields = "LocationType"
-    lookupDialogsAdditionalFields = "LocationType"
-    lookupPhoneDialogsAdditionalFields = "LocationType"
-    searchResultsAdditionalFields = "LocationType"
+    customTabListAdditionalFields = [
+      "LocationType",
+      "VisitorAddress",
+    ]
+    lookupDialogsAdditionalFields = [
+      "LocationType",
+      "VisitorAddress",
+    ]
+    lookupPhoneDialogsAdditionalFields = [
+      "LocationType",
+      "VisitorAddress",
+    ]
+    searchResultsAdditionalFields = [
+      "LocationType",
+      "VisitorAddress",
+    ]
   }
+  _alias = "Location"
 }

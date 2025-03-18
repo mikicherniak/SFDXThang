@@ -60,4 +60,5 @@ type salesforce.CartCheckoutSession {
   label = "Cart Checkout Session"
   enableFeeds = false
   externalSharingModel = "ControlledByParent"
+  _alias = "Cart Checkout Session"
 }

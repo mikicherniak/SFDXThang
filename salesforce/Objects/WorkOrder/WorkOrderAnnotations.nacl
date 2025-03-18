@@ -229,7 +229,10 @@ type salesforce.WorkOrder {
       "Status",
     ]
   }
+  _alias = "Work Order"
   topicsForObjects = {
     enableTopics = false
+  }
+  historyTrackedFields = {
   }
 }

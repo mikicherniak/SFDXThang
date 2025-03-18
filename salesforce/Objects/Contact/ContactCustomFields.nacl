@@ -23,8 +23,6 @@ type salesforce.Contact {
     createable = true
     updateable = true
     queryable = true
-    externalId = false
-    trackFeedHistory = false
     sorted = false
   }
   salesforce.Text Languages__c {
@@ -37,6 +35,5 @@ type salesforce.Contact {
     length = 100
     queryable = true
     externalId = false
-    trackFeedHistory = false
   }
 }

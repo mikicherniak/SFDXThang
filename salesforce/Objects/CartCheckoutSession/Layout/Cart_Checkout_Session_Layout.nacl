@@ -34,6 +34,10 @@ salesforce.Layout CartCheckoutSession_Cart_Checkout_Session_Layout@bsss {
       customLabel = false
       detailHeading = false
       editHeading = false
+      layoutColumns = [
+        {
+        },
+      ]
       style = "CustomLinks"
     },
   ]
@@ -43,4 +47,5 @@ salesforce.Layout CartCheckoutSession_Cart_Checkout_Session_Layout@bsss {
   _parent = [
     salesforce.CartCheckoutSession,
   ]
+  _alias = "CartCheckoutSession-Cart Checkout Session Layout"
 }

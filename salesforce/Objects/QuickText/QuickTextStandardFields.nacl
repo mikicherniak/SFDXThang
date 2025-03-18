@@ -4,22 +4,15 @@ type salesforce.QuickText {
     label = "Quick Text ID"
     queryable = true
     _hidden_value = true
-    updateable = false
-    createable = false
   }
   salesforce.Lookup OwnerId {
     apiName = "QuickText.OwnerId"
     label = "Owner ID"
-    referenceTo = [
-      salesforce.Group,
-      salesforce.User,
-    ]
-    createable = false
-    updateable = false
+    createable = true
+    updateable = true
     relationshipName = "Owner"
     queryable = true
     _hidden_value = true
-    trackHistory = false
   }
   salesforce.Checkbox IsDeleted {
     apiName = "QuickText.IsDeleted"
@@ -52,9 +45,6 @@ type salesforce.QuickText {
   salesforce.Lookup CreatedById {
     apiName = "QuickText.CreatedById"
     label = "Created By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "CreatedBy"
@@ -72,9 +62,6 @@ type salesforce.QuickText {
   salesforce.Lookup LastModifiedById {
     apiName = "QuickText.LastModifiedById"
     label = "Last Modified By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "LastModifiedBy"
@@ -92,7 +79,6 @@ type salesforce.QuickText {
   salesforce.LongTextArea Message {
     apiName = "QuickText.Message"
     label = "Message"
-    _required = true
     createable = true
     updateable = true
     length = 4096
@@ -105,19 +91,7 @@ type salesforce.QuickText {
     createable = true
     updateable = true
     queryable = true
-    trackHistory = false
     valueSetName = salesforce.StandardValueSet.instance.QuickTextCategory
-  }
-  salesforce.MultiselectPicklist Channel {
-    apiName = "QuickText.Channel"
-    label = "Channel"
-    restricted = false
-    visibleLines = 0
-    createable = true
-    updateable = true
-    queryable = true
-    trackHistory = false
-    valueSetName = salesforce.StandardValueSet.instance.QuickTextChannel
   }
   salesforce.Checkbox IsInsertable {
     apiName = "QuickText.IsInsertable"
@@ -130,29 +104,19 @@ type salesforce.QuickText {
   salesforce.Picklist SourceType {
     apiName = "QuickText.SourceType"
     label = "Source Entity Type"
-    valueSet = [
-      {
-        fullName = "EINSTEIN_GENERATED"
-        default = false
-        label = "Einstein"
-        isActive = true
-      },
-      {
-        fullName = "USER_GENERATED"
-        default = false
-        label = "User"
-        isActive = true
-      },
-      {
-        fullName = "USER_EDITED"
-        default = false
-        label = "Einstein with user edits"
-        isActive = true
-      },
-    ]
     restricted = true
     createable = true
     updateable = true
     queryable = true
+  }
+  salesforce.Picklist Channel {
+    apiName = "QuickText.Channel"
+    restricted = false
+    label = "Channel"
+    visibleLines = 0
+    createable = true
+    updateable = true
+    queryable = true
+    valueSetName = salesforce.StandardValueSet.instance.QuickTextChannel
   }
 }

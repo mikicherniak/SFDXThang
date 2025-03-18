@@ -4,22 +4,15 @@ type salesforce.CommSubscriptionChannelType {
     label = "Communication Subscription Channel Type ID"
     queryable = true
     _hidden_value = true
-    updateable = false
-    createable = false
   }
   salesforce.Lookup OwnerId {
     apiName = "CommSubscriptionChannelType.OwnerId"
     label = "Owner ID"
-    referenceTo = [
-      salesforce.Group,
-      salesforce.User,
-    ]
-    createable = false
-    updateable = false
+    createable = true
+    updateable = true
     relationshipName = "Owner"
     queryable = true
     _hidden_value = true
-    trackHistory = false
   }
   salesforce.Checkbox IsDeleted {
     apiName = "CommSubscriptionChannelType.IsDeleted"
@@ -29,6 +22,14 @@ type salesforce.CommSubscriptionChannelType {
     updateable = false
     queryable = true
     _hidden_value = true
+  }
+  salesforce.Lookup MessagingChannelId {
+    apiName = "CommSubscriptionChannelType.MessagingChannelId"
+    relationshipName = "MessagingChannel"
+    label = "Messaging Channel ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
   salesforce.Text Name {
     apiName = "CommSubscriptionChannelType.Name"
@@ -52,9 +53,6 @@ type salesforce.CommSubscriptionChannelType {
   salesforce.Lookup CreatedById {
     apiName = "CommSubscriptionChannelType.CreatedById"
     label = "Created By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "CreatedBy"
@@ -72,9 +70,6 @@ type salesforce.CommSubscriptionChannelType {
   salesforce.Lookup LastModifiedById {
     apiName = "CommSubscriptionChannelType.LastModifiedById"
     label = "Last Modified By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "LastModifiedBy"
@@ -93,28 +88,29 @@ type salesforce.CommSubscriptionChannelType {
     apiName = "CommSubscriptionChannelType.CommunicationSubscriptionId"
     label = "Communication Subscription ID"
     _required = true
-    referenceTo = [
-      salesforce.CommSubscription,
-    ]
     inlineHelpText = "The communication subscription record associated with the communication subscription channel type."
     createable = true
     updateable = true
     relationshipName = "CommunicationSubscription"
     queryable = true
-    trackHistory = false
   }
   salesforce.Lookup EngagementChannelTypeId {
     apiName = "CommSubscriptionChannelType.EngagementChannelTypeId"
     label = "Engagement Channel Type ID"
     _required = true
-    referenceTo = [
-      salesforce.EngagementChannelType,
-    ]
     inlineHelpText = "The engagement channel type record associated with the communication subscription channel type."
     createable = true
     updateable = true
     relationshipName = "EngagementChannelType"
     queryable = true
-    trackHistory = false
+  }
+  salesforce.Lookup DataUsePurposeId {
+    apiName = "CommSubscriptionChannelType.DataUsePurposeId"
+    relationshipName = "DataUsePurpose"
+    label = "Communication Subscription ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
   }
 }

@@ -278,4 +278,8 @@ type salesforce.User {
       "CORE.USERS.EMAIL",
     ]
   }
+  _alias = "User"
+  feedHistoryTrackedFields = {
+    ManagerId = salesforce.User.field.ManagerId
+  }
 }

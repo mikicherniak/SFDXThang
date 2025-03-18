@@ -5,4 +5,5 @@ salesforce.ListView ServiceTerritory_My_ServiceTerritories {
   _parent = [
     salesforce.ServiceTerritory,
   ]
+  _alias = "My Service Territories"
 }

@@ -227,25 +227,43 @@ type salesforce.Contract {
       formFactor = "Small"
       type = "Default"
     },
+    {
+      actionName = "headlessPricingAction"
+      type = "Default"
+    },
+    {
+      actionName = "headlessPricingAction"
+      formFactor = "Large"
+      type = "Default"
+    },
+    {
+      actionName = "headlessPricingAction"
+      formFactor = "Small"
+      type = "Default"
+    },
   ]
   compactLayoutAssignment = "SYSTEM"
   enableFeeds = false
   searchLayouts = {
     customTabListAdditionalFields = [
       "CONTRACT.CONTRACT_NUMBER",
+      "CONTRACT.NAME",
       "SALES.ACCOUNT.NAME",
       "CONTRACT.STATUS",
     ]
     lookupDialogsAdditionalFields = [
       "CONTRACT.CONTRACT_NUMBER",
+      "CONTRACT.NAME",
       "CORE.USERS.ALIAS",
     ]
     lookupPhoneDialogsAdditionalFields = [
       "CONTRACT.CONTRACT_NUMBER",
+      "CONTRACT.NAME",
       "CORE.USERS.ALIAS",
     ]
     searchResultsAdditionalFields = [
       "CONTRACT.CONTRACT_NUMBER",
+      "CONTRACT.NAME",
       "SALES.ACCOUNT.NAME",
       "CONTRACT.STATUS",
       "CONTRACT.START_DATE",
@@ -253,7 +271,28 @@ type salesforce.Contract {
       "CONTRACT_TERM",
     ]
   }
+  _alias = "Contract"
   topicsForObjects = {
     enableTopics = true
+  }
+  historyTrackedFields = {
+    AccountId = salesforce.Contract.field.AccountId
+    BillingAddress = salesforce.Contract.field.BillingAddress
+    CompanySignedDate = salesforce.Contract.field.CompanySignedDate
+    CompanySignedId = salesforce.Contract.field.CompanySignedId
+    ContractTerm = salesforce.Contract.field.ContractTerm
+    CustomerSignedDate = salesforce.Contract.field.CustomerSignedDate
+    CustomerSignedId = salesforce.Contract.field.CustomerSignedId
+    CustomerSignedTitle = salesforce.Contract.field.CustomerSignedTitle
+    Description = salesforce.Contract.field.Description
+    EndDate = salesforce.Contract.field.EndDate
+    Name = salesforce.Contract.field.Name
+    OwnerExpirationNotice = salesforce.Contract.field.OwnerExpirationNotice
+    OwnerId = salesforce.Contract.field.OwnerId
+    Pricebook2Id = salesforce.Contract.field.Pricebook2Id
+    ShippingAddress = salesforce.Contract.field.ShippingAddress
+    SpecialTerms = salesforce.Contract.field.SpecialTerms
+    StartDate = salesforce.Contract.field.StartDate
+    Status = salesforce.Contract.field.Status
   }
 }

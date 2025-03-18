@@ -4,21 +4,15 @@ type salesforce.Individual {
     label = "Individual ID"
     queryable = true
     _hidden_value = true
-    updateable = false
-    createable = false
   }
   salesforce.Lookup OwnerId {
     apiName = "Individual.OwnerId"
     label = "Owner ID"
-    referenceTo = [
-      salesforce.User,
-    ]
-    createable = false
-    updateable = false
+    createable = true
+    updateable = true
     relationshipName = "Owner"
     queryable = true
     _hidden_value = true
-    trackHistory = false
   }
   salesforce.Checkbox IsDeleted {
     apiName = "Individual.IsDeleted"
@@ -139,31 +133,10 @@ type salesforce.Individual {
   salesforce.Picklist MilitaryService {
     apiName = "Individual.MilitaryService"
     label = "Military Service"
-    valueSet = [
-      {
-        fullName = "Unknown"
-        default = false
-        label = "Unknown"
-        isActive = true
-      },
-      {
-        fullName = "Yes"
-        default = false
-        label = "Yes"
-        isActive = true
-      },
-      {
-        fullName = "No"
-        default = false
-        label = "No"
-        isActive = true
-      },
-    ]
     restricted = false
     createable = true
     updateable = true
     queryable = true
-    trackHistory = false
   }
   salesforce.Checkbox IsHomeOwner {
     apiName = "Individual.IsHomeOwner"
@@ -193,32 +166,14 @@ type salesforce.Individual {
   salesforce.Picklist IndividualsAge {
     apiName = "Individual.IndividualsAge"
     label = "Individual's Age"
-    valueSet = [
-      {
-        fullName = "13 or Older"
-        default = false
-        label = "13 or Older"
-        isActive = true
-      },
-      {
-        fullName = "16 or Older"
-        default = false
-        label = "16 or Older"
-        isActive = true
-      },
-    ]
     restricted = false
     createable = true
     updateable = true
     queryable = true
-    trackHistory = false
   }
   salesforce.Lookup MasterRecordId {
     apiName = "Individual.MasterRecordId"
     label = "Master Record ID"
-    referenceTo = [
-      salesforce.Individual,
-    ]
     createable = false
     updateable = false
     relationshipName = "MasterRecord"
@@ -266,9 +221,6 @@ type salesforce.Individual {
   salesforce.Lookup CreatedById {
     apiName = "Individual.CreatedById"
     label = "Created By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "CreatedBy"
@@ -286,9 +238,6 @@ type salesforce.Individual {
   salesforce.Lookup LastModifiedById {
     apiName = "Individual.LastModifiedById"
     label = "Last Modified By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "LastModifiedBy"

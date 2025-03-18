@@ -1,10 +1,10 @@
 salesforce.ListView WebCart_Owned_WebCarts {
   fullName = "WebCart.Owned_WebCarts"
   columns = [
-    "Name",
-    "CreatedDate",
-    "GrandTotalAmount",
-    "Status",
+    salesforce.WebCart.field.Name,
+    salesforce.WebCart.field.CreatedDate,
+    salesforce.WebCart.field.GrandTotalAmount,
+    salesforce.WebCart.field.Status,
     "Account",
   ]
   filterScope = "Mine"
@@ -24,4 +24,5 @@ salesforce.ListView WebCart_Owned_WebCarts {
   _parent = [
     salesforce.WebCart,
   ]
+  _alias = "My Active Carts"
 }

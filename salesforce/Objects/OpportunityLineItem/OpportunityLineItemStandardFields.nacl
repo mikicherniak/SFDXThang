@@ -4,16 +4,11 @@ type salesforce.OpportunityLineItem {
     label = "Line Item ID"
     queryable = true
     _hidden_value = true
-    updateable = false
-    createable = false
   }
   salesforce.Lookup OpportunityId {
     apiName = "OpportunityLineItem.OpportunityId"
     label = "Opportunity ID"
     _required = true
-    referenceTo = [
-      salesforce.Opportunity,
-    ]
     createable = true
     updateable = false
     relationshipName = "Opportunity"
@@ -32,9 +27,6 @@ type salesforce.OpportunityLineItem {
   salesforce.Lookup PricebookEntryId {
     apiName = "OpportunityLineItem.PricebookEntryId"
     label = "Price Book Entry ID"
-    referenceTo = [
-      salesforce.PricebookEntry,
-    ]
     createable = true
     updateable = false
     relationshipName = "PricebookEntry"
@@ -43,9 +35,6 @@ type salesforce.OpportunityLineItem {
   salesforce.Lookup Product2Id {
     apiName = "OpportunityLineItem.Product2Id"
     label = "Product ID"
-    referenceTo = [
-      salesforce.Product2,
-    ]
     createable = true
     updateable = false
     relationshipName = "Product2"
@@ -140,9 +129,6 @@ type salesforce.OpportunityLineItem {
   salesforce.Lookup CreatedById {
     apiName = "OpportunityLineItem.CreatedById"
     label = "Created By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "CreatedBy"
@@ -160,9 +146,6 @@ type salesforce.OpportunityLineItem {
   salesforce.Lookup LastModifiedById {
     apiName = "OpportunityLineItem.LastModifiedById"
     label = "Last Modified By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "LastModifiedBy"
@@ -188,16 +171,10 @@ type salesforce.OpportunityLineItem {
   }
   salesforce.Unknown Discount {
     apiName = "OpportunityLineItem.Discount"
-    queryable = false
-    updateable = false
-    createable = false
     _hidden_value = true
   }
   salesforce.Unknown Subtotal {
     apiName = "OpportunityLineItem.Subtotal"
-    queryable = false
-    updateable = false
-    createable = false
     _hidden_value = true
   }
 }

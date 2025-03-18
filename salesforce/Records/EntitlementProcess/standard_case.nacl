@@ -11,27 +11,24 @@ salesforce.EntitlementProcess standard_case@s {
   }
   milestones = [
     {
-      milestoneName = "First Response to Customer"
+      milestoneName = salesforce.MilestoneType.instance.First_Response_to_Customer@s
       minutesToComplete = 240
       timeTriggers = {
-        actions = {
-          name = "ChangePriorityToHigh"
-          type = "FieldUpdate"
-        }
         timeLength = -60
         workflowTimeTriggerUnit = "Minutes"
       }
       useCriteriaStartTime = false
     },
     {
-      milestoneName = "Escalate Case"
+      milestoneName = salesforce.MilestoneType.instance.Escalate_Case@s
       minutesToComplete = 1440
       useCriteriaStartTime = false
     },
     {
-      milestoneName = "Close Case"
+      milestoneName = salesforce.MilestoneType.instance.Close_Case@s
       minutesToComplete = 5760
       useCriteriaStartTime = false
     },
   ]
+  _alias = "standard case"
 }

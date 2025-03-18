@@ -224,6 +224,7 @@ type salesforce.ServiceAppointment {
       "Status",
       "ArrivalWindowStartTime",
       "ArrivalWindowEndTime",
+      "Phone",
     ]
     searchResultsAdditionalFields = [
       "ParentRecord",
@@ -233,7 +234,10 @@ type salesforce.ServiceAppointment {
       "ArrivalWindowEndTime",
     ]
   }
+  _alias = "Service Appointment"
   topicsForObjects = {
     enableTopics = false
+  }
+  historyTrackedFields = {
   }
 }

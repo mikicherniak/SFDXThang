@@ -4,8 +4,6 @@ type salesforce.ConsumptionRate {
     label = "Consumption Rate ID"
     queryable = true
     _hidden_value = true
-    updateable = false
-    createable = false
   }
   salesforce.Checkbox IsDeleted {
     apiName = "ConsumptionRate.IsDeleted"
@@ -35,9 +33,6 @@ type salesforce.ConsumptionRate {
   salesforce.Lookup CreatedById {
     apiName = "ConsumptionRate.CreatedById"
     label = "Created By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "CreatedBy"
@@ -55,9 +50,6 @@ type salesforce.ConsumptionRate {
   salesforce.Lookup LastModifiedById {
     apiName = "ConsumptionRate.LastModifiedById"
     label = "Last Modified By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "LastModifiedBy"
@@ -71,20 +63,6 @@ type salesforce.ConsumptionRate {
     updateable = false
     queryable = true
     _hidden_value = true
-  }
-  salesforce.Lookup ConsumptionScheduleId {
-    apiName = "ConsumptionRate.ConsumptionScheduleId"
-    label = "Consumption Schedule ID"
-    _required = true
-    referenceTo = [
-      salesforce.ConsumptionSchedule,
-    ]
-    inlineHelpText = "This rate is a part of of this schedule."
-    createable = true
-    updateable = false
-    relationshipName = "ConsumptionSchedule"
-    queryable = true
-    trackHistory = false
   }
   salesforce.LongTextArea Description {
     apiName = "ConsumptionRate.Description"
@@ -110,20 +88,6 @@ type salesforce.ConsumptionRate {
     apiName = "ConsumptionRate.PricingMethod"
     label = "Pricing Method"
     _required = true
-    valueSet = [
-      {
-        fullName = "PerUnit"
-        default = false
-        label = "Per Unit"
-        isActive = true
-      },
-      {
-        fullName = "FlatFee"
-        default = false
-        label = "Flat Fee"
-        isActive = true
-      },
-    ]
     restricted = true
     inlineHelpText = "Choose whether the usage is priced per unit or quantity or as a flat fee"
     createable = true
@@ -162,6 +126,16 @@ type salesforce.ConsumptionRate {
     updateable = true
     scale = 2
     precision = 13
+    queryable = true
+  }
+  salesforce.MasterDetail ConsumptionScheduleId {
+    apiName = "ConsumptionRate.ConsumptionScheduleId"
+    inlineHelpText = "This rate is a part of of this schedule."
+    relationshipName = "ConsumptionSchedule"
+    _required = true
+    label = "Consumption Schedule ID"
+    createable = true
+    updateable = false
     queryable = true
   }
 }

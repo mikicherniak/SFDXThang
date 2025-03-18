@@ -4,8 +4,6 @@ type salesforce.ResourcePreference {
     label = "Resource Preference ID"
     queryable = true
     _hidden_value = true
-    updateable = false
-    createable = false
   }
   salesforce.Checkbox IsDeleted {
     apiName = "ResourcePreference.IsDeleted"
@@ -35,9 +33,6 @@ type salesforce.ResourcePreference {
   salesforce.Lookup CreatedById {
     apiName = "ResourcePreference.CreatedById"
     label = "Created By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "CreatedBy"
@@ -55,9 +50,6 @@ type salesforce.ResourcePreference {
   salesforce.Lookup LastModifiedById {
     apiName = "ResourcePreference.LastModifiedById"
     label = "Last Modified By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "LastModifiedBy"
@@ -76,56 +68,27 @@ type salesforce.ResourcePreference {
     apiName = "ResourcePreference.ServiceResourceId"
     label = "Resource ID"
     _required = true
-    referenceTo = [
-      salesforce.ServiceResource,
-    ]
     createable = true
     updateable = true
     relationshipName = "ServiceResource"
     queryable = true
-    trackHistory = false
-  }
-  salesforce.Lookup RelatedRecordId {
-    apiName = "ResourcePreference.RelatedRecordId"
-    label = "Related Record ID"
-    _required = true
-    referenceTo = [
-      salesforce.Account,
-      salesforce.WorkOrder,
-    ]
-    createable = true
-    updateable = false
-    relationshipName = "RelatedRecord"
-    queryable = true
-    trackHistory = false
   }
   salesforce.Picklist PreferenceType {
     apiName = "ResourcePreference.PreferenceType"
     label = "Preference Type"
     _required = true
-    valueSet = [
-      {
-        fullName = "Preferred"
-        default = true
-        label = "Preferred"
-        isActive = true
-      },
-      {
-        fullName = "Required"
-        default = false
-        label = "Required"
-        isActive = true
-      },
-      {
-        fullName = "Excluded"
-        default = false
-        label = "Excluded"
-        isActive = true
-      },
-    ]
     restricted = true
     createable = true
     updateable = true
+    queryable = true
+  }
+  salesforce.MasterDetail RelatedRecordId {
+    apiName = "ResourcePreference.RelatedRecordId"
+    relationshipName = "RelatedRecord"
+    _required = true
+    label = "Related Record ID"
+    createable = true
+    updateable = false
     queryable = true
   }
 }

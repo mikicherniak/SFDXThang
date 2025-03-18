@@ -6,12 +6,20 @@ salesforce.Layout Idea_Idea_Layout@bs {
       detailHeading = true
       editHeading = true
       label = "Additional Information"
+      layoutColumns = [
+        {
+        },
+      ]
       style = "OneColumn"
     },
     {
       customLabel = false
       detailHeading = false
       editHeading = false
+      layoutColumns = [
+        {
+        },
+      ]
       style = "CustomLinks"
     },
   ]
@@ -21,4 +29,5 @@ salesforce.Layout Idea_Idea_Layout@bs {
   _parent = [
     salesforce.Idea,
   ]
+  _alias = "Idea-Idea Layout"
 }

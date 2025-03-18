@@ -95,4 +95,5 @@ salesforce.Layout ServiceResourceSkill_Service_Resource_Skill_Layout@bsss {
   _parent = [
     salesforce.ServiceResourceSkill,
   ]
+  _alias = "ServiceResourceSkill-Service Resource Skill Layout"
 }

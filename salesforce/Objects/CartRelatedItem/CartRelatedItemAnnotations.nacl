@@ -60,4 +60,5 @@ type salesforce.CartRelatedItem {
   label = "Cart Related Item"
   enableFeeds = false
   externalSharingModel = "ControlledByParent"
+  _alias = "Cart Related Item"
 }

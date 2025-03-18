@@ -27,6 +27,12 @@ salesforce.SearchSettings {
       {
         enhancedLookupEnabled = false
         lookupAutoCompleteEnabled = false
+        name = salesforce.AppointmentInvitation
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
         name = salesforce.Asset
         resultsPerPageCount = 25
       },
@@ -195,6 +201,12 @@ salesforce.SearchSettings {
       {
         enhancedLookupEnabled = false
         lookupAutoCompleteEnabled = false
+        name = salesforce.Coupon
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
         name = salesforce.CreditMemo
         resultsPerPageCount = 25
       },
@@ -232,6 +244,12 @@ salesforce.SearchSettings {
         enhancedLookupEnabled = false
         lookupAutoCompleteEnabled = false
         name = salesforce.EngagementChannelType
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.EngagementChannelWorkType
         resultsPerPageCount = 25
       },
       {
@@ -351,6 +369,24 @@ salesforce.SearchSettings {
       {
         enhancedLookupEnabled = false
         lookupAutoCompleteEnabled = false
+        name = salesforce.Promotion
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.PromotionMarketSegment
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.PromotionSegment
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
         name = salesforce.QuickText
         resultsPerPageCount = 25
       },
@@ -375,6 +411,12 @@ salesforce.SearchSettings {
       {
         enhancedLookupEnabled = false
         lookupAutoCompleteEnabled = false
+        name = salesforce.ShiftEngagementChannel
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
         name = salesforce.Solution
         resultsPerPageCount = 25
       },
@@ -382,6 +424,12 @@ salesforce.SearchSettings {
         enhancedLookupEnabled = false
         lookupAutoCompleteEnabled = false
         name = salesforce.User
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = salesforce.Waitlist
         resultsPerPageCount = 25
       },
       {
@@ -403,4 +451,10 @@ salesforce.SearchSettings {
   sidebarLimitToItemsIOwnCheckboxEnabled = true
   singleSearchResultShortcutEnabled = true
   spellCorrectKnowledgeSearchEnabled = false
+  _alias = "Search"
+  enableEinsteinSearchAssistantDialog = "true"
+  enableEinsteinSearchEs4kPilot = "false"
+  enableEinsteinSearchNLSFilters = "false"
+  enableEinsteinSearchNaturalLanguage = "true"
+  enableEinsteinSearchPersonalization = true
 }

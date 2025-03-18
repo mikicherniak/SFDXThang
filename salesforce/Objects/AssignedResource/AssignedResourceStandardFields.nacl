@@ -4,8 +4,6 @@ type salesforce.AssignedResource {
     label = "Assigned Resource ID"
     queryable = true
     _hidden_value = true
-    updateable = false
-    createable = false
   }
   salesforce.Checkbox IsDeleted {
     apiName = "AssignedResource.IsDeleted"
@@ -35,9 +33,6 @@ type salesforce.AssignedResource {
   salesforce.Lookup CreatedById {
     apiName = "AssignedResource.CreatedById"
     label = "Created By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "CreatedBy"
@@ -55,9 +50,6 @@ type salesforce.AssignedResource {
   salesforce.Lookup LastModifiedById {
     apiName = "AssignedResource.LastModifiedById"
     label = "Last Modified By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "LastModifiedBy"
@@ -72,25 +64,10 @@ type salesforce.AssignedResource {
     queryable = true
     _hidden_value = true
   }
-  salesforce.Lookup ServiceAppointmentId {
-    apiName = "AssignedResource.ServiceAppointmentId"
-    label = "Service Appointment ID"
-    _required = true
-    referenceTo = [
-      salesforce.ServiceAppointment,
-    ]
-    createable = true
-    updateable = false
-    relationshipName = "ServiceAppointment"
-    queryable = true
-  }
   salesforce.Lookup ServiceResourceId {
     apiName = "AssignedResource.ServiceResourceId"
     label = "Service Resource ID"
     _required = true
-    referenceTo = [
-      salesforce.ServiceResource,
-    ]
     createable = true
     updateable = true
     relationshipName = "ServiceResource"
@@ -114,13 +91,19 @@ type salesforce.AssignedResource {
   salesforce.Lookup EventId {
     apiName = "AssignedResource.EventId"
     label = "Activity ID"
-    referenceTo = [
-      salesforce.Event,
-    ]
     createable = false
     updateable = false
     relationshipName = "Event"
     queryable = true
     _hidden_value = true
+  }
+  salesforce.MasterDetail ServiceAppointmentId {
+    apiName = "AssignedResource.ServiceAppointmentId"
+    relationshipName = "ServiceAppointment"
+    _required = true
+    label = "Service Appointment ID"
+    createable = true
+    updateable = false
+    queryable = true
   }
 }

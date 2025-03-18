@@ -123,6 +123,10 @@ salesforce.Layout Event_Event_Layout@bs {
       customLabel = false
       detailHeading = false
       editHeading = false
+      layoutColumns = [
+        {
+        },
+      ]
       style = "CustomLinks"
     },
   ]
@@ -167,4 +171,5 @@ salesforce.Layout Event_Event_Layout@bs {
   _parent = [
     salesforce.Event,
   ]
+  _alias = "Event-Event Layout"
 }

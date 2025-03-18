@@ -4,8 +4,6 @@ type salesforce.CartTax {
     label = "Cart Tax ID"
     queryable = true
     _hidden_value = true
-    updateable = false
-    createable = false
   }
   salesforce.Checkbox IsDeleted {
     apiName = "CartTax.IsDeleted"
@@ -38,9 +36,6 @@ type salesforce.CartTax {
   salesforce.Lookup CreatedById {
     apiName = "CartTax.CreatedById"
     label = "Created By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "CreatedBy"
@@ -58,9 +53,6 @@ type salesforce.CartTax {
   salesforce.Lookup LastModifiedById {
     apiName = "CartTax.LastModifiedById"
     label = "Last Modified By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "LastModifiedBy"
@@ -75,24 +67,9 @@ type salesforce.CartTax {
     queryable = true
     _hidden_value = true
   }
-  salesforce.Lookup CartItemId {
-    apiName = "CartTax.CartItemId"
-    label = "Cart Item ID"
-    _required = true
-    referenceTo = [
-      salesforce.CartItem,
-    ]
-    createable = true
-    updateable = false
-    relationshipName = "CartItem"
-    queryable = true
-  }
   salesforce.Lookup CartId {
     apiName = "CartTax.CartId"
     label = "Cart ID"
-    referenceTo = [
-      salesforce.WebCart,
-    ]
     createable = false
     updateable = false
     relationshipName = "Cart"
@@ -103,20 +80,6 @@ type salesforce.CartTax {
     apiName = "CartTax.TaxType"
     label = "Tax Type"
     _required = true
-    valueSet = [
-      {
-        fullName = "Actual"
-        default = false
-        label = "Actual"
-        isActive = true
-      },
-      {
-        fullName = "Estimated"
-        default = false
-        label = "Estimated"
-        isActive = true
-      },
-    ]
     restricted = true
     createable = true
     updateable = true
@@ -149,12 +112,38 @@ type salesforce.CartTax {
     precision = 5
     queryable = true
   }
+  salesforce.Lookup CartItemPriceAdjustmentId {
+    apiName = "CartTax.CartItemPriceAdjustmentId"
+    relationshipName = "CartItemPriceAdjustment"
+    label = "Cart Item Price Adjustment ID"
+    createable = true
+    updateable = true
+    queryable = true
+  }
   salesforce.LongTextArea Description {
     apiName = "CartTax.Description"
     label = "Description"
     createable = true
     updateable = true
     length = 2000
+    queryable = true
+  }
+  salesforce.Picklist AdjustmentTargetType {
+    apiName = "CartTax.AdjustmentTargetType"
+    restricted = true
+    label = "Target Type for the Adjustment"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.MasterDetail CartItemId {
+    apiName = "CartTax.CartItemId"
+    relationshipName = "CartItem"
+    _required = true
+    label = "Cart Item ID"
+    createable = true
+    updateable = false
     queryable = true
   }
 }

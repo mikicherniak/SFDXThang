@@ -216,7 +216,12 @@ type salesforce.Event {
   ]
   compactLayoutAssignment = "SYSTEM"
   enableFeeds = false
+  searchLayouts = {
+  }
+  _alias = "Event"
   topicsForObjects = {
     enableTopics = true
+  }
+  historyTrackedFields = {
   }
 }

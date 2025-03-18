@@ -4,8 +4,6 @@ type salesforce.AssociatedLocation {
     label = "Associated Location ID"
     queryable = true
     _hidden_value = true
-    updateable = false
-    createable = false
   }
   salesforce.Checkbox IsDeleted {
     apiName = "AssociatedLocation.IsDeleted"
@@ -35,9 +33,6 @@ type salesforce.AssociatedLocation {
   salesforce.Lookup CreatedById {
     apiName = "AssociatedLocation.CreatedById"
     label = "Created By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "CreatedBy"
@@ -55,9 +50,6 @@ type salesforce.AssociatedLocation {
   salesforce.Lookup LastModifiedById {
     apiName = "AssociatedLocation.LastModifiedById"
     label = "Last Modified By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "LastModifiedBy"
@@ -72,31 +64,14 @@ type salesforce.AssociatedLocation {
     queryable = true
     _hidden_value = true
   }
-  salesforce.Lookup ParentRecordId {
-    apiName = "AssociatedLocation.ParentRecordId"
-    label = "Account Name ID"
-    _required = true
-    referenceTo = [
-      salesforce.Account,
-    ]
-    createable = true
-    updateable = false
-    relationshipName = "ParentRecord"
-    queryable = true
-    trackHistory = false
-  }
   salesforce.Lookup LocationId {
     apiName = "AssociatedLocation.LocationId"
     label = "Location ID"
     _required = true
-    referenceTo = [
-      salesforce.Location,
-    ]
     createable = true
     updateable = true
     relationshipName = "Location"
     queryable = true
-    trackHistory = false
   }
   salesforce.Picklist Type {
     apiName = "AssociatedLocation.Type"
@@ -104,7 +79,6 @@ type salesforce.AssociatedLocation {
     createable = true
     updateable = true
     queryable = true
-    trackHistory = false
   }
   salesforce.DateTime ActiveFrom {
     apiName = "AssociatedLocation.ActiveFrom"
@@ -118,6 +92,15 @@ type salesforce.AssociatedLocation {
     label = "Active To"
     createable = true
     updateable = true
+    queryable = true
+  }
+  salesforce.MasterDetail ParentRecordId {
+    apiName = "AssociatedLocation.ParentRecordId"
+    relationshipName = "ParentRecord"
+    _required = true
+    label = "Account Name ID"
+    createable = true
+    updateable = false
     queryable = true
   }
 }

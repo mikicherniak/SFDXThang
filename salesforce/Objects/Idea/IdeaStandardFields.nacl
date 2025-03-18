@@ -4,8 +4,6 @@ type salesforce.Idea {
     label = "Idea ID"
     queryable = true
     _hidden_value = true
-    updateable = false
-    createable = false
   }
   salesforce.Checkbox IsDeleted {
     apiName = "Idea.IsDeleted"
@@ -30,9 +28,6 @@ type salesforce.Idea {
   salesforce.Lookup RecordTypeId {
     apiName = "Idea.RecordTypeId"
     label = "Record Type ID"
-    referenceTo = [
-      salesforce.RecordType,
-    ]
     createable = false
     updateable = false
     relationshipName = "RecordType"
@@ -50,9 +45,6 @@ type salesforce.Idea {
   salesforce.Lookup CreatedById {
     apiName = "Idea.CreatedById"
     label = "Created By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "CreatedBy"
@@ -70,9 +62,6 @@ type salesforce.Idea {
   salesforce.Lookup LastModifiedById {
     apiName = "Idea.LastModifiedById"
     label = "Last Modified By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "LastModifiedBy"
@@ -91,9 +80,6 @@ type salesforce.Idea {
     apiName = "Idea.CommunityId"
     label = "Zone ID"
     _required = true
-    referenceTo = [
-      salesforce.Community,
-    ]
     createable = true
     updateable = false
     relationshipName = "Community"
@@ -138,13 +124,6 @@ type salesforce.Idea {
     queryable = true
     _hidden_value = true
   }
-  salesforce.MultiselectPicklist Categories {
-    apiName = "Idea.Categories"
-    label = "Categories"
-    createable = true
-    updateable = true
-    queryable = true
-  }
   salesforce.Picklist Status {
     apiName = "Idea.Status"
     label = "Status"
@@ -163,9 +142,6 @@ type salesforce.Idea {
   salesforce.Lookup LastCommentId {
     apiName = "Idea.LastCommentId"
     label = "Idea Comment ID"
-    referenceTo = [
-      "IdeaComment",
-    ]
     createable = false
     updateable = false
     relationshipName = "LastComment"
@@ -175,9 +151,6 @@ type salesforce.Idea {
   salesforce.Lookup ParentIdeaId {
     apiName = "Idea.ParentIdeaId"
     label = "Idea ID"
-    referenceTo = [
-      salesforce.Idea,
-    ]
     createable = false
     updateable = false
     relationshipName = "ParentIdea"
@@ -234,5 +207,12 @@ type salesforce.Idea {
     length = 121
     queryable = true
     _hidden_value = true
+  }
+  salesforce.Picklist Categories {
+    apiName = "Idea.Categories"
+    label = "Categories"
+    createable = true
+    updateable = true
+    queryable = true
   }
 }

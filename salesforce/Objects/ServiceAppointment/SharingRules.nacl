@@ -3,4 +3,5 @@ salesforce.SharingRules ServiceAppointment {
   _parent = [
     salesforce.ServiceAppointment,
   ]
+  _alias = "ServiceAppointment"
 }

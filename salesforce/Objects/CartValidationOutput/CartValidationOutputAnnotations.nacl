@@ -60,4 +60,5 @@ type salesforce.CartValidationOutput {
   label = "Cart Validation Output"
   enableFeeds = false
   externalSharingModel = "ControlledByParent"
+  _alias = "Cart Validation Output"
 }

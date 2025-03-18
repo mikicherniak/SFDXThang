@@ -58,8 +58,17 @@ salesforce.AppMenu Salesforce1 {
       type = "StandardAppMenuItem"
     },
     {
+      name = "ProductCatalog"
+      type = "StandardAppMenuItem"
+    },
+    {
+      name = "ProductCategory"
+      type = "StandardAppMenuItem"
+    },
+    {
       name = "MobileHome"
       type = "StandardAppMenuItem"
     },
   ]
+  _alias = "Salesforce1"
 }

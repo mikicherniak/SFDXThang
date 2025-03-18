@@ -160,4 +160,7 @@ type salesforce.OrderItem {
   ]
   compactLayoutAssignment = "SYSTEM"
   enableFeeds = false
+  _alias = "Order Product"
+  historyTrackedFields = {
+  }
 }

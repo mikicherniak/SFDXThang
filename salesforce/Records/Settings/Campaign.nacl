@@ -5,4 +5,6 @@ salesforce.CampaignSettings {
   enableCampaignHistoryTrackEnabled = false
   enableCampaignInfluence2 = false
   enableCampaignMemberTWCF = true
+  _alias = "Campaign"
+  enableAccountsAsCM = "false"
 }

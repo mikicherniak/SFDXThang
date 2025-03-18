@@ -211,6 +211,7 @@ type salesforce.WorkPlanTemplate {
       "IsActive",
     ]
   }
+  _alias = "Work Plan Template"
   topicsForObjects = {
     enableTopics = false
   }

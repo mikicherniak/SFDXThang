@@ -3,6 +3,8 @@ salesforce.CustomApplication standard__Platform {
   defaultLandingTab = "standard-home"
   isNavAutoTempTabsDisabled = false
   isNavPersonalizationDisabled = false
+  isNavTabPersistenceDisabled = false
+  isOmniPinnedViewEnabled = false
   tabs = [
     "standard-Chatter",
     "standard-Account",
@@ -10,4 +12,5 @@ salesforce.CustomApplication standard__Platform {
     "standard-report",
     "standard-Dashboard",
   ]
+  _alias = "standard__Platform"
 }

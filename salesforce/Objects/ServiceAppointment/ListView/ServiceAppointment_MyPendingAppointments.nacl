@@ -2,13 +2,13 @@ salesforce.ListView ServiceAppointment_MyPendingAppointments {
   fullName = "ServiceAppointment.MyPendingAppointments"
   columns = [
     "Name",
-    "SchedStartTime",
-    "SchedEndTime",
+    salesforce.ServiceAppointment.field.SchedStartTime,
+    salesforce.ServiceAppointment.field.SchedEndTime,
     "ServiceTerritory",
-    "Status",
+    salesforce.ServiceAppointment.field.Status,
     "WorkTypeName",
     "WorkType",
-    "AdditionalInformation",
+    salesforce.ServiceAppointment.field.AdditionalInformation,
     "Account",
     "ParentRecord",
   ]
@@ -28,4 +28,5 @@ salesforce.ListView ServiceAppointment_MyPendingAppointments {
   _parent = [
     salesforce.ServiceAppointment,
   ]
+  _alias = "My Pending Service Appointments"
 }

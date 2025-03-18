@@ -223,6 +223,7 @@ type salesforce.ServiceResourceSkill {
       "ServiceResource",
     ]
   }
+  _alias = "Service Resource Skill"
   topicsForObjects = {
     enableTopics = false
   }

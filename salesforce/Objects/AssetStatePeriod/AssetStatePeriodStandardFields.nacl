@@ -4,8 +4,6 @@ type salesforce.AssetStatePeriod {
     label = "Asset State Period ID"
     queryable = true
     _hidden_value = true
-    updateable = false
-    createable = false
   }
   salesforce.Checkbox IsDeleted {
     apiName = "AssetStatePeriod.IsDeleted"
@@ -35,9 +33,6 @@ type salesforce.AssetStatePeriod {
   salesforce.Lookup CreatedById {
     apiName = "AssetStatePeriod.CreatedById"
     label = "Created By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "CreatedBy"
@@ -55,9 +50,6 @@ type salesforce.AssetStatePeriod {
   salesforce.Lookup LastModifiedById {
     apiName = "AssetStatePeriod.LastModifiedById"
     label = "Last Modified By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "LastModifiedBy"
@@ -69,19 +61,6 @@ type salesforce.AssetStatePeriod {
     label = "System Modstamp"
     createable = false
     updateable = false
-    queryable = true
-    _hidden_value = true
-  }
-  salesforce.Lookup AssetId {
-    apiName = "AssetStatePeriod.AssetId"
-    label = "Asset ID"
-    _required = true
-    referenceTo = [
-      salesforce.Asset,
-    ]
-    createable = false
-    updateable = false
-    relationshipName = "Asset"
     queryable = true
     _hidden_value = true
   }
@@ -133,6 +112,16 @@ type salesforce.AssetStatePeriod {
     updateable = false
     scale = 2
     precision = 18
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.MasterDetail AssetId {
+    apiName = "AssetStatePeriod.AssetId"
+    relationshipName = "Asset"
+    _required = true
+    label = "Asset ID"
+    createable = false
+    updateable = false
     queryable = true
     _hidden_value = true
   }

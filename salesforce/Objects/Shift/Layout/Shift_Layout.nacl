@@ -1,5 +1,8 @@
 salesforce.Layout Shift_Shift_Layout@bs {
   fullName = "Shift-Shift Layout"
+  excludeButtons = [
+    "Submit",
+  ]
   layoutSections = [
     {
       customLabel = false
@@ -63,4 +66,5 @@ salesforce.Layout Shift_Shift_Layout@bs {
   _parent = [
     salesforce.Shift,
   ]
+  _alias = "Shift-Shift Layout"
 }

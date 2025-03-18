@@ -23,6 +23,8 @@ salesforce.Layout ContactPointEmail_Contact_Point_Email_Layout@bsss {
             },
           ]
         },
+        {
+        },
       ]
       style = "TwoColumnsTopToBottom"
     },
@@ -30,6 +32,10 @@ salesforce.Layout ContactPointEmail_Contact_Point_Email_Layout@bsss {
       customLabel = false
       detailHeading = false
       editHeading = false
+      layoutColumns = [
+        {
+        },
+      ]
       style = "CustomLinks"
     },
   ]
@@ -53,4 +59,5 @@ salesforce.Layout ContactPointEmail_Contact_Point_Email_Layout@bsss {
   _parent = [
     salesforce.ContactPointEmail,
   ]
+  _alias = "ContactPointEmail-Contact Point Email Layout"
 }

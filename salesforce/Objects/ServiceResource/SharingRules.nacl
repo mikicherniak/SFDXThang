@@ -3,4 +3,5 @@ salesforce.SharingRules ServiceResource {
   _parent = [
     salesforce.ServiceResource,
   ]
+  _alias = "ServiceResource"
 }

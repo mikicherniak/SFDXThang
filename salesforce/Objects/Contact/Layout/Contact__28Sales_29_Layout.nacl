@@ -346,11 +346,6 @@ salesforce.Layout Contact_Contact__28Sales_29_Layout@bspps {
           field = salesforce.Contact.field.AccountId
         }
       },
-      {
-        layoutItem = {
-          component = "runtime_sales_social:socialPanel"
-        }
-      },
     ]
   }
   relatedLists = [
@@ -439,4 +434,5 @@ salesforce.Layout Contact_Contact__28Sales_29_Layout@bspps {
   _parent = [
     salesforce.Contact,
   ]
+  _alias = "Contact-Contact %28Sales%29 Layout"
 }

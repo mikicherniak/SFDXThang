@@ -4,8 +4,6 @@ type salesforce.ReturnOrderItemTax {
     label = "Return Order Item Tax ID"
     queryable = true
     _hidden_value = true
-    updateable = false
-    createable = false
   }
   salesforce.Checkbox IsDeleted {
     apiName = "ReturnOrderItemTax.IsDeleted"
@@ -35,9 +33,6 @@ type salesforce.ReturnOrderItemTax {
   salesforce.Lookup CreatedById {
     apiName = "ReturnOrderItemTax.CreatedById"
     label = "Created By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "CreatedBy"
@@ -55,9 +50,6 @@ type salesforce.ReturnOrderItemTax {
   salesforce.Lookup LastModifiedById {
     apiName = "ReturnOrderItemTax.LastModifiedById"
     label = "Last Modified By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "LastModifiedBy"
@@ -72,25 +64,10 @@ type salesforce.ReturnOrderItemTax {
     queryable = true
     _hidden_value = true
   }
-  salesforce.Lookup ReturnOrderLineItemId {
-    apiName = "ReturnOrderItemTax.ReturnOrderLineItemId"
-    label = "Return Order Line Item ID"
-    _required = true
-    referenceTo = [
-      salesforce.ReturnOrderLineItem,
-    ]
-    createable = true
-    updateable = false
-    relationshipName = "ReturnOrderLineItem"
-    queryable = true
-  }
   salesforce.Lookup ReturnOrderId {
     apiName = "ReturnOrderItemTax.ReturnOrderId"
     label = "Return Order ID"
     _required = true
-    referenceTo = [
-      salesforce.ReturnOrder,
-    ]
     createable = true
     updateable = false
     relationshipName = "ReturnOrder"
@@ -99,9 +76,6 @@ type salesforce.ReturnOrderItemTax {
   salesforce.Lookup ReturnOrderItemAdjustmentId {
     apiName = "ReturnOrderItemTax.ReturnOrderItemAdjustmentId"
     label = "Return Order Item Adjustment ID"
-    referenceTo = [
-      salesforce.ReturnOrderItemAdjustment,
-    ]
     createable = true
     updateable = false
     relationshipName = "ReturnOrderItemAdjustment"
@@ -111,20 +85,6 @@ type salesforce.ReturnOrderItemTax {
     apiName = "ReturnOrderItemTax.Type"
     label = "Type"
     _required = true
-    valueSet = [
-      {
-        fullName = "Actual"
-        default = false
-        label = "Actual"
-        isActive = true
-      },
-      {
-        fullName = "Estimated"
-        default = false
-        label = "Estimated"
-        isActive = true
-      },
-    ]
     restricted = true
     createable = true
     updateable = true
@@ -164,6 +124,15 @@ type salesforce.ReturnOrderItemTax {
     createable = true
     updateable = true
     length = 2000
+    queryable = true
+  }
+  salesforce.MasterDetail ReturnOrderLineItemId {
+    apiName = "ReturnOrderItemTax.ReturnOrderLineItemId"
+    relationshipName = "ReturnOrderLineItem"
+    _required = true
+    label = "Return Order Line Item ID"
+    createable = true
+    updateable = false
     queryable = true
   }
 }

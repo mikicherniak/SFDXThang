@@ -5,6 +5,8 @@ salesforce.CustomApplication standard__LightningScheduler {
   ]
   isNavAutoTempTabsDisabled = false
   isNavPersonalizationDisabled = false
+  isNavTabPersistenceDisabled = false
+  isOmniPinnedViewEnabled = false
   label = "Salesforce Scheduler Setup"
   navType = "Standard"
   tabs = [
@@ -17,4 +19,5 @@ salesforce.CustomApplication standard__LightningScheduler {
     "standard-ServiceAppointment",
   ]
   uiType = "Lightning"
+  _alias = "Salesforce Scheduler Setup (standard)"
 }

@@ -309,6 +309,10 @@ salesforce.Layout FinanceTransaction_Finance_Transaction_Layout@bss {
       customLabel = false
       detailHeading = false
       editHeading = false
+      layoutColumns = [
+        {
+        },
+      ]
       style = "CustomLinks"
     },
   ]
@@ -318,4 +322,5 @@ salesforce.Layout FinanceTransaction_Finance_Transaction_Layout@bss {
   _parent = [
     salesforce.FinanceTransaction,
   ]
+  _alias = "FinanceTransaction-Finance Transaction Layout"
 }

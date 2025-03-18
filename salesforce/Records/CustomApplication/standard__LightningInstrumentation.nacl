@@ -5,10 +5,13 @@ salesforce.CustomApplication standard__LightningInstrumentation {
   ]
   isNavAutoTempTabsDisabled = false
   isNavPersonalizationDisabled = false
+  isNavTabPersistenceDisabled = false
+  isOmniPinnedViewEnabled = false
   label = "LightningInstrumentation"
   navType = "Standard"
   tabs = [
     "standard-LightningInstrumentation",
   ]
   uiType = "Lightning"
+  _alias = "LightningInstrumentation (standard)"
 }

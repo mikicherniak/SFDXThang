@@ -223,4 +223,7 @@ type salesforce.Entitlement {
       "ENTITLEMENT.STATUSINDICATOR",
     ]
   }
+  _alias = "Entitlement"
+  historyTrackedFields = {
+  }
 }

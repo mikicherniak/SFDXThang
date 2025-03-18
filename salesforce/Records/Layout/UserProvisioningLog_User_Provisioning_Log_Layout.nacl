@@ -63,10 +63,15 @@ salesforce.Layout UserProvisioningLog_User_Provisioning_Log_Layout@bsss {
       customLabel = false
       detailHeading = false
       editHeading = false
+      layoutColumns = [
+        {
+        },
+      ]
       style = "CustomLinks"
     },
   ]
   showEmailCheckbox = false
   showRunAssignmentRulesCheckbox = false
   showSubmitAndAttachButton = false
+  _alias = "UserProvisioningLog-User Provisioning Log Layout"
 }

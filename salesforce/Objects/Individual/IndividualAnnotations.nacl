@@ -219,4 +219,7 @@ type salesforce.Individual {
       "INDIVIDUAL.LAST_UPDATE",
     ]
   }
+  _alias = "Individual"
+  historyTrackedFields = {
+  }
 }

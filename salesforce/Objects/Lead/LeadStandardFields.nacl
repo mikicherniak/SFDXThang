@@ -4,8 +4,6 @@ type salesforce.Lead {
     label = "Lead ID"
     queryable = true
     _hidden_value = true
-    updateable = false
-    createable = false
   }
   salesforce.Checkbox IsDeleted {
     apiName = "Lead.IsDeleted"
@@ -19,9 +17,6 @@ type salesforce.Lead {
   salesforce.Lookup MasterRecordId {
     apiName = "Lead.MasterRecordId"
     label = "Master Record ID"
-    referenceTo = [
-      salesforce.Lead,
-    ]
     createable = false
     updateable = false
     relationshipName = "MasterRecord"
@@ -125,7 +120,6 @@ type salesforce.Lead {
     createable = true
     updateable = true
     queryable = true
-    trackFeedHistory = false
     valueSetName = salesforce.StandardValueSet.instance.LeadSource
   }
   salesforce.Picklist Status {
@@ -136,7 +130,6 @@ type salesforce.Lead {
     createable = true
     updateable = true
     queryable = true
-    trackFeedHistory = true
     valueSetName = salesforce.StandardValueSet.instance.LeadStatus
   }
   salesforce.Picklist Industry {
@@ -146,8 +139,11 @@ type salesforce.Lead {
     createable = true
     updateable = true
     queryable = true
-    trackFeedHistory = false
     valueSetName = salesforce.StandardValueSet.instance.Industry
+  }
+  salesforce.Picklist Pronouns {
+    apiName = "Lead.Pronouns"
+    _hidden_value = true
   }
   salesforce.Picklist Rating {
     apiName = "Lead.Rating"
@@ -156,7 +152,6 @@ type salesforce.Lead {
     createable = true
     updateable = true
     queryable = true
-    trackFeedHistory = false
     valueSetName = salesforce.StandardValueSet.instance.AccountRating
   }
   salesforce.Currency AnnualRevenue {
@@ -181,16 +176,11 @@ type salesforce.Lead {
   salesforce.Lookup OwnerId {
     apiName = "Lead.OwnerId"
     label = "Owner ID"
-    referenceTo = [
-      salesforce.Group,
-      salesforce.User,
-    ]
-    createable = false
-    updateable = false
+    createable = true
+    updateable = true
     relationshipName = "Owner"
     queryable = true
     _hidden_value = true
-    trackFeedHistory = true
   }
   salesforce.Checkbox IsConverted {
     apiName = "Lead.IsConverted"
@@ -211,9 +201,6 @@ type salesforce.Lead {
   salesforce.Lookup ConvertedAccountId {
     apiName = "Lead.ConvertedAccountId"
     label = "Converted Account ID"
-    referenceTo = [
-      salesforce.Account,
-    ]
     createable = false
     updateable = false
     relationshipName = "ConvertedAccount"
@@ -223,9 +210,6 @@ type salesforce.Lead {
   salesforce.Lookup ConvertedContactId {
     apiName = "Lead.ConvertedContactId"
     label = "Converted Contact ID"
-    referenceTo = [
-      salesforce.Contact,
-    ]
     createable = false
     updateable = false
     relationshipName = "ConvertedContact"
@@ -235,9 +219,6 @@ type salesforce.Lead {
   salesforce.Lookup ConvertedOpportunityId {
     apiName = "Lead.ConvertedOpportunityId"
     label = "Converted Opportunity ID"
-    referenceTo = [
-      salesforce.Opportunity,
-    ]
     createable = false
     updateable = false
     relationshipName = "ConvertedOpportunity"
@@ -263,9 +244,6 @@ type salesforce.Lead {
   salesforce.Lookup CreatedById {
     apiName = "Lead.CreatedById"
     label = "Created By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "CreatedBy"
@@ -283,9 +261,6 @@ type salesforce.Lead {
   salesforce.Lookup LastModifiedById {
     apiName = "Lead.LastModifiedById"
     label = "Last Modified By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "LastModifiedBy"
@@ -332,56 +307,6 @@ type salesforce.Lead {
   salesforce.Picklist CleanStatus {
     apiName = "Lead.CleanStatus"
     label = "Clean Status"
-    valueSet = [
-      {
-        fullName = "Matched"
-        default = false
-        label = "In Sync"
-        isActive = true
-      },
-      {
-        fullName = "Different"
-        default = false
-        label = "Different"
-        isActive = true
-      },
-      {
-        fullName = "Acknowledged"
-        default = false
-        label = "Reviewed"
-        isActive = true
-      },
-      {
-        fullName = "NotFound"
-        default = false
-        label = "Not Found"
-        isActive = true
-      },
-      {
-        fullName = "Inactive"
-        default = false
-        label = "Inactive"
-        isActive = true
-      },
-      {
-        fullName = "Pending"
-        default = false
-        label = "Not Compared"
-        isActive = true
-      },
-      {
-        fullName = "SelectMatch"
-        default = false
-        label = "Select Match"
-        isActive = true
-      },
-      {
-        fullName = "Skipped"
-        default = false
-        label = "Skipped"
-        isActive = true
-      },
-    ]
     restricted = true
     createable = true
     updateable = true
@@ -400,14 +325,10 @@ type salesforce.Lead {
   salesforce.Lookup DandbCompanyId {
     apiName = "Lead.DandbCompanyId"
     label = "D&B Company ID"
-    referenceTo = [
-      salesforce.DandBCompany,
-    ]
     createable = true
     updateable = true
     relationshipName = "DandbCompany"
     queryable = true
-    trackFeedHistory = false
   }
   salesforce.Text EmailBouncedReason {
     apiName = "Lead.EmailBouncedReason"
@@ -429,51 +350,42 @@ type salesforce.Lead {
   salesforce.Lookup IndividualId {
     apiName = "Lead.IndividualId"
     label = "Individual ID"
-    referenceTo = [
-      salesforce.Individual,
-    ]
     createable = true
     updateable = true
     relationshipName = "Individual"
     queryable = true
-    trackFeedHistory = false
   }
   salesforce.Lookup CampaignId {
     apiName = "Lead.CampaignId"
-    queryable = false
-    updateable = false
-    createable = false
     _hidden_value = true
   }
   salesforce.Unknown DoNotCall {
     apiName = "Lead.DoNotCall"
-    trackFeedHistory = false
-    queryable = false
-    updateable = false
-    createable = false
+    _hidden_value = true
+  }
+  salesforce.Picklist GenderIdentity {
+    apiName = "Lead.GenderIdentity"
     _hidden_value = true
   }
   salesforce.Unknown HasOptedOutOfEmail {
     apiName = "Lead.HasOptedOutOfEmail"
-    trackFeedHistory = false
-    queryable = false
-    updateable = false
-    createable = false
     _hidden_value = true
   }
   salesforce.Unknown HasOptedOutOfFax {
     apiName = "Lead.HasOptedOutOfFax"
-    trackFeedHistory = false
-    queryable = false
-    updateable = false
-    createable = false
     _hidden_value = true
   }
   salesforce.Unknown LastTransferDate {
     apiName = "Lead.LastTransferDate"
-    queryable = false
-    updateable = false
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsPriorityRecord {
+    apiName = "Lead.IsPriorityRecord"
+    defaultValue = false
+    label = "Important"
     createable = false
+    updateable = false
+    queryable = true
     _hidden_value = true
   }
 }

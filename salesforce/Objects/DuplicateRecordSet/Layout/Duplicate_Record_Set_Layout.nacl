@@ -50,6 +50,10 @@ salesforce.Layout DuplicateRecordSet_Duplicate_Record_Set_Layout@bsss {
       customLabel = false
       detailHeading = false
       editHeading = false
+      layoutColumns = [
+        {
+        },
+      ]
       style = "CustomLinks"
     },
   ]
@@ -69,4 +73,5 @@ salesforce.Layout DuplicateRecordSet_Duplicate_Record_Set_Layout@bsss {
   _parent = [
     salesforce.DuplicateRecordSet,
   ]
+  _alias = "DuplicateRecordSet-Duplicate Record Set Layout"
 }

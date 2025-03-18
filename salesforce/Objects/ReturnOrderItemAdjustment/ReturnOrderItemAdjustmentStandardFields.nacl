@@ -4,8 +4,6 @@ type salesforce.ReturnOrderItemAdjustment {
     label = "Return Order Item Adjustment ID"
     queryable = true
     _hidden_value = true
-    updateable = false
-    createable = false
   }
   salesforce.Checkbox IsDeleted {
     apiName = "ReturnOrderItemAdjustment.IsDeleted"
@@ -35,9 +33,6 @@ type salesforce.ReturnOrderItemAdjustment {
   salesforce.Lookup CreatedById {
     apiName = "ReturnOrderItemAdjustment.CreatedById"
     label = "Created By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "CreatedBy"
@@ -55,9 +50,6 @@ type salesforce.ReturnOrderItemAdjustment {
   salesforce.Lookup LastModifiedById {
     apiName = "ReturnOrderItemAdjustment.LastModifiedById"
     label = "Last Modified By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "LastModifiedBy"
@@ -72,25 +64,10 @@ type salesforce.ReturnOrderItemAdjustment {
     queryable = true
     _hidden_value = true
   }
-  salesforce.Lookup ReturnOrderLineItemId {
-    apiName = "ReturnOrderItemAdjustment.ReturnOrderLineItemId"
-    label = "Return Order Line Item ID"
-    _required = true
-    referenceTo = [
-      salesforce.ReturnOrderLineItem,
-    ]
-    createable = true
-    updateable = false
-    relationshipName = "ReturnOrderLineItem"
-    queryable = true
-  }
   salesforce.Lookup ReturnOrderId {
     apiName = "ReturnOrderItemAdjustment.ReturnOrderId"
     label = "Return Order ID"
     _required = true
-    referenceTo = [
-      salesforce.ReturnOrder,
-    ]
     createable = true
     updateable = false
     relationshipName = "ReturnOrder"
@@ -132,6 +109,15 @@ type salesforce.ReturnOrderItemAdjustment {
     createable = true
     updateable = true
     length = 1175
+    queryable = true
+  }
+  salesforce.MasterDetail ReturnOrderLineItemId {
+    apiName = "ReturnOrderItemAdjustment.ReturnOrderLineItemId"
+    relationshipName = "ReturnOrderLineItem"
+    _required = true
+    label = "Return Order Line Item ID"
+    createable = true
+    updateable = false
     queryable = true
   }
 }

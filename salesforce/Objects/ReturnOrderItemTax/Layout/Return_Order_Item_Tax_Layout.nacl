@@ -54,6 +54,10 @@ salesforce.Layout ReturnOrderItemTax_Return_Order_Item_Tax_Layout@bssss {
       customLabel = false
       detailHeading = false
       editHeading = false
+      layoutColumns = [
+        {
+        },
+      ]
       style = "CustomLinks"
     },
   ]
@@ -63,4 +67,5 @@ salesforce.Layout ReturnOrderItemTax_Return_Order_Item_Tax_Layout@bssss {
   _parent = [
     salesforce.ReturnOrderItemTax,
   ]
+  _alias = "ReturnOrderItemTax-Return Order Item Tax Layout"
 }

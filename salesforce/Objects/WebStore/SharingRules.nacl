@@ -3,4 +3,5 @@ salesforce.SharingRules WebStore {
   _parent = [
     salesforce.WebStore,
   ]
+  _alias = "WebStore"
 }

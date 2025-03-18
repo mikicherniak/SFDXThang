@@ -219,6 +219,7 @@ type salesforce.WorkPlanTemplateEntry {
       "LastModifiedDate",
     ]
   }
+  _alias = "Work Plan Template Entry"
   topicsForObjects = {
     enableTopics = false
   }

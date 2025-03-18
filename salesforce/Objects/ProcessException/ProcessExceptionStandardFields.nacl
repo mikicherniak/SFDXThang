@@ -4,18 +4,12 @@ type salesforce.ProcessException {
     label = "Process Exception ID"
     queryable = true
     _hidden_value = true
-    updateable = false
-    createable = false
   }
   salesforce.Lookup OwnerId {
     apiName = "ProcessException.OwnerId"
     label = "Owner ID"
-    referenceTo = [
-      salesforce.Group,
-      salesforce.User,
-    ]
-    createable = false
-    updateable = false
+    createable = true
+    updateable = true
     relationshipName = "Owner"
     queryable = true
     _hidden_value = true
@@ -48,9 +42,6 @@ type salesforce.ProcessException {
   salesforce.Lookup CreatedById {
     apiName = "ProcessException.CreatedById"
     label = "Created By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "CreatedBy"
@@ -68,9 +59,6 @@ type salesforce.ProcessException {
   salesforce.Lookup LastModifiedById {
     apiName = "ProcessException.LastModifiedById"
     label = "Last Modified By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "LastModifiedBy"
@@ -89,16 +77,6 @@ type salesforce.ProcessException {
     apiName = "ProcessException.AttachedToId"
     label = "Attached To ID"
     _required = true
-    referenceTo = [
-      salesforce.CreditMemo,
-      salesforce.Invoice,
-      salesforce.Order,
-      salesforce.OrderItem,
-      salesforce.Payment,
-      salesforce.PaymentAuthorization,
-      salesforce.Refund,
-      salesforce.ReturnOrder,
-    ]
     createable = true
     updateable = true
     relationshipName = "AttachedTo"
@@ -119,26 +97,6 @@ type salesforce.ProcessException {
     apiName = "ProcessException.StatusCategory"
     label = "Status Category"
     _required = true
-    valueSet = [
-      {
-        fullName = "ACTIVE"
-        default = false
-        label = "Active"
-        isActive = true
-      },
-      {
-        fullName = "INACTIVE"
-        default = false
-        label = "Inactive"
-        isActive = true
-      },
-      {
-        fullName = "RESOLVED"
-        default = false
-        label = "Resolved"
-        isActive = true
-      },
-    ]
     restricted = true
     createable = false
     updateable = false
@@ -149,44 +107,6 @@ type salesforce.ProcessException {
     apiName = "ProcessException.Status"
     label = "Status"
     _required = true
-    valueSet = [
-      {
-        fullName = "New"
-        default = true
-        label = "New"
-        isActive = true
-      },
-      {
-        fullName = "Triaged"
-        default = false
-        label = "Triaged"
-        isActive = true
-      },
-      {
-        fullName = "Paused"
-        default = false
-        label = "Paused"
-        isActive = true
-      },
-      {
-        fullName = "Ignored"
-        default = false
-        label = "Ignored"
-        isActive = true
-      },
-      {
-        fullName = "Resolved"
-        default = false
-        label = "Resolved"
-        isActive = true
-      },
-      {
-        fullName = "Voided"
-        default = false
-        label = "Voided"
-        isActive = true
-      },
-    ]
     restricted = false
     createable = true
     updateable = true
@@ -195,38 +115,6 @@ type salesforce.ProcessException {
   salesforce.Picklist Category {
     apiName = "ProcessException.Category"
     label = "Category"
-    valueSet = [
-      {
-        fullName = "Order Activation"
-        default = true
-        label = "Order Activation"
-        isActive = true
-      },
-      {
-        fullName = "Order Approval"
-        default = false
-        label = "Order Approval"
-        isActive = true
-      },
-      {
-        fullName = "Fulfillment"
-        default = false
-        label = "Fulfillment"
-        isActive = true
-      },
-      {
-        fullName = "Payment"
-        default = false
-        label = "Payment"
-        isActive = true
-      },
-      {
-        fullName = "Invoicing"
-        default = false
-        label = "Invoicing"
-        isActive = true
-      },
-    ]
     restricted = false
     createable = true
     updateable = true
@@ -235,20 +123,6 @@ type salesforce.ProcessException {
   salesforce.Picklist Severity {
     apiName = "ProcessException.Severity"
     label = "Severity"
-    valueSet = [
-      {
-        fullName = "High"
-        default = true
-        label = "High"
-        isActive = true
-      },
-      {
-        fullName = "Low"
-        default = false
-        label = "Low"
-        isActive = true
-      },
-    ]
     restricted = false
     createable = true
     updateable = true
@@ -257,20 +131,6 @@ type salesforce.ProcessException {
   salesforce.Picklist Priority {
     apiName = "ProcessException.Priority"
     label = "Priority"
-    valueSet = [
-      {
-        fullName = "High"
-        default = false
-        label = "High"
-        isActive = true
-      },
-      {
-        fullName = "Low"
-        default = true
-        label = "Low"
-        isActive = true
-      },
-    ]
     restricted = false
     createable = true
     updateable = true
@@ -279,9 +139,6 @@ type salesforce.ProcessException {
   salesforce.Lookup CaseId {
     apiName = "ProcessException.CaseId"
     label = "Case ID"
-    referenceTo = [
-      salesforce.Case,
-    ]
     createable = true
     updateable = true
     relationshipName = "Case"
@@ -300,26 +157,6 @@ type salesforce.ProcessException {
   salesforce.Picklist SeverityCategory {
     apiName = "ProcessException.SeverityCategory"
     label = "Severity Category"
-    valueSet = [
-      {
-        fullName = "HIGH"
-        default = false
-        label = "High"
-        isActive = true
-      },
-      {
-        fullName = "MEDIUM"
-        default = false
-        label = "Medium"
-        isActive = true
-      },
-      {
-        fullName = "LOW"
-        default = false
-        label = "Low"
-        isActive = true
-      },
-    ]
     restricted = true
     createable = false
     updateable = false

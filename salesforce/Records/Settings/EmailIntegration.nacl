@@ -9,4 +9,12 @@ salesforce.EmailIntegrationSettings {
   isLayoutCustomizationAllowed = false
   orgIsSyncingEventsOutbound = "false"
   shouldUseTrustedDomainsList = true
+  _alias = "EmailIntegration"
+  enableContextualEverywhere = "true"
+  enableEmailTrackingInMobile = true
+  enableExtensionHostUnrestricted = "true"
+  enableInboxInternalEmailTracking = "false"
+  enableInboxMobileIntune = "false"
+  enableProductivityFeatures = false
+  enableSupplementalContactInfoInMobile = false
 }

@@ -4,8 +4,6 @@ type salesforce.CreditMemoLine {
     label = "Credit Memo Line ID"
     queryable = true
     _hidden_value = true
-    updateable = false
-    createable = false
   }
   salesforce.Checkbox IsDeleted {
     apiName = "CreditMemoLine.IsDeleted"
@@ -38,9 +36,6 @@ type salesforce.CreditMemoLine {
   salesforce.Lookup CreatedById {
     apiName = "CreditMemoLine.CreatedById"
     label = "Created By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "CreatedBy"
@@ -58,9 +53,6 @@ type salesforce.CreditMemoLine {
   salesforce.Lookup LastModifiedById {
     apiName = "CreditMemoLine.LastModifiedById"
     label = "Last Modified By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "LastModifiedBy"
@@ -73,20 +65,6 @@ type salesforce.CreditMemoLine {
     createable = false
     updateable = false
     queryable = true
-    _hidden_value = true
-  }
-  salesforce.Lookup CreditMemoId {
-    apiName = "CreditMemoLine.CreditMemoId"
-    label = "Credit Memo ID"
-    _required = true
-    referenceTo = [
-      salesforce.CreditMemo,
-    ]
-    createable = false
-    updateable = false
-    relationshipName = "CreditMemo"
-    queryable = true
-    trackHistory = false
     _hidden_value = true
   }
   salesforce.Date StartDate {
@@ -114,26 +92,6 @@ type salesforce.CreditMemoLine {
     apiName = "CreditMemoLine.Type"
     label = "Type"
     _required = true
-    valueSet = [
-      {
-        fullName = "Charge"
-        default = false
-        label = "Charge"
-        isActive = true
-      },
-      {
-        fullName = "Tax"
-        default = false
-        label = "Tax"
-        isActive = true
-      },
-      {
-        fullName = "Adjustment"
-        default = false
-        label = "Adjustment"
-        isActive = true
-      },
-    ]
     restricted = true
     createable = false
     updateable = false
@@ -155,8 +113,8 @@ type salesforce.CreditMemoLine {
     label = "Tax Rate"
     createable = false
     updateable = true
-    scale = 0
-    precision = 3
+    scale = 2
+    precision = 5
     queryable = true
   }
   salesforce.Text Status {
@@ -215,23 +173,17 @@ type salesforce.CreditMemoLine {
     length = 255
     queryable = true
   }
+  salesforce.Lookup ReferenceEntityItemId {
+    apiName = "CreditMemoLine.ReferenceEntityItemId"
+    relationshipName = "ReferenceEntityItem"
+    label = "ReferenceEntityItem ID"
+    createable = false
+    updateable = true
+    queryable = true
+  }
   salesforce.Picklist ReferenceEntityItemTypeCode {
     apiName = "CreditMemoLine.ReferenceEntityItemTypeCode"
     label = "Reference Entity Item Type Code"
-    valueSet = [
-      {
-        fullName = "Product"
-        default = false
-        label = "Product"
-        isActive = true
-      },
-      {
-        fullName = "Charge"
-        default = false
-        label = "Charge"
-        isActive = true
-      },
-    ]
     restricted = true
     createable = false
     updateable = true
@@ -240,20 +192,6 @@ type salesforce.CreditMemoLine {
   salesforce.Picklist ReferenceEntityItemType {
     apiName = "CreditMemoLine.ReferenceEntityItemType"
     label = "Reference Entity Item Type"
-    valueSet = [
-      {
-        fullName = "Order Product"
-        default = false
-        label = "Order Product"
-        isActive = true
-      },
-      {
-        fullName = "Delivery Charge"
-        default = false
-        label = "Delivery Charge"
-        isActive = true
-      },
-    ]
     restricted = true
     createable = false
     updateable = true
@@ -262,26 +200,18 @@ type salesforce.CreditMemoLine {
   salesforce.Lookup RelatedLineId {
     apiName = "CreditMemoLine.RelatedLineId"
     label = "Credit Memo Line ID"
-    referenceTo = [
-      salesforce.CreditMemoLine,
-    ]
     createable = false
     updateable = true
     relationshipName = "RelatedLine"
     queryable = true
-    trackHistory = false
   }
   salesforce.Lookup Product2Id {
     apiName = "CreditMemoLine.Product2Id"
     label = "Product ID"
-    referenceTo = [
-      salesforce.Product2,
-    ]
     createable = false
     updateable = true
     relationshipName = "Product2"
     queryable = true
-    trackHistory = false
   }
   salesforce.Text TaxName {
     apiName = "CreditMemoLine.TaxName"
@@ -330,6 +260,16 @@ type salesforce.CreditMemoLine {
     updateable = false
     scale = 2
     precision = 18
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.MasterDetail CreditMemoId {
+    apiName = "CreditMemoLine.CreditMemoId"
+    relationshipName = "CreditMemo"
+    _required = true
+    label = "Credit Memo ID"
+    createable = false
+    updateable = false
     queryable = true
     _hidden_value = true
   }

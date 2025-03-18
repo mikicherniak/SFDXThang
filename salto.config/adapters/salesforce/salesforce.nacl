@@ -3,9 +3,9 @@ salesforce {
     metadata = {
       include = [
         {
-          metadataType = ".*"
-          namespace = ""
-          name = ".*"
+         metadataType = ".*"
+         namespace = ""
+         name = ".*"
         },
       ]
       exclude = [

@@ -6,6 +6,8 @@ salesforce.CustomApplication standard__Chatter {
   ]
   isNavAutoTempTabsDisabled = false
   isNavPersonalizationDisabled = false
+  isNavTabPersistenceDisabled = false
+  isOmniPinnedViewEnabled = false
   tabs = [
     "standard-Chatter",
     "standard-UserProfile",
@@ -13,4 +15,5 @@ salesforce.CustomApplication standard__Chatter {
     "standard-CollaborationGroup",
     "standard-File",
   ]
+  _alias = "standard__Chatter"
 }

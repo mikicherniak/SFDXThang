@@ -186,6 +186,8 @@ type salesforce.CaseRelatedIssue {
       type = "Default"
     },
   ]
+  compactLayoutAssignment = "SYSTEM"
   enableFeeds = false
   externalSharingModel = "ControlledByParent"
+  _alias = "Case Related Issue"
 }

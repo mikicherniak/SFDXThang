@@ -210,6 +210,10 @@ salesforce.Layout Account_Account__28Support_29_Layout@bspps {
             },
           ]
         },
+        {
+        },
+        {
+        },
       ]
       style = "CustomLinks"
     },
@@ -402,15 +406,6 @@ salesforce.Layout Account_Account__28Support_29_Layout@bspps {
       },
     ]
   }
-  relatedContent = {
-    relatedContentItems = [
-      {
-        layoutItem = {
-          component = "runtime_sales_social:socialPanel"
-        }
-      },
-    ]
-  }
   relatedLists = [
     {
       fields = [
@@ -496,4 +491,5 @@ salesforce.Layout Account_Account__28Support_29_Layout@bspps {
   _parent = [
     salesforce.Account,
   ]
+  _alias = "Account-Account %28Support%29 Layout"
 }

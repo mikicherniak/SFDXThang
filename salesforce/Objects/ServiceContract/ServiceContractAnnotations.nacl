@@ -207,4 +207,7 @@ type salesforce.ServiceContract {
       "CONTRACT.STATUSINDICATOR",
     ]
   }
+  _alias = "Service Contract"
+  historyTrackedFields = {
+  }
 }

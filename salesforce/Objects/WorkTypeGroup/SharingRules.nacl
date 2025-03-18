@@ -3,4 +3,5 @@ salesforce.SharingRules WorkTypeGroup {
   _parent = [
     salesforce.WorkTypeGroup,
   ]
+  _alias = "WorkTypeGroup"
 }

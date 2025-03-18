@@ -4,8 +4,6 @@ type salesforce.Payment {
     label = "Payment ID"
     queryable = true
     _hidden_value = true
-    updateable = false
-    createable = false
   }
   salesforce.Checkbox IsDeleted {
     apiName = "Payment.IsDeleted"
@@ -35,9 +33,6 @@ type salesforce.Payment {
   salesforce.Lookup CreatedById {
     apiName = "Payment.CreatedById"
     label = "Created By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "CreatedBy"
@@ -55,9 +50,6 @@ type salesforce.Payment {
   salesforce.Lookup LastModifiedById {
     apiName = "Payment.LastModifiedById"
     label = "Last Modified By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "LastModifiedBy"
@@ -75,9 +67,6 @@ type salesforce.Payment {
   salesforce.Lookup PaymentGroupId {
     apiName = "Payment.PaymentGroupId"
     label = "Payment Group ID"
-    referenceTo = [
-      salesforce.PaymentGroup,
-    ]
     createable = true
     updateable = true
     relationshipName = "PaymentGroup"
@@ -86,9 +75,6 @@ type salesforce.Payment {
   salesforce.Lookup AccountId {
     apiName = "Payment.AccountId"
     label = "Account ID"
-    referenceTo = [
-      salesforce.Account,
-    ]
     createable = true
     updateable = true
     relationshipName = "Account"
@@ -97,9 +83,6 @@ type salesforce.Payment {
   salesforce.Lookup PaymentAuthorizationId {
     apiName = "Payment.PaymentAuthorizationId"
     label = "Payment Authorization ID"
-    referenceTo = [
-      salesforce.PaymentAuthorization,
-    ]
     createable = true
     updateable = true
     relationshipName = "PaymentAuthorization"
@@ -133,38 +116,6 @@ type salesforce.Payment {
     apiName = "Payment.Status"
     label = "Status"
     _required = true
-    valueSet = [
-      {
-        fullName = "Draft"
-        default = false
-        label = "Draft"
-        isActive = true
-      },
-      {
-        fullName = "Processed"
-        default = false
-        label = "Processed"
-        isActive = true
-      },
-      {
-        fullName = "Canceled"
-        default = false
-        label = "Canceled"
-        isActive = true
-      },
-      {
-        fullName = "Pending"
-        default = false
-        label = "Pending"
-        isActive = true
-      },
-      {
-        fullName = "Failed"
-        default = false
-        label = "Failed"
-        isActive = true
-      },
-    ]
     restricted = true
     createable = true
     updateable = true
@@ -174,20 +125,6 @@ type salesforce.Payment {
     apiName = "Payment.Type"
     label = "Type"
     _required = true
-    valueSet = [
-      {
-        fullName = "Sale"
-        default = false
-        label = "Sale"
-        isActive = true
-      },
-      {
-        fullName = "Capture"
-        default = false
-        label = "Capture"
-        isActive = true
-      },
-    ]
     restricted = true
     createable = true
     updateable = true
@@ -197,20 +134,6 @@ type salesforce.Payment {
     apiName = "Payment.ProcessingMode"
     label = "Processing Mode"
     _required = true
-    valueSet = [
-      {
-        fullName = "Salesforce"
-        default = false
-        label = "Salesforce"
-        isActive = true
-      },
-      {
-        fullName = "External"
-        default = false
-        label = "External"
-        isActive = true
-      },
-    ]
     restricted = true
     createable = true
     updateable = false
@@ -237,7 +160,7 @@ type salesforce.Payment {
   }
   salesforce.Text GatewayResultCode {
     apiName = "Payment.GatewayResultCode"
-    label = "Gateway ResultCode"
+    label = "Gateway Result Code"
     createable = true
     updateable = true
     unique = false
@@ -247,51 +170,7 @@ type salesforce.Payment {
   }
   salesforce.Picklist SfResultCode {
     apiName = "Payment.SfResultCode"
-    label = "Salesforce ResultCode"
-    valueSet = [
-      {
-        fullName = "Success"
-        default = false
-        label = "Success"
-        isActive = true
-      },
-      {
-        fullName = "PermanentFail"
-        default = false
-        label = "PermanentFail"
-        isActive = true
-      },
-      {
-        fullName = "Decline"
-        default = false
-        label = "Decline"
-        isActive = true
-      },
-      {
-        fullName = "RequiresReview"
-        default = false
-        label = "RequiresReview"
-        isActive = true
-      },
-      {
-        fullName = "Indeterminate"
-        default = false
-        label = "Indeterminate"
-        isActive = true
-      },
-      {
-        fullName = "SystemError"
-        default = false
-        label = "SystemError"
-        isActive = true
-      },
-      {
-        fullName = "ValidationError"
-        default = false
-        label = "ValidationError"
-        isActive = true
-      },
-    ]
+    label = "Salesforce Result Code"
     restricted = true
     createable = true
     updateable = true
@@ -316,7 +195,7 @@ type salesforce.Payment {
   }
   salesforce.Text CancellationGatewayResultCode {
     apiName = "Payment.CancellationGatewayResultCode"
-    label = "Cancellation Gateway ResultCode"
+    label = "Cancellation Gateway Result Code"
     createable = true
     updateable = true
     unique = false
@@ -326,7 +205,7 @@ type salesforce.Payment {
   }
   salesforce.Text CancellationSfResultCode {
     apiName = "Payment.CancellationSfResultCode"
-    label = "Cancellation Salesforce ResultCode"
+    label = "Cancellation Salesforce Result Code"
     createable = true
     updateable = true
     unique = false
@@ -373,7 +252,7 @@ type salesforce.Payment {
   }
   salesforce.Text GatewayResultCodeDescription {
     apiName = "Payment.GatewayResultCodeDescription"
-    label = "Gateway ResultCode Description"
+    label = "Gateway Result Code Description"
     createable = true
     updateable = true
     unique = false
@@ -427,9 +306,6 @@ type salesforce.Payment {
   salesforce.Lookup PaymentGatewayId {
     apiName = "Payment.PaymentGatewayId"
     label = "Payment Gateway ID"
-    referenceTo = [
-      salesforce.PaymentGateway,
-    ]
     createable = true
     updateable = true
     relationshipName = "PaymentGateway"
@@ -438,9 +314,6 @@ type salesforce.Payment {
   salesforce.Lookup PaymentMethodId {
     apiName = "Payment.PaymentMethodId"
     label = "Payment Method ID"
-    referenceTo = [
-      salesforce.PaymentMethod,
-    ]
     createable = true
     updateable = true
     relationshipName = "PaymentMethod"
@@ -509,5 +382,15 @@ type salesforce.Payment {
     updateable = false
     queryable = true
     _hidden_value = true
+  }
+  salesforce.Text PaymentIntentGuid {
+    apiName = "Payment.PaymentIntentGuid"
+    length = 255
+    label = "Payment Intent Guid"
+    createable = true
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
   }
 }

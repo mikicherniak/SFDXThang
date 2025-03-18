@@ -4,8 +4,6 @@ type salesforce.ContractLineItem {
     label = "Contract Line Item ID"
     queryable = true
     _hidden_value = true
-    updateable = false
-    createable = false
   }
   salesforce.Checkbox IsDeleted {
     apiName = "ContractLineItem.IsDeleted"
@@ -35,9 +33,6 @@ type salesforce.ContractLineItem {
   salesforce.Lookup CreatedById {
     apiName = "ContractLineItem.CreatedById"
     label = "Created By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "CreatedBy"
@@ -55,9 +50,6 @@ type salesforce.ContractLineItem {
   salesforce.Lookup LastModifiedById {
     apiName = "ContractLineItem.LastModifiedById"
     label = "Last Modified By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "LastModifiedBy"
@@ -72,25 +64,9 @@ type salesforce.ContractLineItem {
     queryable = true
     _hidden_value = true
   }
-  salesforce.Lookup ServiceContractId {
-    apiName = "ContractLineItem.ServiceContractId"
-    label = "Service Contract ID"
-    _required = true
-    referenceTo = [
-      salesforce.ServiceContract,
-    ]
-    createable = true
-    updateable = false
-    relationshipName = "ServiceContract"
-    queryable = true
-    trackHistory = false
-  }
   salesforce.Lookup Product2Id {
     apiName = "ContractLineItem.Product2Id"
     label = "Product ID"
-    referenceTo = [
-      salesforce.Product2,
-    ]
     createable = false
     updateable = false
     relationshipName = "Product2"
@@ -100,14 +76,10 @@ type salesforce.ContractLineItem {
   salesforce.Lookup AssetId {
     apiName = "ContractLineItem.AssetId"
     label = "Asset ID"
-    referenceTo = [
-      salesforce.Asset,
-    ]
     createable = true
     updateable = true
     relationshipName = "Asset"
     queryable = true
-    trackHistory = false
   }
   salesforce.Date StartDate {
     apiName = "ContractLineItem.StartDate"
@@ -135,14 +107,10 @@ type salesforce.ContractLineItem {
     apiName = "ContractLineItem.PricebookEntryId"
     label = "Price Book Entry ID"
     _required = true
-    referenceTo = [
-      salesforce.PricebookEntry,
-    ]
     createable = true
     updateable = true
     relationshipName = "PricebookEntry"
     queryable = true
-    trackHistory = false
   }
   salesforce.Number Quantity {
     apiName = "ContractLineItem.Quantity"
@@ -207,26 +175,6 @@ type salesforce.ContractLineItem {
   salesforce.Picklist Status {
     apiName = "ContractLineItem.Status"
     label = "Status"
-    valueSet = [
-      {
-        fullName = "Inactive"
-        default = false
-        label = "Inactive"
-        isActive = true
-      },
-      {
-        fullName = "Active"
-        default = false
-        label = "Active"
-        isActive = true
-      },
-      {
-        fullName = "Expired"
-        default = false
-        label = "Expired"
-        isActive = true
-      },
-    ]
     restricted = true
     createable = false
     updateable = false
@@ -236,42 +184,39 @@ type salesforce.ContractLineItem {
   salesforce.Lookup ParentContractLineItemId {
     apiName = "ContractLineItem.ParentContractLineItemId"
     label = "Contract Line Item ID"
-    referenceTo = [
-      salesforce.ContractLineItem,
-    ]
     createable = true
     updateable = true
     relationshipName = "ParentContractLineItem"
     queryable = true
-    trackHistory = false
   }
   salesforce.Lookup RootContractLineItemId {
     apiName = "ContractLineItem.RootContractLineItemId"
     label = "Contract Line Item ID"
-    referenceTo = [
-      salesforce.ContractLineItem,
-    ]
     createable = false
     updateable = false
     relationshipName = "RootContractLineItem"
     queryable = true
-    trackHistory = false
     _hidden_value = true
   }
   salesforce.Lookup LocationId {
     apiName = "ContractLineItem.LocationId"
-    trackHistory = false
-    queryable = false
-    updateable = false
-    createable = false
-    _hidden_value = true
+    queryable = true
+    updateable = true
+    relationshipName = "Location"
+    label = "Location ID"
+    createable = true
   }
   salesforce.Unknown StatusIndicator {
     apiName = "ContractLineItem.StatusIndicator"
-    trackHistory = false
-    queryable = false
-    updateable = false
-    createable = false
     _hidden_value = true
+  }
+  salesforce.MasterDetail ServiceContractId {
+    apiName = "ContractLineItem.ServiceContractId"
+    relationshipName = "ServiceContract"
+    _required = true
+    label = "Service Contract ID"
+    createable = true
+    updateable = false
+    queryable = true
   }
 }

@@ -219,6 +219,7 @@ type salesforce.ServiceTerritory {
       "LastModifiedBy",
     ]
   }
+  _alias = "Service Territory"
   topicsForObjects = {
     enableTopics = false
   }

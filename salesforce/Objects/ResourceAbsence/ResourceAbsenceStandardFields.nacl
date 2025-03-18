@@ -4,8 +4,6 @@ type salesforce.ResourceAbsence {
     label = "Absence ID"
     queryable = true
     _hidden_value = true
-    updateable = false
-    createable = false
   }
   salesforce.Checkbox IsDeleted {
     apiName = "ResourceAbsence.IsDeleted"
@@ -35,9 +33,6 @@ type salesforce.ResourceAbsence {
   salesforce.Lookup CreatedById {
     apiName = "ResourceAbsence.CreatedById"
     label = "Created By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "CreatedBy"
@@ -55,9 +50,6 @@ type salesforce.ResourceAbsence {
   salesforce.Lookup LastModifiedById {
     apiName = "ResourceAbsence.LastModifiedById"
     label = "Last Modified By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "LastModifiedBy"
@@ -72,54 +64,14 @@ type salesforce.ResourceAbsence {
     queryable = true
     _hidden_value = true
   }
-  salesforce.Lookup ResourceId {
-    apiName = "ResourceAbsence.ResourceId"
-    label = "Resource ID"
-    _required = true
-    referenceTo = [
-      salesforce.ServiceResource,
-    ]
-    createable = true
-    updateable = false
-    relationshipName = "Resource"
-    queryable = true
-    trackHistory = false
-  }
   salesforce.Picklist Type {
     apiName = "ResourceAbsence.Type"
     label = "Type"
     _required = true
-    valueSet = [
-      {
-        fullName = "Vacation"
-        default = true
-        label = "Vacation"
-        isActive = true
-      },
-      {
-        fullName = "Meeting"
-        default = false
-        label = "Meeting"
-        isActive = true
-      },
-      {
-        fullName = "Training"
-        default = false
-        label = "Training"
-        isActive = true
-      },
-      {
-        fullName = "Medical"
-        default = false
-        label = "Medical"
-        isActive = true
-      },
-    ]
     restricted = false
     createable = true
     updateable = true
     queryable = true
-    trackHistory = false
   }
   salesforce.LongTextArea Description {
     apiName = "ResourceAbsence.Description"
@@ -152,5 +104,14 @@ type salesforce.ResourceAbsence {
     updateable = false
     queryable = true
     _hidden_value = true
+  }
+  salesforce.MasterDetail ResourceId {
+    apiName = "ResourceAbsence.ResourceId"
+    relationshipName = "Resource"
+    _required = true
+    label = "Resource ID"
+    createable = true
+    updateable = true
+    queryable = true
   }
 }

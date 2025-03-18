@@ -18,6 +18,8 @@ salesforce.QuickAction CollaborationGroup_NewGroupRecord@v {
           },
         ]
       },
+      {
+      },
     ]
   }
   standardLabel = "AddRecord"
@@ -27,4 +29,5 @@ salesforce.QuickAction CollaborationGroup_NewGroupRecord@v {
   _parent = [
     salesforce.CollaborationGroup,
   ]
+  _alias = "CollaborationGroup.NewGroupRecord"
 }

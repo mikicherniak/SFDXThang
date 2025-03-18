@@ -3,4 +3,5 @@ salesforce.SharingRules WebCart {
   _parent = [
     salesforce.WebCart,
   ]
+  _alias = "WebCart"
 }

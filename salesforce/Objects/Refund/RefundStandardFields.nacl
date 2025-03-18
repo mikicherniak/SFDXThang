@@ -4,8 +4,6 @@ type salesforce.Refund {
     label = "Refund ID"
     queryable = true
     _hidden_value = true
-    updateable = false
-    createable = false
   }
   salesforce.Checkbox IsDeleted {
     apiName = "Refund.IsDeleted"
@@ -35,9 +33,6 @@ type salesforce.Refund {
   salesforce.Lookup CreatedById {
     apiName = "Refund.CreatedById"
     label = "Created By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "CreatedBy"
@@ -55,9 +50,6 @@ type salesforce.Refund {
   salesforce.Lookup LastModifiedById {
     apiName = "Refund.LastModifiedById"
     label = "Last Modified By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "LastModifiedBy"
@@ -76,20 +68,6 @@ type salesforce.Refund {
     apiName = "Refund.Type"
     label = "Type"
     _required = true
-    valueSet = [
-      {
-        fullName = "Referenced"
-        default = false
-        label = "Referenced"
-        isActive = true
-      },
-      {
-        fullName = "NonReferenced"
-        default = false
-        label = "NonReferenced"
-        isActive = true
-      },
-    ]
     restricted = true
     createable = true
     updateable = true
@@ -98,9 +76,6 @@ type salesforce.Refund {
   salesforce.Lookup PaymentGroupId {
     apiName = "Refund.PaymentGroupId"
     label = "Payment Group ID"
-    referenceTo = [
-      salesforce.PaymentGroup,
-    ]
     createable = true
     updateable = true
     relationshipName = "PaymentGroup"
@@ -118,20 +93,6 @@ type salesforce.Refund {
     apiName = "Refund.ProcessingMode"
     label = "Processing Mode"
     _required = true
-    valueSet = [
-      {
-        fullName = "Salesforce"
-        default = false
-        label = "Salesforce"
-        isActive = true
-      },
-      {
-        fullName = "External"
-        default = false
-        label = "External"
-        isActive = true
-      },
-    ]
     restricted = true
     createable = true
     updateable = false
@@ -150,9 +111,6 @@ type salesforce.Refund {
   salesforce.Lookup AccountId {
     apiName = "Refund.AccountId"
     label = "Account ID"
-    referenceTo = [
-      salesforce.Account,
-    ]
     createable = true
     updateable = true
     relationshipName = "Account"
@@ -161,9 +119,6 @@ type salesforce.Refund {
   salesforce.Lookup PaymentMethodId {
     apiName = "Refund.PaymentMethodId"
     label = "Payment Method ID"
-    referenceTo = [
-      salesforce.PaymentMethod,
-    ]
     createable = true
     updateable = true
     relationshipName = "PaymentMethod"
@@ -181,38 +136,6 @@ type salesforce.Refund {
     apiName = "Refund.Status"
     label = "Status"
     _required = true
-    valueSet = [
-      {
-        fullName = "Draft"
-        default = false
-        label = "Draft"
-        isActive = true
-      },
-      {
-        fullName = "Processed"
-        default = false
-        label = "Processed"
-        isActive = true
-      },
-      {
-        fullName = "Canceled"
-        default = false
-        label = "Canceled"
-        isActive = true
-      },
-      {
-        fullName = "Pending"
-        default = false
-        label = "Pending"
-        isActive = true
-      },
-      {
-        fullName = "Failed"
-        default = false
-        label = "Failed"
-        isActive = true
-      },
-    ]
     restricted = true
     createable = true
     updateable = true
@@ -239,7 +162,7 @@ type salesforce.Refund {
   }
   salesforce.Text GatewayResultCode {
     apiName = "Refund.GatewayResultCode"
-    label = "Gateway ResultCode"
+    label = "Gateway Result Code"
     createable = true
     updateable = true
     unique = false
@@ -249,7 +172,7 @@ type salesforce.Refund {
   }
   salesforce.Text GatewayResultCodeDescription {
     apiName = "Refund.GatewayResultCodeDescription"
-    label = "Gateway ResultCode Description"
+    label = "Gateway Result Code Description"
     createable = true
     updateable = true
     unique = false
@@ -259,51 +182,7 @@ type salesforce.Refund {
   }
   salesforce.Picklist SfResultCode {
     apiName = "Refund.SfResultCode"
-    label = "Salesforce ResultCode"
-    valueSet = [
-      {
-        fullName = "Success"
-        default = false
-        label = "Success"
-        isActive = true
-      },
-      {
-        fullName = "PermanentFail"
-        default = false
-        label = "PermanentFail"
-        isActive = true
-      },
-      {
-        fullName = "Decline"
-        default = false
-        label = "Decline"
-        isActive = true
-      },
-      {
-        fullName = "RequiresReview"
-        default = false
-        label = "RequiresReview"
-        isActive = true
-      },
-      {
-        fullName = "Indeterminate"
-        default = false
-        label = "Indeterminate"
-        isActive = true
-      },
-      {
-        fullName = "SystemError"
-        default = false
-        label = "SystemError"
-        isActive = true
-      },
-      {
-        fullName = "ValidationError"
-        default = false
-        label = "ValidationError"
-        isActive = true
-      },
-    ]
+    label = "Salesforce Result Code"
     restricted = true
     createable = true
     updateable = true
@@ -391,7 +270,7 @@ type salesforce.Refund {
   }
   salesforce.Text CancellationGatewayResultCode {
     apiName = "Refund.CancellationGatewayResultCode"
-    label = "Cancellation Gateway ResultCode"
+    label = "Cancellation Gateway Result Code"
     createable = true
     updateable = true
     unique = false
@@ -401,7 +280,7 @@ type salesforce.Refund {
   }
   salesforce.Text CancellationSfResultCode {
     apiName = "Refund.CancellationSfResultCode"
-    label = "Cancellation Salesforce ResultCode"
+    label = "Cancellation Salesforce Result Code"
     createable = true
     updateable = true
     unique = false
@@ -419,9 +298,6 @@ type salesforce.Refund {
   salesforce.Lookup PaymentGatewayId {
     apiName = "Refund.PaymentGatewayId"
     label = "Payment Gateway ID"
-    referenceTo = [
-      salesforce.PaymentGateway,
-    ]
     createable = true
     updateable = true
     relationshipName = "PaymentGateway"

@@ -38,6 +38,10 @@ salesforce.Layout DataUsePurpose_Data_Use_Purpose_Layout@bsss {
       customLabel = false
       detailHeading = false
       editHeading = false
+      layoutColumns = [
+        {
+        },
+      ]
       style = "CustomLinks"
     },
   ]
@@ -59,4 +63,5 @@ salesforce.Layout DataUsePurpose_Data_Use_Purpose_Layout@bsss {
   _parent = [
     salesforce.DataUsePurpose,
   ]
+  _alias = "DataUsePurpose-Data Use Purpose Layout"
 }

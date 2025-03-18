@@ -5,4 +5,5 @@ salesforce.ListView Shift_My_Shifts {
   _parent = [
     salesforce.Shift,
   ]
+  _alias = "My Shifts"
 }

@@ -199,4 +199,5 @@ type salesforce.ServiceTerritoryWorkType {
       "WorkType",
     ]
   }
+  _alias = "Service Territory Work Type"
 }

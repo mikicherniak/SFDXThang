@@ -85,4 +85,5 @@ salesforce.Layout TimeSlot_Time_Slot_Layout@bss {
   _parent = [
     salesforce.TimeSlot,
   ]
+  _alias = "TimeSlot-Time Slot Layout"
 }

@@ -87,10 +87,15 @@ salesforce.Layout UserProvAccount_User_Provisioning_Account_Layout@bsss {
       customLabel = false
       detailHeading = false
       editHeading = false
+      layoutColumns = [
+        {
+        },
+      ]
       style = "CustomLinks"
     },
   ]
   showEmailCheckbox = false
   showRunAssignmentRulesCheckbox = false
   showSubmitAndAttachButton = false
+  _alias = "UserProvAccount-User Provisioning Account Layout"
 }

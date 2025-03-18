@@ -4,8 +4,6 @@ type salesforce.Campaign {
     label = "Campaign ID"
     queryable = true
     _hidden_value = true
-    updateable = false
-    createable = false
   }
   salesforce.Checkbox IsDeleted {
     apiName = "Campaign.IsDeleted"
@@ -30,9 +28,6 @@ type salesforce.Campaign {
   salesforce.Lookup ParentId {
     apiName = "Campaign.ParentId"
     label = "Parent Campaign ID"
-    referenceTo = [
-      salesforce.Campaign,
-    ]
     createable = true
     updateable = true
     relationshipName = "Parent"
@@ -229,11 +224,8 @@ type salesforce.Campaign {
   salesforce.Lookup OwnerId {
     apiName = "Campaign.OwnerId"
     label = "Owner ID"
-    referenceTo = [
-      salesforce.User,
-    ]
-    createable = false
-    updateable = false
+    createable = true
+    updateable = true
     relationshipName = "Owner"
     queryable = true
     _hidden_value = true
@@ -249,9 +241,6 @@ type salesforce.Campaign {
   salesforce.Lookup CreatedById {
     apiName = "Campaign.CreatedById"
     label = "Created By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "CreatedBy"
@@ -269,9 +258,6 @@ type salesforce.Campaign {
   salesforce.Lookup LastModifiedById {
     apiName = "Campaign.LastModifiedById"
     label = "Last Modified By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "LastModifiedBy"
@@ -297,9 +283,6 @@ type salesforce.Campaign {
   salesforce.Lookup CampaignMemberRecordTypeId {
     apiName = "Campaign.CampaignMemberRecordTypeId"
     label = "Record Type ID"
-    referenceTo = [
-      salesforce.RecordType,
-    ]
     createable = true
     updateable = true
     relationshipName = "CampaignMemberRecordType"
@@ -307,86 +290,50 @@ type salesforce.Campaign {
   }
   salesforce.Unknown HierarchyActualCost {
     apiName = "Campaign.HierarchyActualCost"
-    queryable = false
-    updateable = false
-    createable = false
     _hidden_value = true
   }
   salesforce.Unknown HierarchyAmountAllOpportunities {
     apiName = "Campaign.HierarchyAmountAllOpportunities"
-    queryable = false
-    updateable = false
-    createable = false
     _hidden_value = true
   }
   salesforce.Unknown HierarchyAmountWonOpportunities {
     apiName = "Campaign.HierarchyAmountWonOpportunities"
-    queryable = false
-    updateable = false
-    createable = false
     _hidden_value = true
   }
   salesforce.Unknown HierarchyBudgetedCost {
     apiName = "Campaign.HierarchyBudgetedCost"
-    queryable = false
-    updateable = false
-    createable = false
     _hidden_value = true
   }
   salesforce.Unknown HierarchyExpectedRevenue {
     apiName = "Campaign.HierarchyExpectedRevenue"
-    queryable = false
-    updateable = false
-    createable = false
     _hidden_value = true
   }
   salesforce.Unknown HierarchyNumberOfContacts {
     apiName = "Campaign.HierarchyNumberOfContacts"
-    queryable = false
-    updateable = false
-    createable = false
     _hidden_value = true
   }
   salesforce.Unknown HierarchyNumberOfConvertedLeads {
     apiName = "Campaign.HierarchyNumberOfConvertedLeads"
-    queryable = false
-    updateable = false
-    createable = false
     _hidden_value = true
   }
   salesforce.Unknown HierarchyNumberOfLeads {
     apiName = "Campaign.HierarchyNumberOfLeads"
-    queryable = false
-    updateable = false
-    createable = false
     _hidden_value = true
   }
   salesforce.Unknown HierarchyNumberOfOpportunities {
     apiName = "Campaign.HierarchyNumberOfOpportunities"
-    queryable = false
-    updateable = false
-    createable = false
     _hidden_value = true
   }
   salesforce.Unknown HierarchyNumberOfResponses {
     apiName = "Campaign.HierarchyNumberOfResponses"
-    queryable = false
-    updateable = false
-    createable = false
     _hidden_value = true
   }
   salesforce.Unknown HierarchyNumberOfWonOpportunities {
     apiName = "Campaign.HierarchyNumberOfWonOpportunities"
-    queryable = false
-    updateable = false
-    createable = false
     _hidden_value = true
   }
   salesforce.Unknown HierarchyNumberSent {
     apiName = "Campaign.HierarchyNumberSent"
-    queryable = false
-    updateable = false
-    createable = false
     _hidden_value = true
   }
 }

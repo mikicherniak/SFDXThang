@@ -11,4 +11,5 @@ salesforce.ListView Contact_BulkMessageContacts {
   _parent = [
     salesforce.Contact,
   ]
+  _alias = "Bulk_SMS_Contacts"
 }

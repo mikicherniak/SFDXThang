@@ -4,22 +4,15 @@ type salesforce.ReturnOrder {
     label = "Return Order ID"
     queryable = true
     _hidden_value = true
-    updateable = false
-    createable = false
   }
   salesforce.Lookup OwnerId {
     apiName = "ReturnOrder.OwnerId"
     label = "Owner ID"
-    referenceTo = [
-      salesforce.Group,
-      salesforce.User,
-    ]
-    createable = false
-    updateable = false
+    createable = true
+    updateable = true
     relationshipName = "Owner"
     queryable = true
     _hidden_value = true
-    trackHistory = false
   }
   salesforce.Checkbox IsDeleted {
     apiName = "ReturnOrder.IsDeleted"
@@ -49,9 +42,6 @@ type salesforce.ReturnOrder {
   salesforce.Lookup CreatedById {
     apiName = "ReturnOrder.CreatedById"
     label = "Created By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "CreatedBy"
@@ -69,9 +59,6 @@ type salesforce.ReturnOrder {
   salesforce.Lookup LastModifiedById {
     apiName = "ReturnOrder.LastModifiedById"
     label = "Last Modified By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "LastModifiedBy"
@@ -89,115 +76,58 @@ type salesforce.ReturnOrder {
   salesforce.Lookup AccountId {
     apiName = "ReturnOrder.AccountId"
     label = "Account ID"
-    referenceTo = [
-      salesforce.Account,
-    ]
     createable = true
     updateable = true
     relationshipName = "Account"
     queryable = true
-    trackHistory = false
   }
   salesforce.Lookup ContactId {
     apiName = "ReturnOrder.ContactId"
     label = "Contact ID"
-    referenceTo = [
-      salesforce.Contact,
-    ]
     createable = true
     updateable = true
     relationshipName = "Contact"
     queryable = true
-    trackHistory = false
   }
   salesforce.Lookup CaseId {
     apiName = "ReturnOrder.CaseId"
     label = "Case ID"
-    referenceTo = [
-      salesforce.Case,
-    ]
     createable = true
     updateable = true
     relationshipName = "Case"
     queryable = true
-    trackHistory = false
   }
   salesforce.Lookup OrderId {
     apiName = "ReturnOrder.OrderId"
     label = "Order ID"
-    referenceTo = [
-      salesforce.Order,
-    ]
     createable = true
     updateable = true
     relationshipName = "Order"
     queryable = true
-    trackHistory = false
   }
   salesforce.Lookup SourceLocationId {
     apiName = "ReturnOrder.SourceLocationId"
     label = "Source Location ID"
-    referenceTo = [
-      salesforce.Location,
-    ]
     createable = true
     updateable = true
     relationshipName = "SourceLocation"
     queryable = true
-    trackHistory = false
   }
   salesforce.Lookup DestinationLocationId {
     apiName = "ReturnOrder.DestinationLocationId"
     label = "Destination Location ID"
-    referenceTo = [
-      salesforce.Location,
-    ]
     createable = true
     updateable = true
     relationshipName = "DestinationLocation"
     queryable = true
-    trackHistory = false
   }
   salesforce.Picklist ShipmentType {
     apiName = "ReturnOrder.ShipmentType"
     label = "Shipment Type"
-    valueSet = [
-      {
-        fullName = "Standard"
-        default = true
-        label = "Standard"
-        isActive = true
-      },
-      {
-        fullName = "Rush"
-        default = false
-        label = "Rush"
-        isActive = true
-      },
-      {
-        fullName = "Overnight"
-        default = false
-        label = "Overnight"
-        isActive = true
-      },
-      {
-        fullName = "Next Business Day"
-        default = false
-        label = "Next Business Day"
-        isActive = true
-      },
-      {
-        fullName = "Pick Up"
-        default = false
-        label = "Pick Up"
-        isActive = true
-      },
-    ]
     restricted = false
     createable = true
     updateable = true
     queryable = true
-    trackHistory = false
   }
   salesforce.Address ShipFromAddress {
     apiName = "ReturnOrder.ShipFromAddress"
@@ -210,14 +140,10 @@ type salesforce.ReturnOrder {
   salesforce.Lookup ReturnedById {
     apiName = "ReturnOrder.ReturnedById"
     label = "Returned By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = true
     updateable = true
     relationshipName = "ReturnedBy"
     queryable = true
-    trackHistory = false
   }
   salesforce.LongTextArea Description {
     apiName = "ReturnOrder.Description"
@@ -237,73 +163,14 @@ type salesforce.ReturnOrder {
   salesforce.Picklist Status {
     apiName = "ReturnOrder.Status"
     label = "Status"
-    valueSet = [
-      {
-        fullName = "Draft"
-        default = true
-        label = "Draft"
-        isActive = true
-      },
-      {
-        fullName = "Submitted"
-        default = false
-        label = "Submitted"
-        isActive = true
-      },
-      {
-        fullName = "Approved"
-        default = false
-        label = "Approved"
-        isActive = true
-      },
-      {
-        fullName = "Canceled"
-        default = false
-        label = "Canceled"
-        isActive = true
-      },
-      {
-        fullName = "Closed"
-        default = false
-        label = "Closed"
-        isActive = true
-      },
-    ]
     restricted = false
     createable = true
     updateable = true
     queryable = true
-    trackHistory = false
   }
   salesforce.Picklist StatusCategory {
     apiName = "ReturnOrder.StatusCategory"
     label = "Status Category"
-    valueSet = [
-      {
-        fullName = "Draft"
-        default = false
-        label = "Draft"
-        isActive = true
-      },
-      {
-        fullName = "Activated"
-        default = true
-        label = "Activated"
-        isActive = true
-      },
-      {
-        fullName = "Closed"
-        default = false
-        label = "Closed"
-        isActive = true
-      },
-      {
-        fullName = "Canceled"
-        default = false
-        label = "Canceled"
-        isActive = true
-      },
-    ]
     restricted = true
     createable = false
     updateable = false
@@ -400,20 +267,6 @@ type salesforce.ReturnOrder {
   salesforce.Picklist TaxLocaleType {
     apiName = "ReturnOrder.TaxLocaleType"
     label = "Tax Locale Type"
-    valueSet = [
-      {
-        fullName = "Net"
-        default = false
-        label = "Net"
-        isActive = true
-      },
-      {
-        fullName = "Gross"
-        default = false
-        label = "Gross"
-        isActive = true
-      },
-    ]
     restricted = true
     createable = false
     updateable = false
@@ -463,21 +316,55 @@ type salesforce.ReturnOrder {
   salesforce.Picklist LifeCycleType {
     apiName = "ReturnOrder.LifeCycleType"
     label = "Life Cycle Type"
-    valueSet = [
-      {
-        fullName = "MANAGED"
-        default = false
-        label = "Managed"
-        isActive = true
-      },
-      {
-        fullName = "UNMANAGED"
-        default = false
-        label = "Unmanaged"
-        isActive = true
-      },
-    ]
     restricted = true
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Summary TotalFeeAmount {
+    apiName = "ReturnOrder.TotalFeeAmount"
+    label = "Fee Subtotal"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Summary TotalFeeTaxAmount {
+    apiName = "ReturnOrder.TotalFeeTaxAmount"
+    label = "Fee Subtotal Tax"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Summary TotalFeeAdjustAmount {
+    apiName = "ReturnOrder.TotalFeeAdjustAmount"
+    label = "Fee Adjustments"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Summary TotalFeeAdjustTaxAmount {
+    apiName = "ReturnOrder.TotalFeeAdjustTaxAmount"
+    label = "Fee Adjustments Tax"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Summary TotalFeeAmtWithTax {
+    apiName = "ReturnOrder.TotalFeeAmtWithTax"
+    label = "Fee Subtotal with Tax"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Summary TotalFeeAdjustAmtWithTax {
+    apiName = "ReturnOrder.TotalFeeAdjustAmtWithTax"
+    label = "Fee Adjustments with Tax"
     createable = false
     updateable = false
     queryable = true

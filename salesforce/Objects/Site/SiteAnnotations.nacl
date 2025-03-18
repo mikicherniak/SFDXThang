@@ -59,4 +59,7 @@ type salesforce.Site {
   metadataType = "CustomObject"
   label = "Site"
   enableFeeds = true
+  _alias = "Site"
+  feedHistoryTrackedFields = {
+  }
 }

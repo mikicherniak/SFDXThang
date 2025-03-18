@@ -107,4 +107,5 @@ salesforce.Layout ResourceAbsence_Resource_Absence_Layout@bss {
   _parent = [
     salesforce.ResourceAbsence,
   ]
+  _alias = "ResourceAbsence-Resource Absence Layout"
 }

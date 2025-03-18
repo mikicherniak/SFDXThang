@@ -237,7 +237,10 @@ type salesforce.Campaign {
       "CORE.USERS.ALIAS",
     ]
   }
+  _alias = "Campaign"
   topicsForObjects = {
     enableTopics = true
+  }
+  historyTrackedFields = {
   }
 }

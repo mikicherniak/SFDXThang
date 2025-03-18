@@ -189,6 +189,7 @@ type salesforce.ResourcePreference {
   compactLayoutAssignment = "SYSTEM"
   enableFeeds = false
   externalSharingModel = "ControlledByParent"
+  _alias = "Resource Preference"
   topicsForObjects = {
     enableTopics = false
   }

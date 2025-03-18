@@ -194,9 +194,18 @@ type salesforce.WorkTypeGroupMember {
       "WorkTypeGroup",
       "WorkType",
     ]
+    lookupDialogsAdditionalFields = [
+      "WorkTypeGroup",
+      "WorkType",
+    ]
+    lookupPhoneDialogsAdditionalFields = [
+      "WorkTypeGroup",
+      "WorkType",
+    ]
     searchResultsAdditionalFields = [
       "WorkTypeGroup",
       "WorkType",
     ]
   }
+  _alias = "Work Type Group Member"
 }

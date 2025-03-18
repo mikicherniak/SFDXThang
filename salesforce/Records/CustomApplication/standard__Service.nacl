@@ -6,6 +6,8 @@ salesforce.CustomApplication standard__Service {
   ]
   isNavAutoTempTabsDisabled = false
   isNavPersonalizationDisabled = false
+  isNavTabPersistenceDisabled = false
+  isOmniPinnedViewEnabled = false
   tabs = [
     "standard-Chatter",
     "standard-Account",
@@ -15,4 +17,5 @@ salesforce.CustomApplication standard__Service {
     "standard-report",
     "standard-Dashboard",
   ]
+  _alias = "standard__Service"
 }

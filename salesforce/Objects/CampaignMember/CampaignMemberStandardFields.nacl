@@ -4,8 +4,6 @@ type salesforce.CampaignMember {
     label = "Campaign Member ID"
     queryable = true
     _hidden_value = true
-    updateable = false
-    createable = false
   }
   salesforce.Checkbox IsDeleted {
     apiName = "CampaignMember.IsDeleted"
@@ -20,9 +18,6 @@ type salesforce.CampaignMember {
     apiName = "CampaignMember.CampaignId"
     label = "Campaign ID"
     _required = true
-    referenceTo = [
-      salesforce.Campaign,
-    ]
     createable = true
     updateable = false
     relationshipName = "Campaign"
@@ -31,9 +26,6 @@ type salesforce.CampaignMember {
   salesforce.Lookup LeadId {
     apiName = "CampaignMember.LeadId"
     label = "Lead ID"
-    referenceTo = [
-      salesforce.Lead,
-    ]
     createable = true
     updateable = false
     relationshipName = "Lead"
@@ -42,9 +34,6 @@ type salesforce.CampaignMember {
   salesforce.Lookup ContactId {
     apiName = "CampaignMember.ContactId"
     label = "Contact ID"
-    referenceTo = [
-      salesforce.Contact,
-    ]
     createable = true
     updateable = false
     relationshipName = "Contact"
@@ -79,9 +68,6 @@ type salesforce.CampaignMember {
   salesforce.Lookup CreatedById {
     apiName = "CampaignMember.CreatedById"
     label = "Created By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "CreatedBy"
@@ -99,9 +85,6 @@ type salesforce.CampaignMember {
   salesforce.Lookup LastModifiedById {
     apiName = "CampaignMember.LastModifiedById"
     label = "Last Modified By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "LastModifiedBy"
@@ -337,11 +320,6 @@ type salesforce.CampaignMember {
   salesforce.Lookup LeadOrContactId {
     apiName = "CampaignMember.LeadOrContactId"
     label = "Related Record ID"
-    referenceTo = [
-      salesforce.Account,
-      salesforce.Contact,
-      salesforce.Lead,
-    ]
     createable = false
     updateable = false
     queryable = true
@@ -350,10 +328,6 @@ type salesforce.CampaignMember {
   salesforce.Lookup LeadOrContactOwnerId {
     apiName = "CampaignMember.LeadOrContactOwnerId"
     label = "Related Record Owner ID"
-    referenceTo = [
-      salesforce.Group,
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "LeadOrContactOwner"

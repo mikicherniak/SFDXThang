@@ -4,8 +4,6 @@ type salesforce.WorkPlanTemplateEntry {
     label = "Work Plan Template Entry ID"
     queryable = true
     _hidden_value = true
-    updateable = false
-    createable = false
   }
   salesforce.Checkbox IsDeleted {
     apiName = "WorkPlanTemplateEntry.IsDeleted"
@@ -35,9 +33,6 @@ type salesforce.WorkPlanTemplateEntry {
   salesforce.Lookup CreatedById {
     apiName = "WorkPlanTemplateEntry.CreatedById"
     label = "Created By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "CreatedBy"
@@ -55,9 +50,6 @@ type salesforce.WorkPlanTemplateEntry {
   salesforce.Lookup LastModifiedById {
     apiName = "WorkPlanTemplateEntry.LastModifiedById"
     label = "Last Modified By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "LastModifiedBy"
@@ -72,31 +64,14 @@ type salesforce.WorkPlanTemplateEntry {
     queryable = true
     _hidden_value = true
   }
-  salesforce.Lookup WorkPlanTemplateId {
-    apiName = "WorkPlanTemplateEntry.WorkPlanTemplateId"
-    label = "Work Plan Template ID"
-    _required = true
-    referenceTo = [
-      salesforce.WorkPlanTemplate,
-    ]
-    createable = true
-    updateable = false
-    relationshipName = "WorkPlanTemplate"
-    queryable = true
-    trackHistory = false
-  }
   salesforce.Lookup WorkStepTemplateId {
     apiName = "WorkPlanTemplateEntry.WorkStepTemplateId"
     label = "Work Step Template ID"
     _required = true
-    referenceTo = [
-      salesforce.WorkStepTemplate,
-    ]
     createable = true
     updateable = true
     relationshipName = "WorkStepTemplate"
     queryable = true
-    trackHistory = false
   }
   salesforce.Number ExecutionOrder {
     apiName = "WorkPlanTemplateEntry.ExecutionOrder"
@@ -106,6 +81,15 @@ type salesforce.WorkPlanTemplateEntry {
     updateable = true
     scale = 0
     unique = false
+    queryable = true
+  }
+  salesforce.MasterDetail WorkPlanTemplateId {
+    apiName = "WorkPlanTemplateEntry.WorkPlanTemplateId"
+    relationshipName = "WorkPlanTemplate"
+    _required = true
+    label = "Work Plan Template ID"
+    createable = true
+    updateable = false
     queryable = true
   }
 }

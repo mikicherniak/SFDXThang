@@ -5,4 +5,5 @@ salesforce.ListView ReturnOrder_My_ReturnOrders {
   _parent = [
     salesforce.ReturnOrder,
   ]
+  _alias = "My Return Orders"
 }

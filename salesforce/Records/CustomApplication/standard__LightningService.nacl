@@ -6,6 +6,8 @@ salesforce.CustomApplication standard__LightningService {
   ]
   isNavAutoTempTabsDisabled = false
   isNavPersonalizationDisabled = false
+  isNavTabPersistenceDisabled = false
+  isOmniPinnedViewEnabled = false
   label = "Service Console"
   navType = "Console"
   setupExperience = "service"
@@ -53,4 +55,5 @@ salesforce.CustomApplication standard__LightningService {
       },
     ]
   }
+  _alias = "Service Console (standard)"
 }

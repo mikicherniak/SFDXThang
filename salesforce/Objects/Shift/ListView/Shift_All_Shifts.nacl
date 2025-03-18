@@ -5,4 +5,5 @@ salesforce.ListView Shift_All_Shifts {
   _parent = [
     salesforce.Shift,
   ]
+  _alias = "All Shifts"
 }

@@ -4,8 +4,6 @@ type salesforce.PaymentLineInvoice {
     label = "Payment Line Invoice ID"
     queryable = true
     _hidden_value = true
-    updateable = false
-    createable = false
   }
   salesforce.Checkbox IsDeleted {
     apiName = "PaymentLineInvoice.IsDeleted"
@@ -35,9 +33,6 @@ type salesforce.PaymentLineInvoice {
   salesforce.Lookup CreatedById {
     apiName = "PaymentLineInvoice.CreatedById"
     label = "Created By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "CreatedBy"
@@ -55,9 +50,6 @@ type salesforce.PaymentLineInvoice {
   salesforce.Lookup LastModifiedById {
     apiName = "PaymentLineInvoice.LastModifiedById"
     label = "Last Modified By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "LastModifiedBy"
@@ -72,25 +64,10 @@ type salesforce.PaymentLineInvoice {
     queryable = true
     _hidden_value = true
   }
-  salesforce.Lookup InvoiceId {
-    apiName = "PaymentLineInvoice.InvoiceId"
-    label = "Invoice ID"
-    _required = true
-    referenceTo = [
-      salesforce.Invoice,
-    ]
-    createable = true
-    updateable = false
-    relationshipName = "Invoice"
-    queryable = true
-  }
   salesforce.Lookup PaymentId {
     apiName = "PaymentLineInvoice.PaymentId"
     label = "Payment ID"
     _required = true
-    referenceTo = [
-      salesforce.Payment,
-    ]
     createable = true
     updateable = false
     relationshipName = "Payment"
@@ -110,20 +87,6 @@ type salesforce.PaymentLineInvoice {
     apiName = "PaymentLineInvoice.Type"
     label = "Type"
     _required = true
-    valueSet = [
-      {
-        fullName = "Applied"
-        default = false
-        label = "Applied"
-        isActive = true
-      },
-      {
-        fullName = "Unapplied"
-        default = false
-        label = "Unapplied"
-        isActive = true
-      },
-    ]
     restricted = true
     createable = true
     updateable = false
@@ -133,26 +96,6 @@ type salesforce.PaymentLineInvoice {
     apiName = "PaymentLineInvoice.HasBeenUnapplied"
     label = "Has Been Unapplied"
     _required = true
-    valueSet = [
-      {
-        fullName = "No"
-        default = false
-        label = "No"
-        isActive = true
-      },
-      {
-        fullName = "Yes"
-        default = false
-        label = "Yes"
-        isActive = true
-      },
-      {
-        fullName = "NA"
-        default = false
-        label = "NA"
-        isActive = true
-      },
-    ]
     restricted = true
     createable = true
     updateable = false
@@ -197,9 +140,6 @@ type salesforce.PaymentLineInvoice {
   salesforce.Lookup AssociatedAccountId {
     apiName = "PaymentLineInvoice.AssociatedAccountId"
     label = "Account ID"
-    referenceTo = [
-      salesforce.Account,
-    ]
     createable = true
     updateable = false
     relationshipName = "AssociatedAccount"
@@ -208,9 +148,6 @@ type salesforce.PaymentLineInvoice {
   salesforce.Lookup AssociatedPaymentLineId {
     apiName = "PaymentLineInvoice.AssociatedPaymentLineId"
     label = "Payment Line Invoice ID"
-    referenceTo = [
-      salesforce.PaymentLineInvoice,
-    ]
     createable = true
     updateable = false
     relationshipName = "AssociatedPaymentLine"
@@ -241,5 +178,14 @@ type salesforce.PaymentLineInvoice {
     precision = 18
     queryable = true
     _hidden_value = true
+  }
+  salesforce.MasterDetail InvoiceId {
+    apiName = "PaymentLineInvoice.InvoiceId"
+    relationshipName = "Invoice"
+    _required = true
+    label = "Invoice ID"
+    createable = true
+    updateable = false
+    queryable = true
   }
 }

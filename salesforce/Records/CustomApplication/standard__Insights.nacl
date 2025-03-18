@@ -1,4 +1,6 @@
 salesforce.CustomApplication standard__Insights {
+  isNavTabPersistenceDisabled = false
+  isOmniPinnedViewEnabled = false
   fullName = "standard__Insights"
   defaultLandingTab = "standard-home"
   formFactors = [
@@ -6,4 +8,5 @@ salesforce.CustomApplication standard__Insights {
   ]
   isNavAutoTempTabsDisabled = false
   isNavPersonalizationDisabled = false
+  _alias = "standard__Insights"
 }

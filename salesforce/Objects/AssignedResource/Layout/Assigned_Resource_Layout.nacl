@@ -80,4 +80,5 @@ salesforce.Layout AssignedResource_Assigned_Resource_Layout@bss {
   _parent = [
     salesforce.AssignedResource,
   ]
+  _alias = "AssignedResource-Assigned Resource Layout"
 }

@@ -9,8 +9,6 @@ type salesforce.Case {
     length = 12
     queryable = true
     externalId = false
-    trackFeedHistory = false
-    trackHistory = false
     trackTrending = false
   }
   salesforce.Picklist SLAViolation__c {
@@ -32,9 +30,6 @@ type salesforce.Case {
     createable = true
     updateable = true
     queryable = true
-    externalId = false
-    trackFeedHistory = false
-    trackHistory = false
     trackTrending = false
     sorted = false
   }
@@ -92,9 +87,6 @@ type salesforce.Case {
     createable = true
     updateable = true
     queryable = true
-    externalId = false
-    trackFeedHistory = false
-    trackHistory = false
     trackTrending = false
     sorted = false
   }
@@ -117,9 +109,6 @@ type salesforce.Case {
     createable = true
     updateable = true
     queryable = true
-    externalId = false
-    trackFeedHistory = false
-    trackHistory = false
     trackTrending = false
     sorted = false
   }

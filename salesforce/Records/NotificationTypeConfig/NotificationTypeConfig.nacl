@@ -4,9 +4,30 @@ salesforce.NotificationTypeConfig NotificationTypeConfig {
     {
       notificationChannels = {
         desktopEnabled = true
+        mobileEnabled = false
+      }
+      notificationType = "actionablelist_async_save"
+    },
+    {
+      notificationChannels = {
+        desktopEnabled = false
+        mobileEnabled = false
+      }
+      notificationType = "amount_updated"
+    },
+    {
+      notificationChannels = {
+        desktopEnabled = true
         mobileEnabled = true
       }
       notificationType = "approval_request"
+    },
+    {
+      notificationChannels = {
+        desktopEnabled = true
+        mobileEnabled = false
+      }
+      notificationType = "bulk_action_plan_save"
     },
     {
       notificationChannels = {
@@ -31,10 +52,59 @@ salesforce.NotificationTypeConfig NotificationTypeConfig {
     },
     {
       notificationChannels = {
+        desktopEnabled = false
+        mobileEnabled = false
+      }
+      notificationType = "close_date_reminder"
+    },
+    {
+      notificationChannels = {
+        desktopEnabled = false
+        mobileEnabled = false
+      }
+      notificationType = "close_date_updated"
+    },
+    {
+      notificationChannels = {
+        desktopEnabled = true
+        mobileEnabled = false
+      }
+      notificationType = "conversation_mining_notify"
+    },
+    {
+      notificationChannels = {
+        desktopEnabled = false
+        mobileEnabled = false
+      }
+      notificationType = "deal_won"
+    },
+    {
+      notificationChannels = {
+        desktopEnabled = false
+        mobileEnabled = false
+      }
+      notificationType = "deals_to_watch"
+    },
+    {
+      notificationChannels = {
         desktopEnabled = true
         mobileEnabled = true
       }
       notificationType = "direct_message"
+    },
+    {
+      notificationChannels = {
+        desktopEnabled = true
+        mobileEnabled = false
+      }
+      notificationType = "eacforfsc_async_notify"
+    },
+    {
+      notificationChannels = {
+        desktopEnabled = true
+        mobileEnabled = false
+      }
+      notificationType = "easy_fts_syncx_notify"
     },
     {
       notificationChannels = {
@@ -49,6 +119,13 @@ salesforce.NotificationTypeConfig NotificationTypeConfig {
         mobileEnabled = false
       }
       notificationType = "event_reminder"
+    },
+    {
+      notificationChannels = {
+        desktopEnabled = true
+        mobileEnabled = false
+      }
+      notificationType = "followup_process_notification"
     },
     {
       notificationChannels = {
@@ -69,7 +146,35 @@ salesforce.NotificationTypeConfig NotificationTypeConfig {
         desktopEnabled = true
         mobileEnabled = false
       }
+      notificationType = "health_insights_notify"
+    },
+    {
+      notificationChannels = {
+        desktopEnabled = false
+        mobileEnabled = false
+      }
+      notificationType = "high_priority_case"
+    },
+    {
+      notificationChannels = {
+        desktopEnabled = true
+        mobileEnabled = false
+      }
       notificationType = "mailapp_alert"
+    },
+    {
+      notificationChannels = {
+        desktopEnabled = false
+        mobileEnabled = false
+      }
+      notificationType = "new_child_opportunity"
+    },
+    {
+      notificationChannels = {
+        desktopEnabled = false
+        mobileEnabled = false
+      }
+      notificationType = "next_step_reminder"
     },
     {
       notificationChannels = {
@@ -105,6 +210,20 @@ salesforce.NotificationTypeConfig NotificationTypeConfig {
         mobileEnabled = false
       }
       notificationType = "security_center_alert"
+    },
+    {
+      notificationChannels = {
+        desktopEnabled = false
+        mobileEnabled = false
+      }
+      notificationType = "stage_reminder"
+    },
+    {
+      notificationChannels = {
+        desktopEnabled = false
+        mobileEnabled = false
+      }
+      notificationType = "stage_updated"
     },
     {
       notificationChannels = {
@@ -149,4 +268,5 @@ salesforce.NotificationTypeConfig NotificationTypeConfig {
       notificationType = "wave_condition"
     },
   ]
+  _alias = "NotificationTypeConfig"
 }

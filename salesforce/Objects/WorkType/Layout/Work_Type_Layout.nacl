@@ -135,4 +135,5 @@ salesforce.Layout WorkType_Work_Type_Layout@bss {
   _parent = [
     salesforce.WorkType,
   ]
+  _alias = "WorkType-Work Type Layout"
 }

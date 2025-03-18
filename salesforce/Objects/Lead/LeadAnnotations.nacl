@@ -343,7 +343,13 @@ type salesforce.Lead {
       "CORE.USERS.ALIAS",
     ]
   }
+  _alias = "Lead"
   topicsForObjects = {
     enableTopics = true
+  }
+  feedHistoryTrackedFields = {
+    Name = salesforce.Lead.field.Name
+    OwnerId = salesforce.Lead.field.OwnerId
+    Status = salesforce.Lead.field.Status
   }
 }

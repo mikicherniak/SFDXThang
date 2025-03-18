@@ -57,7 +57,7 @@ type salesforce.SocialPersona {
   }
   apiName = "SocialPersona"
   metadataType = "CustomObject"
-  label = "Social Persona"
+  label = "SocialPersona"
   actionOverrides = [
     {
       actionName = "CancelEdit"
@@ -166,4 +166,5 @@ type salesforce.SocialPersona {
     customTabListAdditionalFields = "Provider"
     searchResultsAdditionalFields = "Provider"
   }
+  _alias = "SocialPersona"
 }

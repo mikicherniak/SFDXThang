@@ -4,8 +4,6 @@ type salesforce.AccountCleanInfo {
     label = "Account Clean Info ID"
     queryable = true
     _hidden_value = true
-    updateable = false
-    createable = false
   }
   salesforce.Checkbox IsDeleted {
     apiName = "AccountCleanInfo.IsDeleted"
@@ -38,9 +36,6 @@ type salesforce.AccountCleanInfo {
   salesforce.Lookup CreatedById {
     apiName = "AccountCleanInfo.CreatedById"
     label = "Created By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "CreatedBy"
@@ -58,9 +53,6 @@ type salesforce.AccountCleanInfo {
   salesforce.Lookup LastModifiedById {
     apiName = "AccountCleanInfo.LastModifiedById"
     label = "Last Modified By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "LastModifiedBy"
@@ -79,9 +71,6 @@ type salesforce.AccountCleanInfo {
     apiName = "AccountCleanInfo.AccountId"
     label = "Account ID"
     _required = true
-    referenceTo = [
-      salesforce.Account,
-    ]
     createable = false
     updateable = false
     relationshipName = "Account"
@@ -108,9 +97,6 @@ type salesforce.AccountCleanInfo {
   salesforce.Lookup LastStatusChangedById {
     apiName = "AccountCleanInfo.LastStatusChangedById"
     label = "User ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "LastStatusChangedBy"
@@ -353,20 +339,6 @@ type salesforce.AccountCleanInfo {
   salesforce.Picklist CompanyStatusDataDotCom {
     apiName = "AccountCleanInfo.CompanyStatusDataDotCom"
     label = "Company Status per Data.com"
-    valueSet = [
-      {
-        fullName = "IsActiveCompanyDataDotCom"
-        default = false
-        label = "Company is In Business per Data.com"
-        isActive = true
-      },
-      {
-        fullName = "IsInactiveCompanyDataDotCom"
-        default = false
-        label = "Company is Out of Business per Data.com"
-        isActive = true
-      },
-    ]
     restricted = true
     createable = false
     updateable = false

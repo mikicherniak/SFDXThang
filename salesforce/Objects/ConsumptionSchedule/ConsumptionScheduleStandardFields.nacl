@@ -4,18 +4,12 @@ type salesforce.ConsumptionSchedule {
     label = "Consumption Schedule ID"
     queryable = true
     _hidden_value = true
-    updateable = false
-    createable = false
   }
   salesforce.Lookup OwnerId {
     apiName = "ConsumptionSchedule.OwnerId"
     label = "Owner ID"
-    referenceTo = [
-      salesforce.Group,
-      salesforce.User,
-    ]
-    createable = false
-    updateable = false
+    createable = true
+    updateable = true
     relationshipName = "Owner"
     queryable = true
     _hidden_value = true
@@ -51,9 +45,6 @@ type salesforce.ConsumptionSchedule {
   salesforce.Lookup CreatedById {
     apiName = "ConsumptionSchedule.CreatedById"
     label = "Created By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "CreatedBy"
@@ -71,9 +62,6 @@ type salesforce.ConsumptionSchedule {
   salesforce.Lookup LastModifiedById {
     apiName = "ConsumptionSchedule.LastModifiedById"
     label = "Last Modified By ID"
-    referenceTo = [
-      salesforce.User,
-    ]
     createable = false
     updateable = false
     relationshipName = "LastModifiedBy"
@@ -120,26 +108,6 @@ type salesforce.ConsumptionSchedule {
     apiName = "ConsumptionSchedule.BillingTermUnit"
     label = "Billing Term Unit"
     _required = true
-    valueSet = [
-      {
-        fullName = "Month"
-        default = false
-        label = "Month"
-        isActive = true
-      },
-      {
-        fullName = "Quarter"
-        default = false
-        label = "Quarter"
-        isActive = true
-      },
-      {
-        fullName = "Year"
-        default = false
-        label = "Year"
-        isActive = true
-      },
-    ]
     restricted = true
     inlineHelpText = "The unit used with the billing term to determine the billing frequency."
     createable = true
@@ -150,20 +118,6 @@ type salesforce.ConsumptionSchedule {
     apiName = "ConsumptionSchedule.Type"
     label = "Type"
     _required = true
-    valueSet = [
-      {
-        fullName = "Range"
-        default = false
-        label = "Range"
-        isActive = true
-      },
-      {
-        fullName = "Slab"
-        default = false
-        label = "Slab"
-        isActive = true
-      },
-    ]
     restricted = true
     inlineHelpText = "Range: The schedule prices only using the tier that applies to the usage quantity. Slab: Usage within a given bound receives pricing equal to its tier's value."
     createable = true
@@ -177,20 +131,11 @@ type salesforce.ConsumptionSchedule {
     createable = true
     updateable = true
     queryable = true
-    trackHistory = false
   }
   salesforce.Picklist RatingMethod {
     apiName = "ConsumptionSchedule.RatingMethod"
     label = "Rating Method"
     _required = true
-    valueSet = [
-      {
-        fullName = "Tier"
-        default = false
-        label = "Tier"
-        isActive = true
-      },
-    ]
     restricted = true
     inlineHelpText = "Choose a specific use case to rate usage against this schedule. This is a controlling picklist for the Type field."
     createable = true
