@@ -1,0 +1,20 @@
+salesforce.UserManagementSettings {
+  fullName = "UserManagement"
+  enableCanAnswerContainUsername = "true"
+  enableConcealPersonalInfo = "true"
+  enableContactlessExternalIdentityUsers = false
+  enableEnhancedPermsetMgmt = false
+  enableEnhancedProfileMgmt = true
+  enableNewProfileUI = false
+  enableProfileFiltering = "false"
+  enableScrambleUserData = false
+  enableUserSelfDeactivate = false
+  restrictedProfileCloning = "false"
+  enableEnhancedConcealPersonalInfo = "false"
+  enableEnhcUiUserAccessPolicies = "false"
+  enableRestrictEmailDomains = "false"
+  permsetsInFieldCreation = "false"
+  psaExpirationUIEnabled = "true"
+  userAccessPoliciesEnabled = "false"
+  _alias = "UserManagement"
+}

@@ -1,6 +1,0 @@
-salesforce.QuoteSettings {
-  fullName = "Quote"
-  enableQuote = false
-  _alias = "Quote"
-  enableQuotesWithoutOppEnabled = false
-}

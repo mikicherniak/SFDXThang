@@ -1,0 +1,22 @@
+salesforce.IndustriesSettings {
+  fullName = "Industries"
+  enableAccountScoreEnabled = "false"
+  enableEventManagementOrgPref = false
+  enableEventWriteOrgPref = "false"
+  enableMultiResourceOrgPref = false
+  enableOverbookingOrgPref = false
+  appointmentDistributionOrgPref = "false"
+  enableAnyResourceTypeOrgPref = "false"
+  enableAppFrmAnywhereOrgPref = "false"
+  enableAppInviteOrgPref = "false"
+  enableDepriveSoqlAccessGuestUserOrgPref = "false"
+  enableDepriveSoqlAccessOrgPref = "true"
+  enableDropInAppointmentsOrgPref = "false"
+  enableMultipleTopicsForShiftsOrgPref = "false"
+  enablePreBookedFallbackMechOrgPref = "false"
+  enableShareSaWithArOrgPref = "false"
+  enableTopicOrTemplate = "false"
+  enableTopicTimeSlot = "true"
+  rlaEditIfAccHasEdit = "false"
+  _alias = "Industries"
+}
